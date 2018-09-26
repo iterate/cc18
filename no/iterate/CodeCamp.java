@@ -88,6 +88,7 @@ public class CodeCamp {
             tests.add(new AssertFailedTest());
 
             TestResults testResults = runTests(tests);
+            assert(testResults.summary().contains("false"));
 
         }
     }
