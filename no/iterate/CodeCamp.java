@@ -148,9 +148,6 @@ public class CodeCamp {
             assert(testResults.numberOfTestsFailed == 2);
         }
 
-        public String errorMessage() {
-            return "Integrationstest failed!!!";
-        }
     }
 
     private static class FizzBuzz implements Testable {
