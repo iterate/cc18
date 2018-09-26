@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 FILES=$(ls -lrt -d -1 $PWD/**/{*,.*} | grep ".java$")
 
 echo "-----"
