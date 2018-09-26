@@ -41,7 +41,7 @@ public class CodeCamp {
         if (throwable.getMessage() == null) {
             return test.errorMessage();
         }   else {
-            throwable.getStackTrace();
+            StackTraceElement[] stackTraceElements = throwable.getStackTrace();
             return throwable.getMessage();
         }
     }
