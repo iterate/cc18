@@ -86,16 +86,6 @@ public class CodeCamp {
         }
     }
 
-    public static class EmptyTestResult implements Testable {
-
-        @Override
-        public void invoke() {
-            TestResults sample = new TestResults();
-
-            assert(sample.summary().isEmpty());
-        }
-    }
-
     public static class IntegrationTest implements Testable {
 
         @Override
@@ -130,6 +120,16 @@ public class CodeCamp {
         private static class FailingTest implements Testable{
             public void invoke() {
                 throw new RuntimeException("MyMessage");
+            }
+        }
+
+        public static class EmptyTestResult implements Testable {
+
+            @Override
+            public void invoke() {
+                TestResults sample = new TestResults();
+
+                assert(sample.summary().isEmpty());
             }
         }
     }
