@@ -31,13 +31,13 @@ public class CodeCamp {
                 test.invoke();
             } catch (Throwable e) {
                 testResults.numberOfTestsFailed++;
-                testResults.exceptions.add(buildErrorMessage(test, e));
+                testResults.exceptions.add(buildErrorMessage(e));
             }
         }
         return testResults;
     }
 
-    private static String buildErrorMessage(Testable test, Throwable throwable) {
+    private static String buildErrorMessage(Throwable throwable) {
         StackTraceElement[] stackTraceElements = throwable.getStackTrace();
         String message = "";
         for (StackTraceElement stackTraceElement : stackTraceElements) {
