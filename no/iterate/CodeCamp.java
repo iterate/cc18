@@ -40,16 +40,15 @@ public class CodeCamp {
     private static String buildErrorMessage(Testable test, Throwable throwable) {
         if (throwable.getMessage() == null) {
             return test.errorMessage();
-        }   else {
-            StackTraceElement[] stackTraceElements = throwable.getStackTrace();
-            String message = "";
-            for (StackTraceElement stackTraceElement : stackTraceElements) {
-                String msg;
-                msg = stackTraceElement.getFileName();
-                message.concat(msg);
-            }
-            return throwable.getMessage();
         }
+        StackTraceElement[] stackTraceElements = throwable.getStackTrace();
+        String message = "";
+        for (StackTraceElement stackTraceElement : stackTraceElements) {
+            String msg;
+            msg = stackTraceElement.getFileName();
+            message.concat(msg);
+        }
+        return throwable.getMessage();
     }
 
     private interface Testable {
