@@ -9,7 +9,7 @@ public class CodeCamp {
         List<Testable> tests = new ArrayList<>();
         tests.add(new IntegrationTest());
         tests.add(new FizzBuzz());
-        
+
         report(runTests(tests));
     }
 
@@ -39,6 +39,7 @@ public class CodeCamp {
 
     private interface Testable {
         void invoke();
+        String errorMessage();
     }
 
     private static class TestResults {
@@ -58,16 +59,31 @@ public class CodeCamp {
         public void invoke() {
             throw new RuntimeException("MyMessage");
         }
+
+        @Override
+        public String errorMessage() {
+            return "";
+        }
     }
 
     private static class PassingTest implements Testable{
         public void invoke() {
+        }
+
+        @Override
+        public String errorMessage() {
+            return "";
         }
     }
 
     private static class AssertFailedTest implements Testable {
         public void invoke() {
             assert(false);
+        }
+
+        @Override
+        public String errorMessage() {
+            return "";
         }
     }
 
@@ -81,6 +97,11 @@ public class CodeCamp {
             assert(testResults.summary().contains("RuntimeException"));
 
         }
+
+        @Override
+        public String errorMessage() {
+            return "";
+        }
     }
 
     private static class EmptyTestResult implements Testable {
@@ -90,6 +111,11 @@ public class CodeCamp {
             TestResults sample = new TestResults();
 
             assert(sample.summary().isEmpty());
+        }
+
+        @Override
+        public String errorMessage() {
+            return "";
         }
     }
 
@@ -108,6 +134,11 @@ public class CodeCamp {
             assert(testResults.numberOfTests == 4);
             assert(testResults.numberOfTestsFailed == 2);
         }
+
+        @Override
+        public String errorMessage() {
+            return "";
+        }
     }
 
     private static class FizzBuzz implements Testable {
@@ -117,6 +148,11 @@ public class CodeCamp {
             assert(fizzBuzz(3).equals("Fizz!"));
             assert(fizzBuzz(5).equals("Buzz!"));
             assert(fizzBuzz(15).equals("FizzBuzz!"));
+        }
+
+        @Override
+        public String errorMessage() {
+            return "";
         }
 
         private String fizzBuzz(int i) {
