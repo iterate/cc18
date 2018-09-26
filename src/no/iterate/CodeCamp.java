@@ -76,7 +76,7 @@ public class CodeCamp {
         }
     }
 
-    private static class AssertFailedTest implements Testable {
+    public static class AssertFailedTest implements Testable {
         public void invoke() {
             assert(false);
         }
