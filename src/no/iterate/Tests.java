@@ -66,7 +66,7 @@ public class Tests {
 
             TestResults testResults = CodeCamp.runTests(tests, functionTests);
 
-            assert(testResults.numberOfTests == tests.size() + functionTests.size());
+            assert(testResults.numberOfTests == functionTests.size());
             assume(testResults.numberOfTestsFailed == 0);
         }
 
