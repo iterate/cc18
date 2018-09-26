@@ -122,7 +122,6 @@ public class CodeCamp {
             tests.add(new AssertFailedTest());
 
             TestResults testResults = runTests(tests);
-            System.out.println(testResults.summary());
             assert(testResults.summary().contains("CodeCamp.java"));
 
         }
