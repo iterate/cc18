@@ -41,13 +41,13 @@ public class CodeCamp {
         StackTraceElement[] stackTraceElements = throwable.getStackTrace();
         StringBuilder message = new StringBuilder();
 
-        message.append("!!!\nTest failed at: " + printStackTraceMessage(stackTraceElements[0]));
+        message.append("\n!!!\nTest failed at: " + printStackTraceMessage(stackTraceElements[0]));
 
         for (StackTraceElement stackTraceElement : stackTraceElements) {
             message.append(printStackTraceMessage(stackTraceElement));
         }
 
-        return message + throwable.getMessage() + "\n!!!";
+        return message + throwable.getMessage() + "\n!!!\n";
     }
 
     private static String printStackTraceMessage(StackTraceElement stackTraceElement) {
