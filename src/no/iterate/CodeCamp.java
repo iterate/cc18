@@ -2,6 +2,7 @@ package no.iterate;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiFunction;
 
 public class CodeCamp {
 
@@ -14,7 +15,7 @@ public class CodeCamp {
     }
 
     public static class AnonymousFunction implements Testable {
-        public AnonymousFunction() {
+        public AnonymousFunction(BiFunction<Void, ?, Void> function) {
         }
 
         public void invoke() {
@@ -83,7 +84,7 @@ public class CodeCamp {
             tests.add(new EmptyTestResult());
             tests.add(new CorrectErrorMessage());
             tests.add(new CorrectAssertErrorMessage());
-            tests.add(new AnonymousFunction());
+            tests.add(new AnonymousFunction(null));
             
             TestResults testResults = runTests(tests);
 
