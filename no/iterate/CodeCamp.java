@@ -159,10 +159,6 @@ public class CodeCamp {
             assert(fizzBuzz(15).equals("FizzBuzz!"));
         }
 
-        public String errorMessage() {
-            return "";
-        }
-
         private String fizzBuzz(int i) {
             if (i % 3 == 0 && i % 5 == 0) {
                 return "FizzBuzz!";
