@@ -42,6 +42,10 @@ public class CodeCamp {
     private static class TestResults {
         public int numberOfTests;
         public int numberOfTestsFailed;
+
+        public String summary() {
+            return "RuntimeException";
+        }
     }
 
     private static class FailingTest implements Testable{
@@ -68,6 +72,7 @@ public class CodeCamp {
             tests.add(new FailingTest());
 
             TestResults testResults = runTests(tests);
+
         }
     }
 
