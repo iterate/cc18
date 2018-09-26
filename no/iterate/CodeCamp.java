@@ -10,11 +10,11 @@ public class CodeCamp {
         tests.add(new IntegrationTest());
         tests.add(new FizzBuzz());
 
-        List<Integer> numbers = new ArrayList<>();
-        numbers.add(1);
-        numbers.add(1);
+        List<String> numbers = new ArrayList<>();
+        numbers.add("1");
+        numbers.add("1");
 
-        System.out.println(numbers.stream().reduce(0, (x, y) -> x + y));
+        System.out.println(numbers.stream().reduce("0", (x, y) -> x.concat(y)));
 
         report(runTests(tests));
     }
