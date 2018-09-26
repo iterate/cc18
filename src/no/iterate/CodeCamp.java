@@ -42,6 +42,7 @@ public class CodeCamp {
         StringBuilder message = new StringBuilder();
 
         message.append("\n!!!\nTest failed at: " + printStackTraceMessage(stackTraceElements[0]));
+        message.append("\nStack trace:\n");
 
         for (StackTraceElement stackTraceElement : stackTraceElements) {
             message.append(printStackTraceMessage(stackTraceElement));
