@@ -126,6 +126,7 @@ public class CodeCamp {
             tests.add(new AssertFailedTest());
             tests.add(new EmptyTestResult());
             tests.add(new CorrectErrorMessage());
+            tests.add(new CorrectAssertErrorMessage());
 
 
             TestResults testResults = runTests(tests);
