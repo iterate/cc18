@@ -70,11 +70,6 @@ public class Tests {
             assume(testResults.numberOfTestsFailed == 2);
         }
 
-        private static class AssertFailedTest implements Testable {
-            public void invoke() {
-                assume(false);
-            }
-        }
     }
 
     public static void assume(boolean b) {
