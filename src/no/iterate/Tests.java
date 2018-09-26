@@ -65,24 +65,6 @@ public class Tests {
         assume(testResults.summary().contains("(invoke)"), "test result summary should contain \"(invoke)\"");
     };
 
-    public static class IntegrationTest implements Testable {
-
-        @Override
-        public void invoke() {
-            List<Testable> tests = new ArrayList<>();
-
-            List<Runnable> functionTests = new ArrayList<>();
-            functionTests.add(correctErrorMessage);
-            functionTests.add(correctAssertErrorMessage);
-            
-            TestResults testResults = CodeCamp.runTests(tests, functionTests);
-
-            assume(testResults.numberOfTests == functionTests.size());
-            assume(testResults.numberOfTestsFailed == 0, "the number of tests should be 0");
-        }
-
-    }
-
     public static void assume(boolean b) {
         assume(b, "");
     }
