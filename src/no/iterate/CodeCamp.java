@@ -14,6 +14,9 @@ public class CodeCamp {
     }
 
     public static class AnonymousFunction implements WrongTestable {
+        public AnonymousFunction() {
+        }
+
         public void invoke() {
 
         }
