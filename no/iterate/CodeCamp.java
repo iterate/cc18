@@ -122,7 +122,7 @@ public class CodeCamp {
         }
     }
 
-    private static class FizzBuzz implements Testable {
+    public static class FizzBuzz implements Testable {
         public void invoke() {
             assert(fizzBuzz(1).equals("1"));
             assert(fizzBuzz(2).equals("2"));
