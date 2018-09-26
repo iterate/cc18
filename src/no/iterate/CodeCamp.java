@@ -65,7 +65,7 @@ public class CodeCamp {
         }
     }
 
-    private static class FailingTest implements Testable{
+    public static class FailingTest implements Testable{
         public void invoke() {
             throw new RuntimeException("MyMessage");
         }
