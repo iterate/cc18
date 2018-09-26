@@ -61,7 +61,6 @@ public class Tests {
             List<Runnable> functionTests = new ArrayList<>();
             functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
             functionTests.add(() -> {});
-            functionTests.add(() -> { assume(false); });
             functionTests.add(correctErrorMessage);
             functionTests.add(correctAssertErrorMessage);
 
@@ -69,7 +68,7 @@ public class Tests {
             TestResults testResults = CodeCamp.runTests(tests, functionTests);
 
             assert(testResults.numberOfTests == tests.size() + functionTests.size());
-            assume(testResults.numberOfTestsFailed == 2);
+            assume(testResults.numberOfTestsFailed == 1);
         }
 
     }
