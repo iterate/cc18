@@ -81,18 +81,6 @@ public class CodeCamp {
         }
     }
 
-    private static class CorrectAssertionErrorMessage implements Testable {
-        @Override
-        public void invoke() {
-            List<Testable> tests = new ArrayList<>();
-            tests.add(new AssertFailedTest());
-
-            TestResults testResults = runTests(tests);
-            assert(testResults.summary().contains("false"));
-
-        }
-    }
-
     private static class IntegrationTest implements Testable {
 
         @Override
