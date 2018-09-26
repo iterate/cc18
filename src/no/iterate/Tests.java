@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tests {
-    public Runnable integrationTest = () -> {
+    public static Runnable integrationTest = () -> {
         List<Testable> tests = new ArrayList<>();
         tests.add(new CodeCamp.AnonymousFunction(() -> {return;}));
 
