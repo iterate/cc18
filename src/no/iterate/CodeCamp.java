@@ -51,7 +51,13 @@ public class CodeCamp {
         }
 
         for (Runnable test : testFunctions) {
-            
+            try {
+                testResults.numberOfTests++;
+                test.run();
+            } catch (Throwable e) {
+                testResults.numberOfTestsFailed++;
+                testResults.exceptions.add(buildErrorMessage(e));
+            }
         }
 
         return testResults;

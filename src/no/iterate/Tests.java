@@ -44,8 +44,8 @@ public class Tests {
 
             TestResults testResults = CodeCamp.runTests(tests, functionTests);
 
-            assert(testResults.numberOfTests == tests.size());
-            assume(testResults.numberOfTestsFailed == 2);
+            assert(testResults.numberOfTests == tests.size() + functionTests.size());
+            assume(testResults.numberOfTestsFailed == 3);
         }
 
         private static class CorrectAssertErrorMessage implements Testable {
