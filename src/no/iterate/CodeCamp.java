@@ -13,6 +13,7 @@ public class CodeCamp {
         List<Runnable> functionTests = new ArrayList<>();
         functionTests.add(() -> {});
         functionTests.add(Tests.correctErrorMessage);
+        functionTests.add(Tests.correctAssertErrorMessage2);
 
         report(runTests(tests, functionTests));
     }
