@@ -126,9 +126,6 @@ public class CodeCamp {
             assert(sample.summary().isEmpty());
         }
 
-        public String errorMessage() {
-            return "";
-        }
     }
 
     private static class IntegrationTest implements Testable {
