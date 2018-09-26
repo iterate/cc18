@@ -31,7 +31,6 @@ public class Tests {
         @Override
         public void invoke() {
             List<Testable> tests = new ArrayList<>();
-            tests.add(new CorrectErrorMessage());
             tests.add(new CorrectAssertErrorMessage());
             tests.add(new CodeCamp.AnonymousFunction(() -> {return;}));
 
