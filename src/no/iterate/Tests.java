@@ -42,7 +42,7 @@ public class Tests {
             List<Runnable> functionTests = new ArrayList<>();
             functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
 
-            TestResults testResults = CodeCamp.runTests(tests, null);
+            TestResults testResults = CodeCamp.runTests(tests, functionTests);
 
             assert(testResults.numberOfTests == tests.size());
             assume(testResults.numberOfTestsFailed == 2);
