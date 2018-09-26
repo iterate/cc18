@@ -14,8 +14,7 @@ public class CodeCamp {
         numbers.add(1);
         numbers.add(1);
 
-
-        System.out.println(numbers);
+        System.out.println(numbers.stream().reduce(0, (x, y) -> x + y));
 
         report(runTests(tests));
     }
