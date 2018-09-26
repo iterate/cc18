@@ -35,7 +35,6 @@ public class Tests {
 
             Runnable correctErrorMessage = () -> {
                 List<Testable> tests2 = new ArrayList<>();
-                tests2.add(new CodeCamp.AnonymousFunction(() -> { throw new RuntimeException("MyMessage"); }));
 
                 List<Runnable> functionTests = new ArrayList<>();
                 functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
