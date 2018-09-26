@@ -69,10 +69,6 @@ public class CodeCamp {
         return filename + ":" + lineNumber + " (" + methodName + ") \n";
     }
 
-    public interface WrongTestable extends Testable{
-        void invoke();
-    }
-
     public static class IntegrationTest implements Testable {
 
         @Override
