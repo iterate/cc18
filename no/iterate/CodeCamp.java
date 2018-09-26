@@ -38,7 +38,8 @@ public class CodeCamp {
     }
 
     private static String buildErrorMessage(Testable test, Throwable throwable) {
-        if (throwable.getMessage() == null) {
+
+        if (throwable.getMessage() == null && false) {
             return test.errorMessage();
         }
         StackTraceElement[] stackTraceElements = throwable.getStackTrace();
