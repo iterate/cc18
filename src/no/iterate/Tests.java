@@ -6,11 +6,11 @@ import java.util.List;
 public class Tests {
     public static class FizzBuzz implements Testable {
         public void invoke() {
-            assert(fizzBuzz(1).equals("1"));
-            assert(fizzBuzz(2).equals("2"));
-            assert(fizzBuzz(3).equals("Fizz!"));
-            assert(fizzBuzz(5).equals("Buzz!"));
-            assert(fizzBuzz(15).equals("FizzBuzz!"));
+            assume(fizzBuzz(1).equals("1"));
+            assume(fizzBuzz(2).equals("2"));
+            assume(fizzBuzz(3).equals("Fizz!"));
+            assume(fizzBuzz(5).equals("Buzz!"));
+            assume(fizzBuzz(15).equals("FizzBuzz!"));
         }
 
         private String fizzBuzz(int i) {
@@ -42,7 +42,7 @@ public class Tests {
             TestResults testResults = CodeCamp.runTests(tests);
 
             assert(testResults.numberOfTests == tests.size());
-            assert(testResults.numberOfTestsFailed == 2);
+            assume(testResults.numberOfTestsFailed == 2);
         }
 
         private static class CorrectAssertErrorMessage implements Testable {
@@ -52,8 +52,8 @@ public class Tests {
                 tests.add(new AssertFailedTest());
 
                 TestResults testResults = CodeCamp.runTests(tests);
-                assert(testResults.summary().contains("CodeCamp.java"));
-                assert(testResults.summary().contains("(invoke)"));
+                assume(testResults.summary().contains("CodeCamp.java"));
+                assume(testResults.summary().contains("(invoke)"));
 
             }
         }
@@ -70,7 +70,7 @@ public class Tests {
             public void invoke() {
                 TestResults sample = new TestResults();
 
-                assert(sample.summary().isEmpty());
+                assume(sample.summary().isEmpty());
             }
         }
 
@@ -81,14 +81,14 @@ public class Tests {
                 tests.add(new FailingTest());
 
                 TestResults testResults = CodeCamp.runTests(tests);
-                assert(testResults.summary().contains("MyMessage"));
+                assume(testResults.summary().contains("MyMessage"));
 
             }
         }
 
         private static class AssertFailedTest implements Testable {
             public void invoke() {
-                assert(false);
+                assume(false);
             }
         }
 
@@ -96,5 +96,9 @@ public class Tests {
             public void invoke() {
             }
         }
+    }
+
+    private static void assume(boolean b) {
+        assert (b);
     }
 }
