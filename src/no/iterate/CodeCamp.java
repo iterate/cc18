@@ -44,7 +44,7 @@ public class CodeCamp {
             String filename = stackTraceElement.getFileName();
             int linenumber = stackTraceElement.getLineNumber();
             
-            message.append(filename + " " + linenumber + " ");
+            message.append(filename + " L" + linenumber + " ");
         }
         return message + " " + throwable.getMessage();
     }
