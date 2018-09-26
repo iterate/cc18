@@ -56,6 +56,8 @@ public class CodeCamp {
         int lineNumber = stackTraceElement.getLineNumber();
         String methodName = stackTraceElement.getMethodName();
 
+        System.out.println(stackTraceElement.toString());
+
         return filename + ":" + lineNumber + " " + methodName + " \n";
     }
 
@@ -122,6 +124,7 @@ public class CodeCamp {
             tests.add(new AssertFailedTest());
 
             TestResults testResults = runTests(tests);
+            System.out.println(testResults.summary());
             assert(testResults.summary().contains("CodeCamp.java"));
 
         }
