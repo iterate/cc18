@@ -55,9 +55,7 @@ public class CodeCamp {
         String filename = stackTraceElement.getFileName();
         int lineNumber = stackTraceElement.getLineNumber();
         String methodName = stackTraceElement.getMethodName();
-
-        System.out.println(stackTraceElement.toString());
-
+        
         return filename + ":" + lineNumber + " (" + methodName + ") \n";
     }
 
