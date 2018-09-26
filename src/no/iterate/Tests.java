@@ -37,7 +37,7 @@ public class Tests {
             tests.add(new EmptyTestResult());
             tests.add(new CorrectErrorMessage());
             tests.add(new CorrectAssertErrorMessage());
-            tests.add(new CodeCamp.AnonymousFunction(null));
+            tests.add(new CodeCamp.AnonymousFunction(() -> {return;}));
 
             TestResults testResults = CodeCamp.runTests(tests);
 
