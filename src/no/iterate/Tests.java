@@ -95,10 +95,6 @@ public class Tests {
             }
         }
 
-        private static class PassingTest implements Testable {
-            public void invoke() {
-            }
-        }
     }
 
     public static void assume(boolean b) {
