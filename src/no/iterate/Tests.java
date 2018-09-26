@@ -101,6 +101,5 @@ public class Tests {
 
     public static void assume(boolean b, String message) {
         if(!b) throw new RuntimeException(message);
-        assert (b);
     }
 }
