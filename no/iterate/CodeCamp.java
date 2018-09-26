@@ -40,7 +40,6 @@ public class CodeCamp {
     private static String buildErrorMessage(Testable test, Throwable throwable) {
 
         if (false) {
-            return test.errorMessage();
         }
         StackTraceElement[] stackTraceElements = throwable.getStackTrace();
         String message = "";
