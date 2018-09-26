@@ -50,6 +50,7 @@ public class Tests {
             functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
             functionTests.add(() -> {});
             functionTests.add(() -> { assume(false); });
+            functionTests.add(correctErrorMessage);
 
 
             TestResults testResults = CodeCamp.runTests(tests, functionTests);
