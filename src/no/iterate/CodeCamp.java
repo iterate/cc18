@@ -63,12 +63,6 @@ public class CodeCamp {
         void invoke();
     }
 
-    public static class FailingTest implements Testable{
-        public void invoke() {
-            throw new RuntimeException("MyMessage");
-        }
-    }
-
     public static class PassingTest implements Testable{
         public void invoke() {
         }
@@ -84,7 +78,7 @@ public class CodeCamp {
         @Override
         public void invoke() {
             List<Testable> tests = new ArrayList<>();
-            tests.add(new FailingTest());
+            tests.add(new IntegrationTest.FailingTest());
 
             TestResults testResults = runTests(tests);
             assert(testResults.summary().contains("MyMessage"));
@@ -130,6 +124,12 @@ public class CodeCamp {
                 assert(testResults.summary().contains("CodeCamp.java"));
                 assert(testResults.summary().contains("(invoke)"));
 
+            }
+        }
+
+        public static class FailingTest implements Testable{
+            public void invoke() {
+                throw new RuntimeException("MyMessage");
             }
         }
     }
