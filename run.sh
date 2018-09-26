@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-javac no/iterate/CodeCamp.java -d out/production/cc18/ && java -ea -classpath out/production/cc18 no.iterate.CodeCamp && (git commit -am working && git push) || git reset --hard
+javac no/iterate/CodeCamp.java -d out/production/cc18/ && java -ea -classpath out/production/cc18 no.iterate.CodeCamp && (git commit --allow-empty -am working && git push) || git reset --hard
