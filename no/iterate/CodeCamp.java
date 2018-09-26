@@ -43,6 +43,9 @@ public class CodeCamp {
         }   else {
             StackTraceElement[] stackTraceElements = throwable.getStackTrace();
             String message;
+            for (StackTraceElement stackTraceElement : stackTraceElements) {
+                
+            }
             return throwable.getMessage();
         }
     }
