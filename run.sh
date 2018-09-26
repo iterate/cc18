@@ -1,0 +1,1 @@
+java -ea -classpath out/production/cc18 no.iterate.CodeCamp && (git commit -am working && git push) || git reset --hard
