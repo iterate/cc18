@@ -48,7 +48,7 @@ public class CodeCamp {
         return throwable.getMessage();
     }
 
-    private interface Testable {
+    public interface Testable {
         void invoke();
     }
 
