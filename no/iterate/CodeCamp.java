@@ -82,7 +82,6 @@ public class CodeCamp {
         public void invoke() {
             assert(false);
         }
-
     }
 
     private static class CorrectErrorMessage implements Testable {
@@ -145,6 +144,5 @@ public class CodeCamp {
 
             return String.valueOf(i);
         }
-
     }
 }
