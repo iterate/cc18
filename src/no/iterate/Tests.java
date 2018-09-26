@@ -94,7 +94,6 @@ public class Tests {
                 assume(false);
             }
         }
-
     }
 
     public static void assume(boolean b) {
