@@ -71,38 +71,6 @@ public class Tests {
             assume(testResults.numberOfTestsFailed == 2);
         }
 
-        private static class CorrectAssertErrorMessage implements Testable {
-            @Override
-            public void invoke() {
-                List<Testable> tests = new ArrayList<>();
-                tests.add(new AssertFailedTest());
-
-                List<Runnable> functionTests = new ArrayList<>();
-                functionTests.add(() -> { assume(false); });
-
-
-                TestResults testResults = CodeCamp.runTests(tests, functionTests);
-                assume(testResults.summary().contains("CodeCamp.java"));
-                assume(testResults.summary().contains("(invoke)"));
-
-            }
-        }
-
-        private static class CorrectErrorMessage implements Testable {
-            @Override
-            public void invoke() {
-                List<Testable> tests = new ArrayList<>();
-                tests.add(new CodeCamp.AnonymousFunction(() -> { throw new RuntimeException("MyMessage"); }));
-
-                List<Runnable> functionTests = new ArrayList<>();
-                functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
-
-                TestResults testResults = CodeCamp.runTests(tests, functionTests);
-                assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
-
-            }
-        }
-
         private static class AssertFailedTest implements Testable {
             public void invoke() {
                 assume(false);
