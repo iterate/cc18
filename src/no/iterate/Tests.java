@@ -51,8 +51,8 @@ public class Tests {
 
         System.out.println("2 Test results summary " + testResults.summary());
 
-        assume(testResults.summary().contains("CodeCamp.java"));
-        assume(testResults.summary().contains("(run)"));
+        assume(testResults.summary().contains("Tests.java"));
+        assume(testResults.summary().contains("(assume)"));
     };
 
     public static Runnable correctAssertErrorMessage = () -> {
