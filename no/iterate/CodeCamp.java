@@ -136,11 +136,12 @@ public class CodeCamp {
             tests.add(new PassingTest());
             tests.add(new AssertFailedTest());
             tests.add(new EmptyTestResult());
+            tests.add(new CorrectErrorMessage());
 
             TestResults testResults = runTests(tests);
 
             assert(testResults.numberOfTests == tests.size());
-            assert(testResults.numberOfTestsFailed == 2);
+            assert(testResults.numberOfTestsFailed == 3);
         }
 
         @Override
