@@ -45,7 +45,7 @@ public class CodeCamp {
             msg = stackTraceElement.getFileName();
             message.concat(msg);
         }
-        return message;
+        return message + " " + throwable.getMessage();
     }
 
     public interface Testable {
@@ -113,7 +113,7 @@ public class CodeCamp {
             tests.add(new PassingTest());
             tests.add(new AssertFailedTest());
             tests.add(new EmptyTestResult());
-            //tests.add(new CorrectErrorMessage());
+            tests.add(new CorrectErrorMessage());
 
             TestResults testResults = runTests(tests);
 
