@@ -81,8 +81,6 @@ public class Tests {
                 assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
 
             }
-
-           
         }
 
         private static class AssertFailedTest implements Testable {
