@@ -42,10 +42,10 @@ public class CodeCamp {
         StringBuilder message = new StringBuilder();
         for (StackTraceElement stackTraceElement : stackTraceElements) {
             String filename = stackTraceElement.getFileName();
-            int linenumber = stackTraceElement.getLineNumber();
+            int lineNumber = stackTraceElement.getLineNumber();
             String methodName = stackTraceElement.getMethodName();
             
-            message.append(filename + ":" + linenumber + " " + methodName + " \n");
+            message.append(filename + ":" + lineNumber + " " + methodName + " \n");
         }
         return message + " " + throwable.getMessage();
     }
