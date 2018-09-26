@@ -31,7 +31,7 @@ public class CodeCamp {
                 test.invoke();
             } catch (Throwable e) {
                 testResults.numberOfTestsFailed++;
-                testResults.exceptions.add(buildErrorMessage(test, null));
+                testResults.exceptions.add(buildErrorMessage(test, e));
             }
         }
         return testResults;
