@@ -10,7 +10,9 @@ public class CodeCamp {
         tests.add(new Tests.IntegrationTest());
         tests.add(new Tests.FizzBuzz());
 
-        report(runTests(tests, null));
+        List<Runnable> functionTests = new ArrayList<>();
+
+        report(runTests(tests, functionTests));
     }
 
     public static class AnonymousFunction implements Testable {
@@ -46,6 +48,10 @@ public class CodeCamp {
                 testResults.numberOfTestsFailed++;
                 testResults.exceptions.add(buildErrorMessage(e));
             }
+        }
+
+        for (Runnable test : testFunctions) {
+            
         }
 
         return testResults;
