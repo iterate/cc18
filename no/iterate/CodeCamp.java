@@ -39,7 +39,7 @@ public class CodeCamp {
 
     private static String buildErrorMessage(Testable test, Throwable throwable) {
         if (throwable.getMessage() == null) {
-            
+            return test.errorMessage();
         }
 
         return test.errorMessage();
