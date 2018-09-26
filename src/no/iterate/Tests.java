@@ -64,16 +64,6 @@ public class Tests {
             }
         }
 
-        private static class EmptyTestResult implements Testable {
-
-            @Override
-            public void invoke() {
-                TestResults sample = new TestResults();
-
-                assume(sample.summary().isEmpty());
-            }
-        }
-
         private static class CorrectErrorMessage implements Testable {
             @Override
             public void invoke() {
