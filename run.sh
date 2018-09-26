@@ -10,4 +10,4 @@ echo "        \/            \/    \/        \/     \/      \/|__|              \
 
 
 
-javac src/no/iterate/Testable.java src/no/iterate/TestResults.java src/no/iterate/Tests.java src/no/iterate/CodeCamp.java -d out/production/cc18/ && java -ea -classpath out/production/cc18 no.iterate.CodeCamp && git commit -am working || git reset --hard
+javac src/no/iterate/Testable.java src/no/iterate/TestResults.java src/no/iterate/Tests.java src/no/iterate/CodeCamp.java -d out/production/cc18/ && java -classpath out/production/cc18 no.iterate.CodeCamp && git commit -am working || git reset --hard
