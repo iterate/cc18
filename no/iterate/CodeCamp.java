@@ -41,10 +41,8 @@ public class CodeCamp {
         if (throwable.getMessage() == null) {
             return test.errorMessage();
         }   else {
-            
+            return test.errorMessage();
         }
-
-        return test.errorMessage();
     }
 
     private interface Testable {
