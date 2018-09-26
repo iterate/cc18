@@ -88,7 +88,7 @@ public class Tests {
     }
 
     public static void assume(boolean b) {
-        assert (b);
+        assume(b, "");
     }
 
     public static void assume(boolean b, String message) {
