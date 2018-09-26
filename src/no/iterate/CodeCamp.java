@@ -31,7 +31,7 @@ public class CodeCamp {
 
     public static TestResults runTests(List<WrongTestable> tests) {
         TestResults testResults = new TestResults();
-        for (WrongTestable test : tests) {
+        for (Testable test : tests) {
             try {
                 testResults.numberOfTests++;
                 test.invoke();
