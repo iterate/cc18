@@ -61,8 +61,6 @@ public class Tests {
         List<Runnable> functionTests = new ArrayList<>();
         functionTests.add(() -> { assume(false); });
 
-
-
         TestResults testResults = CodeCamp.runTests(tests2, functionTests);
 
         System.out.println("1 Test results summary " + testResults.summary());
