@@ -50,8 +50,7 @@ public class CodeCamp {
         public String summary() {
             return exceptions
                     .stream()
-                    .reduce((exceptionsString, exception) -> exceptionsString.concat(exception))
-                    .orElse("");
+                    .reduce("", (exceptionsString, exception) -> exceptionsString.concat(exception));
         }
     }
 
