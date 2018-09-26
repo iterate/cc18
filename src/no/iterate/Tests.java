@@ -80,7 +80,7 @@ public class Tests {
             TestResults testResults = CodeCamp.runTests(tests, functionTests);
 
             assert(testResults.numberOfTests == functionTests.size());
-            assume(testResults.numberOfTestsFailed == 0, "the number of tests should be 1");
+            assume(testResults.numberOfTestsFailed == 0, "the number of tests should be 0");
         }
 
     }
