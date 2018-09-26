@@ -49,7 +49,7 @@ public class Tests {
 
         TestResults testResults = CodeCamp.runTests(tests2, functionTests);
 
-        System.out.println(testResults.summary());
+        System.out.println("2 Test results summary " + testResults.summary());
 
         assume(testResults.summary().contains("CodeCamp.java"));
         assume(testResults.summary().contains("(run)"));
