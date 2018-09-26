@@ -2,7 +2,6 @@ package no.iterate;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.BiFunction;
 
 public class CodeCamp {
 
@@ -11,7 +10,7 @@ public class CodeCamp {
         tests.add(new Tests.IntegrationTest());
         tests.add(new Tests.FizzBuzz());
 
-        report(runTests(tests));
+        report(runTests(tests, null));
     }
 
     public static class AnonymousFunction implements Testable {
@@ -37,7 +36,7 @@ public class CodeCamp {
         }
     }
 
-    public static TestResults runTests(List<Testable> tests) {
+    public static TestResults runTests(List<Testable> tests, List<Runnable> testFunctions) {
         TestResults testResults = new TestResults();
         for (Testable test : tests) {
             try {
