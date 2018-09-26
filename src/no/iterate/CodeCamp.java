@@ -72,7 +72,7 @@ public class CodeCamp {
         void invoke();
     }
 
-    public static class IntegrationTest implements WrongTestable {
+    public static class IntegrationTest implements Testable {
 
         @Override
         public void invoke() {
