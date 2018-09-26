@@ -94,7 +94,7 @@ public class CodeCamp {
         }
     }
 
-    private static class EmptyTestResult implements Testable {
+    public static class EmptyTestResult implements Testable {
 
         @Override
         public void invoke() {
