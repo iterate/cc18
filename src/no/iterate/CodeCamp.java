@@ -113,8 +113,7 @@ public class CodeCamp {
             tests.add(new EmptyTestResult());
             tests.add(new CorrectErrorMessage());
             tests.add(new CorrectAssertErrorMessage());
-
-
+            
             TestResults testResults = runTests(tests);
 
             assert(testResults.numberOfTests == tests.size());
