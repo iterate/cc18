@@ -45,6 +45,7 @@ public class CodeCamp {
             String message;
             for (StackTraceElement stackTraceElement : stackTraceElements) {
                 String msg;
+                msg = stackTraceElement.getFileName();
             }
             return throwable.getMessage();
         }
