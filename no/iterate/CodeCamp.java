@@ -95,7 +95,6 @@ public class CodeCamp {
             assert(testResults.summary().contains("MyMessage"));
 
         }
-
     }
 
     private static class EmptyTestResult implements Testable {
@@ -124,7 +123,6 @@ public class CodeCamp {
             assert(testResults.numberOfTests == tests.size());
             assert(testResults.numberOfTestsFailed == 2);
         }
-
     }
 
     private static class FizzBuzz implements Testable {
