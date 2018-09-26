@@ -6,7 +6,7 @@ import java.util.List;
 public class CodeCamp {
 
     public static void main(String[] args) {
-        List<WrongTestable> tests = new ArrayList<>();
+        List<Testable> tests = new ArrayList<>();
         tests.add(new IntegrationTest());
         tests.add(new Tests.FizzBuzz());
 
@@ -32,7 +32,7 @@ public class CodeCamp {
         }
     }
 
-    public static TestResults runTests(List<WrongTestable> tests) {
+    public static TestResults runTests(List<Testable> tests) {
         TestResults testResults = new TestResults();
         for (Testable test : tests) {
             try {
@@ -76,7 +76,7 @@ public class CodeCamp {
 
         @Override
         public void invoke() {
-            List<WrongTestable> tests = new ArrayList<>();
+            List<Testable> tests = new ArrayList<>();
             tests.add(new FailingTest());
             tests.add(new PassingTest());
             tests.add(new AssertFailedTest());
@@ -94,7 +94,7 @@ public class CodeCamp {
         private static class CorrectAssertErrorMessage implements WrongTestable {
             @Override
             public void invoke() {
-                List<WrongTestable> tests = new ArrayList<>();
+                List<Testable> tests = new ArrayList<>();
                 tests.add(new AssertFailedTest());
 
                 TestResults testResults = runTests(tests);
@@ -123,7 +123,7 @@ public class CodeCamp {
         private static class CorrectErrorMessage implements WrongTestable {
             @Override
             public void invoke() {
-                List<WrongTestable> tests = new ArrayList<>();
+                List<Testable> tests = new ArrayList<>();
                 tests.add(new FailingTest());
 
                 TestResults testResults = runTests(tests);
