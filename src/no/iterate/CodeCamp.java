@@ -74,18 +74,6 @@ public class CodeCamp {
         }
     }
 
-    private static class CorrectErrorMessage implements Testable {
-        @Override
-        public void invoke() {
-            List<Testable> tests = new ArrayList<>();
-            tests.add(new IntegrationTest.FailingTest());
-
-            TestResults testResults = runTests(tests);
-            assert(testResults.summary().contains("MyMessage"));
-
-        }
-    }
-
     public static class IntegrationTest implements Testable {
 
         @Override
@@ -130,6 +118,18 @@ public class CodeCamp {
                 TestResults sample = new TestResults();
 
                 assert(sample.summary().isEmpty());
+            }
+        }
+
+        private static class CorrectErrorMessage implements Testable {
+            @Override
+            public void invoke() {
+                List<Testable> tests = new ArrayList<>();
+                tests.add(new FailingTest());
+
+                TestResults testResults = runTests(tests);
+                assert(testResults.summary().contains("MyMessage"));
+
             }
         }
     }
