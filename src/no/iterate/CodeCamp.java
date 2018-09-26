@@ -6,14 +6,14 @@ import java.util.List;
 public class CodeCamp {
 
     public static void main(String[] args) {
-        List<Testable> tests = new ArrayList<>();
+        List<WrongTestable> tests = new ArrayList<>();
         tests.add(new IntegrationTest());
         tests.add(new Tests.FizzBuzz());
 
         report(runTests(tests));
     }
 
-    public static class AnonymousFunction implements Testable{
+    public static class AnonymousFunction implements WrongTestable {
         public void invoke() {
 
         }
@@ -29,9 +29,9 @@ public class CodeCamp {
         }
     }
 
-    public static TestResults runTests(List<Testable> tests) {
+    public static TestResults runTests(List<WrongTestable> tests) {
         TestResults testResults = new TestResults();
-        for (Testable test : tests) {
+        for (WrongTestable test : tests) {
             try {
                 testResults.numberOfTests++;
                 test.invoke();
@@ -65,15 +65,15 @@ public class CodeCamp {
         return filename + ":" + lineNumber + " (" + methodName + ") \n";
     }
 
-    public interface Testable {
+    public interface WrongTestable {
         void invoke();
     }
 
-    public static class IntegrationTest implements Testable {
+    public static class IntegrationTest implements WrongTestable {
 
         @Override
         public void invoke() {
-            List<Testable> tests = new ArrayList<>();
+            List<WrongTestable> tests = new ArrayList<>();
             tests.add(new FailingTest());
             tests.add(new PassingTest());
             tests.add(new AssertFailedTest());
@@ -88,10 +88,10 @@ public class CodeCamp {
             assert(testResults.numberOfTestsFailed == 2);
         }
 
-        private static class CorrectAssertErrorMessage implements Testable {
+        private static class CorrectAssertErrorMessage implements WrongTestable {
             @Override
             public void invoke() {
-                List<Testable> tests = new ArrayList<>();
+                List<WrongTestable> tests = new ArrayList<>();
                 tests.add(new AssertFailedTest());
 
                 TestResults testResults = runTests(tests);
@@ -101,13 +101,13 @@ public class CodeCamp {
             }
         }
 
-        private static class FailingTest implements Testable{
+        private static class FailingTest implements WrongTestable {
             public void invoke() {
                 throw new RuntimeException("MyMessage");
             }
         }
 
-        public static class EmptyTestResult implements Testable {
+        public static class EmptyTestResult implements WrongTestable {
 
             @Override
             public void invoke() {
@@ -117,10 +117,10 @@ public class CodeCamp {
             }
         }
 
-        private static class CorrectErrorMessage implements Testable {
+        private static class CorrectErrorMessage implements WrongTestable {
             @Override
             public void invoke() {
-                List<Testable> tests = new ArrayList<>();
+                List<WrongTestable> tests = new ArrayList<>();
                 tests.add(new FailingTest());
 
                 TestResults testResults = runTests(tests);
@@ -129,13 +129,13 @@ public class CodeCamp {
             }
         }
 
-        public static class AssertFailedTest implements Testable {
+        public static class AssertFailedTest implements WrongTestable {
             public void invoke() {
                 assert(false);
             }
         }
 
-        public static class PassingTest implements Testable{
+        public static class PassingTest implements WrongTestable {
             public void invoke() {
             }
         }
