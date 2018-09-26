@@ -12,6 +12,6 @@ class TestResults {
     public String summary() {
         return exceptions
                 .stream()
-                .reduce(null, (exceptionsString, exception) -> exceptionsString.concat(exception));
+                .reduce("", (exceptionsString, exception) -> exceptionsString.concat(exception));
     }
 }
