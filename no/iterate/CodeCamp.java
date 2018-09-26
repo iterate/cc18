@@ -54,7 +54,7 @@ public class CodeCamp {
 
     private static class FailingTest implements Testable{
         public void invoke() {
-            throw new RuntimeException();
+            throw new RuntimeException("MyMessage");
         }
     }
 
