@@ -103,7 +103,6 @@ public class CodeCamp {
             tests.add(new FailingTest());
 
             TestResults testResults = runTests(tests);
-            System.out.println(testResults.summary());
             assert(testResults.summary().contains("MyMessage"));
 
         }
