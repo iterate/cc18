@@ -72,7 +72,7 @@ public class Tests {
             @Override
             public void invoke() {
                 List<Testable> tests = new ArrayList<>();
-                tests.add(new CodeCamp.AnonymousFunction(() -> { throw new RuntimeException("MyMessage"); }));
+                tests.add(new FailingTest());
 
                 TestResults testResults = CodeCamp.runTests(tests);
                 assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
@@ -97,6 +97,10 @@ public class Tests {
     }
 
     public static void assume(boolean b) {
+        assert (b);
+    }
+
+    public static void assume(boolean b, String message) {
         assert (b);
     }
 }
