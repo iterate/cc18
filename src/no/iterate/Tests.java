@@ -100,6 +100,7 @@ public class Tests {
     }
 
     public static void assume(boolean b, String message) {
+        if(!b)
         assert (b);
     }
 }
