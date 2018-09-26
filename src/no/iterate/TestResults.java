@@ -11,6 +11,9 @@ class TestResults {
 
     public String summary() {
         StringBuilder stringBuilder = new StringBuilder();
+        for (String exception : exceptions) {
+            
+        }
         return exceptions
                 .stream()
                 .reduce("", (exceptionsString, exception) -> exceptionsString.concat(exception));
