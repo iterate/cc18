@@ -77,9 +77,6 @@ public class CodeCamp {
             throw new RuntimeException("MyMessage");
         }
 
-        public String errorMessage() {
-            return "";
-        }
     }
 
     private static class PassingTest implements Testable{
