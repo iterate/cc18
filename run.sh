@@ -9,7 +9,6 @@ echo " \______  /\____/\____ |\___  >\______  (____  /__|_|  /   __/|___\______ 
 echo "        \/            \/    \/        \/     \/      \/|__|              \/ "
 
 
-echo "FILES YO: $FILES !!!"
 
 javac /Users/oddmunds/dev/cc18/src/no/iterate/Tests.java /Users/oddmunds/dev/cc18/src/no/iterate/CodeCamp.java -d out/production/cc18/ && java -ea -classpath out/production/cc18 no.iterate.CodeCamp \
     && (git commit -am working \
