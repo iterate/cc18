@@ -84,9 +84,6 @@ public class CodeCamp {
             assert(false);
         }
 
-        public String errorMessage() {
-            return "Assert did not fail";
-        }
     }
 
     private static class CorrectErrorMessage implements Testable {
