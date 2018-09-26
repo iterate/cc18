@@ -39,11 +39,11 @@ public class CodeCamp {
 
     private static String buildErrorMessage(Throwable throwable) {
         StackTraceElement[] stackTraceElements = throwable.getStackTrace();
-        String message = "";
+        StringBuilder message = new StringBuilder();
         for (StackTraceElement stackTraceElement : stackTraceElements) {
             String msg;
             msg = stackTraceElement.getFileName();
-            message.concat(msg);
+            message.append(msg);
         }
         return message + " " + throwable.getMessage();
     }
