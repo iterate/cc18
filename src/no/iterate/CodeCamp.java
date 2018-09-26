@@ -138,7 +138,7 @@ public class CodeCamp {
             }
         }
 
-        public static class PassingTest implements WrongTestable {
+        public static class PassingTest implements Testable {
             public void invoke() {
             }
         }
