@@ -41,9 +41,9 @@ public class CodeCamp {
         StackTraceElement[] stackTraceElements = throwable.getStackTrace();
         StringBuilder message = new StringBuilder();
         for (StackTraceElement stackTraceElement : stackTraceElements) {
-            String msg;
-            msg = stackTraceElement.getFileName();
-            message.append(msg + " ");
+            String filename = stackTraceElement.getFileName();
+
+            message.append(filename + " ");
         }
         return message + " " + throwable.getMessage();
     }
