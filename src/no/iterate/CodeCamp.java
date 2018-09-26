@@ -53,6 +53,8 @@ public class CodeCamp {
     private static String buildErrorMessage(Throwable throwable) {
         StackTraceElement[] stackTraceElements = throwable.getStackTrace();
         StringBuilder message = new StringBuilder();
+        
+        message.append(throwable.getMessage());
 
         message.append("\n!!!\nTest failed at: " + printStackTraceMessage(stackTraceElements[0]));
         message.append("\nStack trace:\n");
