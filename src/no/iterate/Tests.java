@@ -31,7 +31,6 @@ public class Tests {
         @Override
         public void invoke() {
             List<Testable> tests = new ArrayList<>();
-            tests.add(new PassingTest());
             tests.add(new AssertFailedTest());
             tests.add(new EmptyTestResult());
             tests.add(new CorrectErrorMessage());
