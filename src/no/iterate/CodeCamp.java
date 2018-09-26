@@ -7,7 +7,6 @@ public class CodeCamp {
 
     public static void main(String[] args) {
         List<Testable> tests = new ArrayList<>();
-        tests.add(new Tests.IntegrationTest());
         tests.add(new Tests.FizzBuzz());
 
         List<Runnable> functionTests = new ArrayList<>();
