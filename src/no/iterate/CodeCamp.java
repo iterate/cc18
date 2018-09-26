@@ -15,7 +15,10 @@ public class CodeCamp {
     }
 
     public static class AnonymousFunction implements Testable {
+        private final BiFunction<Void, ?, Void> function;
+
         public AnonymousFunction(BiFunction<Void, ?, Void> function) {
+            this.function = function;
         }
 
         public void invoke() {
