@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tests {
+    public Runnable integrationTest = () -> {};
+
     public static class FizzBuzz implements Testable {
+
+
         public void invoke() {
             assume(fizzBuzz(1).equals("1"));
             assume(fizzBuzz(2).equals("2"));
