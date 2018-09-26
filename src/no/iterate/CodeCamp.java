@@ -41,14 +41,18 @@ public class CodeCamp {
         StackTraceElement[] stackTraceElements = throwable.getStackTrace();
         StringBuilder message = new StringBuilder();
         for (StackTraceElement stackTraceElement : stackTraceElements) {
-            String filename = stackTraceElement.getFileName();
-            int lineNumber = stackTraceElement.getLineNumber();
-            String methodName = stackTraceElement.getMethodName();
-
-            final String stackTracePrinted = filename + ":" + lineNumber + " " + methodName + " \n";
+            final String stackTracePrinted = printStackTraceMessage(stackTraceElement);
             message.append(stackTracePrinted);
         }
         return message + " " + throwable.getMessage();
+    }
+
+    private static String printStackTraceMessage(StackTraceElement stackTraceElement) {
+        String filename = stackTraceElement.getFileName();
+        int lineNumber = stackTraceElement.getLineNumber();
+        String methodName = stackTraceElement.getMethodName();
+
+        return filename + ":" + lineNumber + " " + methodName + " \n";
     }
 
     public interface Testable {
