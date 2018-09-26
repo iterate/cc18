@@ -107,10 +107,11 @@ public class CodeCamp {
             tests.add(new FailingTest());
             tests.add(new PassingTest());
             tests.add(new AssertFailedTest());
+            tests.add(new EmptyTestResult());
 
             TestResults testResults = runTests(tests);
 
-            assert(testResults.numberOfTests == 3);
+            assert(testResults.numberOfTests == 4);
             assert(testResults.numberOfTestsFailed == 2);
         }
     }
