@@ -62,7 +62,11 @@ public class Tests {
         functionTests.add(() -> { assume(false); });
 
 
+
         TestResults testResults = CodeCamp.runTests(tests2, functionTests);
+
+        System.out.println("1 Test results summary " + testResults.summary());
+
         assume(testResults.summary().contains("CodeCamp.java"), "test result summary should contain \"CodeCamp.java\"");
         assume(testResults.summary().contains("(invoke)"), "test result summary should contain \"(invoke)\"");
     };
