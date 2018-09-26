@@ -36,7 +36,14 @@ public class Tests {
             tests.add(new CodeCamp.AnonymousFunction(() -> {return;}));
 
             Runnable correctErrorMessage = () -> {
+                List<Testable> tests2 = new ArrayList<>();
+                tests2.add(new CodeCamp.AnonymousFunction(() -> { throw new RuntimeException("MyMessage"); }));
 
+                List<Runnable> functionTests = new ArrayList<>();
+                functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
+
+                TestResults testResults = CodeCamp.runTests(tests2, functionTests);
+                assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
             };
 
             List<Runnable> functionTests = new ArrayList<>();
