@@ -43,6 +43,8 @@ public class CodeCamp {
         public int numberOfTests;
         public int numberOfTestsFailed;
 
+        public List<String> exceptions;
+
         public String summary() {
             return "RuntimeException";
         }
