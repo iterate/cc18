@@ -45,6 +45,19 @@ public class Tests {
                 assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
             };
 
+            Runnable correctAssertErrorMessage = () -> {
+                List<Testable> tests2 = new ArrayList<>();
+                tests2.add(new AssertFailedTest());
+
+                List<Runnable> functionTests = new ArrayList<>();
+                functionTests.add(() -> { assume(false); });
+
+
+                TestResults testResults = CodeCamp.runTests(tests2, functionTests);
+                assume(testResults.summary().contains("CodeCamp.java"));
+                assume(testResults.summary().contains("(invoke)"));
+            };
+
             List<Runnable> functionTests = new ArrayList<>();
             functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
             functionTests.add(() -> {});
