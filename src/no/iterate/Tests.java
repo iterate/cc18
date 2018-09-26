@@ -39,6 +39,9 @@ public class Tests {
             tests.add(new CorrectAssertErrorMessage());
             tests.add(new CodeCamp.AnonymousFunction(() -> {return;}));
 
+            List<Runnable> functionTests = new ArrayList<>();
+            functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
+
             TestResults testResults = CodeCamp.runTests(tests);
 
             assert(testResults.numberOfTests == tests.size());
