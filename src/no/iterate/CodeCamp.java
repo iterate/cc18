@@ -13,7 +13,7 @@ public class CodeCamp {
         report(runTests(tests));
     }
 
-    public static class AnonymousFunction implements WrongTestable {
+    public static class AnonymousFunction implements Testable {
         public AnonymousFunction() {
         }
 
