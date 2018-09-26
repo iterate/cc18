@@ -137,7 +137,7 @@ public class CodeCamp {
 
         @Override
         public String errorMessage() {
-            return "";
+            return "Integrationstest failed!!!";
         }
     }
 
