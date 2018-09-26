@@ -51,7 +51,6 @@ public class CodeCamp {
 
     private interface Testable {
         void invoke();
-        String errorMessage();
     }
 
     private static class TestResults {
@@ -78,7 +77,6 @@ public class CodeCamp {
             throw new RuntimeException("MyMessage");
         }
 
-        @Override
         public String errorMessage() {
             return "";
         }
@@ -88,7 +86,6 @@ public class CodeCamp {
         public void invoke() {
         }
 
-        @Override
         public String errorMessage() {
             return "";
         }
@@ -99,7 +96,6 @@ public class CodeCamp {
             assert(false);
         }
 
-        @Override
         public String errorMessage() {
             return "Assert did not fail";
         }
@@ -116,7 +112,6 @@ public class CodeCamp {
 
         }
 
-        @Override
         public String errorMessage() {
             return "";
         }
@@ -131,7 +126,6 @@ public class CodeCamp {
             assert(sample.summary().isEmpty());
         }
 
-        @Override
         public String errorMessage() {
             return "";
         }
@@ -154,7 +148,6 @@ public class CodeCamp {
             assert(testResults.numberOfTestsFailed == 2);
         }
 
-        @Override
         public String errorMessage() {
             return "Integrationstest failed!!!";
         }
@@ -169,7 +162,6 @@ public class CodeCamp {
             assert(fizzBuzz(15).equals("FizzBuzz!"));
         }
 
-        @Override
         public String errorMessage() {
             return "";
         }
