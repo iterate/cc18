@@ -11,8 +11,6 @@ public class CodeCamp {
         tests.add(new FizzBuzz());
 
         report(runTests(tests));
-
-
     }
 
     public static void report(TestResults testResults) {
