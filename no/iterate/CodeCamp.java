@@ -112,9 +112,6 @@ public class CodeCamp {
 
         }
 
-        public String errorMessage() {
-            return "";
-        }
     }
 
     private static class EmptyTestResult implements Testable {
