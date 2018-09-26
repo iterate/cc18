@@ -63,11 +63,6 @@ public class CodeCamp {
         void invoke();
     }
 
-    public static class PassingTest implements Testable{
-        public void invoke() {
-        }
-    }
-
     public static class IntegrationTest implements Testable {
 
         @Override
@@ -130,6 +125,11 @@ public class CodeCamp {
         public static class AssertFailedTest implements Testable {
             public void invoke() {
                 assert(false);
+            }
+        }
+
+        public static class PassingTest implements Testable{
+            public void invoke() {
             }
         }
     }
