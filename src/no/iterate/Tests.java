@@ -64,7 +64,7 @@ public class Tests {
 
         TestResults testResults = CodeCamp.runTests(tests2, functionTests);
         assume(testResults.summary().contains("CodeCamp.java"));
-        assume(testResults.summary().contains("(invoke)"));
+        assume(testResults.summary().contains("(invoke)"), "test result summary should contain \"(invoke)\"");
     };
 
     public static class IntegrationTest implements Testable {
