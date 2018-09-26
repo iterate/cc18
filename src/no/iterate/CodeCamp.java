@@ -132,7 +132,7 @@ public class CodeCamp {
             }
         }
 
-        public static class AssertFailedTest implements Testable {
+        private static class AssertFailedTest implements Testable {
             public void invoke() {
                 assert(false);
             }
