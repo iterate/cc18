@@ -58,12 +58,6 @@ public class Tests {
             }
         }
 
-        private static class FailingTest implements Testable {
-            public void invoke() {
-                throw new RuntimeException("MyMessage");
-            }
-        }
-
         private static class EmptyTestResult implements Testable {
 
             @Override
