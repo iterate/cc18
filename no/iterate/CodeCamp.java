@@ -31,10 +31,14 @@ public class CodeCamp {
                 test.invoke();
             } catch (Throwable e) {
                 testResults.numberOfTestsFailed++;
-                testResults.exceptions.add(test.errorMessage());
+                testResults.exceptions.add(buildErrorMessage(test));
             }
         }
         return testResults;
+    }
+
+    private static String buildErrorMessage(Testable test) {
+        return test.errorMessage();
     }
 
     private interface Testable {
