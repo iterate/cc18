@@ -48,7 +48,10 @@ public class CodeCamp {
         public List<String> exceptions = new ArrayList<>();
 
         public String summary() {
-            return exceptions.stream().reduce((exceptionsString, exception) -> exceptionsString.concat(exception)).get();
+            return exceptions
+                    .stream()
+                    .reduce((exceptionsString, exception) -> exceptionsString.concat(exception))
+                    .get();
         }
     }
 
