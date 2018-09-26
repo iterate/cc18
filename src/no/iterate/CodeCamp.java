@@ -120,7 +120,7 @@ public class CodeCamp {
             }
         }
 
-        private static class CorrectErrorMessage implements WrongTestable {
+        private static class CorrectErrorMessage implements Testable {
             @Override
             public void invoke() {
                 List<Testable> tests = new ArrayList<>();
