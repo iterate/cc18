@@ -63,6 +63,7 @@ public class Tests {
             functionTests.add(() -> {});
             functionTests.add(() -> { assume(false); });
             functionTests.add(correctErrorMessage);
+            functionTests.add(correctAssertErrorMessage);
 
 
             TestResults testResults = CodeCamp.runTests(tests, functionTests);
