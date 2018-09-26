@@ -6,7 +6,6 @@ import java.util.List;
 public class Tests {
     public static Runnable integrationTest = () -> {
         List<Testable> tests = new ArrayList<>();
-        tests.add(new CodeCamp.AnonymousFunction(() -> {return;}));
 
         Runnable correctErrorMessage = () -> {
             List<Testable> tests2 = new ArrayList<>();
