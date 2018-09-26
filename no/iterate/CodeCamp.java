@@ -139,7 +139,7 @@ public class CodeCamp {
 
             TestResults testResults = runTests(tests);
 
-            assert(testResults.numberOfTests == 4);
+            assert(testResults.numberOfTests == tests.size());
             assert(testResults.numberOfTestsFailed == 2);
         }
 
