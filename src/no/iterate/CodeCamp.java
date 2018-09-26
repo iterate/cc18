@@ -110,7 +110,7 @@ public class CodeCamp {
             }
         }
 
-        public static class EmptyTestResult implements WrongTestable {
+        public static class EmptyTestResult implements Testable {
 
             @Override
             public void invoke() {
