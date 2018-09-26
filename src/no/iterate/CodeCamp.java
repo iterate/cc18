@@ -65,7 +65,7 @@ public class CodeCamp {
         return filename + ":" + lineNumber + " (" + methodName + ") \n";
     }
 
-    public interface WrongTestable {
+    public interface WrongTestable extends Testable{
         void invoke();
     }
 
