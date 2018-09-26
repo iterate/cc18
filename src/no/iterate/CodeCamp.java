@@ -15,6 +15,7 @@ public class CodeCamp {
 
     public static class AnonymousFunction implements Testable{
         public void invoke() {
+
         }
     }
 
@@ -79,6 +80,7 @@ public class CodeCamp {
             tests.add(new EmptyTestResult());
             tests.add(new CorrectErrorMessage());
             tests.add(new CorrectAssertErrorMessage());
+            tests.add(new AnonymousFunction());
             
             TestResults testResults = runTests(tests);
 
