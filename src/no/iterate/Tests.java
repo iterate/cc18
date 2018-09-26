@@ -31,7 +31,6 @@ public class Tests {
         @Override
         public void invoke() {
             List<Testable> tests = new ArrayList<>();
-            tests.add(new FailingTest());
             tests.add(new CodeCamp.AnonymousFunction(() -> { throw new RuntimeException("MyMessage"); }));
             tests.add(new PassingTest());
             tests.add(new AssertFailedTest());
@@ -43,7 +42,7 @@ public class Tests {
             TestResults testResults = CodeCamp.runTests(tests);
 
             assert(testResults.numberOfTests == tests.size());
-            assume(testResults.numberOfTestsFailed == 3);
+            assume(testResults.numberOfTestsFailed == 2);
         }
 
         private static class CorrectAssertErrorMessage implements Testable {
