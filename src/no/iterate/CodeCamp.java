@@ -11,6 +11,7 @@ public class CodeCamp {
         tests.add(new Tests.FizzBuzz());
 
         List<Runnable> functionTests = new ArrayList<>();
+        functionTests.add(() -> {});
 
         report(runTests(tests, functionTests));
     }

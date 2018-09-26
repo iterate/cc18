@@ -59,7 +59,6 @@ public class Tests {
             List<Testable> tests = new ArrayList<>();
 
             List<Runnable> functionTests = new ArrayList<>();
-            functionTests.add(() -> {});
             functionTests.add(correctErrorMessage);
             functionTests.add(correctAssertErrorMessage);
             
