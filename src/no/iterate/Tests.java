@@ -30,21 +30,21 @@ public class Tests {
         }
     }
 
+    private static Runnable correctErrorMessage = () -> {
+        List<Testable> tests2 = new ArrayList<>();
+
+        List<Runnable> functionTests = new ArrayList<>();
+        functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
+
+        TestResults testResults = CodeCamp.runTests(tests2, functionTests);
+        assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
+    };
+
     public static class IntegrationTest implements Testable {
 
         @Override
         public void invoke() {
             List<Testable> tests = new ArrayList<>();
-
-            Runnable correctErrorMessage = () -> {
-                List<Testable> tests2 = new ArrayList<>();
-
-                List<Runnable> functionTests = new ArrayList<>();
-                functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
-
-                TestResults testResults = CodeCamp.runTests(tests2, functionTests);
-                assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
-            };
 
             Runnable correctAssertErrorMessage = () -> {
                 List<Testable> tests2 = new ArrayList<>();
