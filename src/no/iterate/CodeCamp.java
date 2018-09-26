@@ -91,7 +91,7 @@ public class CodeCamp {
             assert(testResults.numberOfTestsFailed == 2);
         }
 
-        private static class CorrectAssertErrorMessage implements WrongTestable {
+        private static class CorrectAssertErrorMessage implements Testable {
             @Override
             public void invoke() {
                 List<Testable> tests = new ArrayList<>();
