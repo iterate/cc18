@@ -9,13 +9,7 @@ public class CodeCamp {
         List<Testable> tests = new ArrayList<>();
         tests.add(new IntegrationTest());
         tests.add(new FizzBuzz());
-
-        List<String> numbers = new ArrayList<>();
-        numbers.add("1");
-        numbers.add("1");
-
-        System.out.println(numbers.stream().reduce("0", (x, y) -> x.concat(y)));
-
+        
         report(runTests(tests));
     }
 
