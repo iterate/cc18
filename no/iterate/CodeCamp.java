@@ -104,7 +104,7 @@ public class CodeCamp {
         }
     }
 
-    private static class IntegrationTest implements Testable {
+    public static class IntegrationTest implements Testable {
 
         @Override
         public void invoke() {
