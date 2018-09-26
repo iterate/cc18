@@ -83,7 +83,7 @@ public class CodeCamp {
 
         @Override
         public String errorMessage() {
-            return "";
+            return "Assert did not fail";
         }
     }
 
