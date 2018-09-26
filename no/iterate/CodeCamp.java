@@ -24,7 +24,7 @@ public class CodeCamp {
     }
 
     public static TestResults runTests(List<Testable> tests) {
-        TestResults testResults = new TestResults();
+        TestResults testResults = new TestResults(0, 0, new ArrayList<>());
         for (Testable test : tests) {
             try {
                 testResults.numberOfTests++;
@@ -55,6 +55,12 @@ public class CodeCamp {
     }
 
     private static class TestResults {
+        public TestResults(int numberOfTests, int numberOfTestsFailed, List<String> exceptions) {
+            this.numberOfTests = numberOfTests;
+            this.numberOfTestsFailed = numberOfTestsFailed;
+            this.exceptions = exceptions;
+        }
+
         public int numberOfTests;
         public int numberOfTestsFailed;
 
@@ -120,7 +126,7 @@ public class CodeCamp {
 
         @Override
         public void invoke() {
-            TestResults sample = new TestResults();
+            TestResults sample = new TestResults(0, 0, new ArrayList<>());
 
             assert(sample.summary().isEmpty());
         }
