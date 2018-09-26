@@ -72,6 +72,7 @@ public class CodeCamp {
             tests.add(new FailingTest());
 
             TestResults testResults = runTests(tests);
+            assert(testResults.summary().contains("RuntimeException"));
 
         }
     }
