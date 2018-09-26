@@ -13,6 +13,11 @@ public class CodeCamp {
         report(runTests(tests));
     }
 
+    public static class AnonymousFunction implements Testable{
+        public void invoke() {
+        }
+    }
+
     public static void report(TestResults testResults) {
         System.out.println("Tests run: " + testResults.numberOfTests);
         System.out.println("Tests failed: " + testResults.numberOfTestsFailed);
