@@ -9,6 +9,7 @@ echo " \______  /\____/\____ |\___  >\______  (____  /__|_|  /   __/|___\______ 
 echo "        \/            \/    \/        \/     \/      \/|__|              \/ "
 
 
+echo $FILES
 
 javac src/no/iterate/CodeCamp.java -d out/production/cc18/ && java -ea -classpath out/production/cc18 no.iterate.CodeCamp \
     && (git commit -am working \
