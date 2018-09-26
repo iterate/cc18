@@ -40,7 +40,7 @@ public class Tests {
         assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
     };
 
-    private static Runnable correctAssertErrorMessage = () -> {
+    public static Runnable correctAssertErrorMessage = () -> {
         List<Testable> tests2 = new ArrayList<>();
 
         List<Runnable> functionTests = new ArrayList<>();
