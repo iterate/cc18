@@ -102,7 +102,7 @@ public class Tests {
         }
     }
 
-    private static void assume(boolean b) {
+    public static void assume(boolean b) {
         assert (b);
     }
 }
