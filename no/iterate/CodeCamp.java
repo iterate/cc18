@@ -69,13 +69,11 @@ public class CodeCamp {
         public void invoke() {
             throw new RuntimeException("MyMessage");
         }
-
     }
 
     private static class PassingTest implements Testable{
         public void invoke() {
         }
-
     }
 
     private static class AssertFailedTest implements Testable {
