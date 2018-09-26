@@ -104,6 +104,18 @@ public class CodeCamp {
         }
     }
 
+    private static class CorrectAssertErrorMessage implements Testable {
+        @Override
+        public void invoke() {
+            List<Testable> tests = new ArrayList<>();
+            tests.add(new AssertFailedTest());
+
+            TestResults testResults = runTests(tests);
+            assert(testResults.summary().contains("CodeCamp.java"));
+
+        }
+    }
+
     public static class IntegrationTest implements Testable {
 
         @Override
@@ -114,6 +126,7 @@ public class CodeCamp {
             tests.add(new AssertFailedTest());
             tests.add(new EmptyTestResult());
             tests.add(new CorrectErrorMessage());
+
 
             TestResults testResults = runTests(tests);
 
