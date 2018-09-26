@@ -54,6 +54,10 @@ public class Tests {
                 List<Testable> tests = new ArrayList<>();
                 tests.add(new AssertFailedTest());
 
+                List<Runnable> functionTests = new ArrayList<>();
+                functionTests.add(() -> { assume(false); });
+
+
                 TestResults testResults = CodeCamp.runTests(tests, null);
                 assume(testResults.summary().contains("CodeCamp.java"));
                 assume(testResults.summary().contains("(invoke)"));
