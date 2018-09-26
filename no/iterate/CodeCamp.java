@@ -51,7 +51,7 @@ public class CodeCamp {
             return exceptions
                     .stream()
                     .reduce((exceptionsString, exception) -> exceptionsString.concat(exception))
-                    .get();
+                    .orElse("");
         }
     }
 
