@@ -106,7 +106,6 @@ public class CodeCamp {
 
             assert(sample.summary().isEmpty());
         }
-
     }
 
     private static class IntegrationTest implements Testable {
