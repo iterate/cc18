@@ -14,6 +14,7 @@ class TestResults {
         for (String exception : exceptions) {
             stringBuilder.append(exception);
         }
+        stringBuilder.toString();
         return exceptions
                 .stream()
                 .reduce("", (exceptionsString, exception) -> exceptionsString.concat(exception));
