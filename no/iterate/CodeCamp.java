@@ -86,9 +86,6 @@ public class CodeCamp {
         public void invoke() {
         }
 
-        public String errorMessage() {
-            return "";
-        }
     }
 
     private static class AssertFailedTest implements Testable {
