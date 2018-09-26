@@ -123,6 +123,7 @@ public class CodeCamp {
 
             TestResults testResults = runTests(tests);
             assert(testResults.summary().contains("CodeCamp.java"));
+            assert(testResults.summary().contains("(invoke)"));
 
         }
     }
