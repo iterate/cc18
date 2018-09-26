@@ -30,6 +30,7 @@ public class CodeCamp {
                 test.invoke();
             } catch (Throwable e) {
                 testResults.numberOfTestsFailed++;
+                testResults.exceptions.add(e.getMessage());
             }
         }
         return testResults;
