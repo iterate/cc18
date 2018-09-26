@@ -40,6 +40,18 @@ public class Tests {
         assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
     };
 
+    public static Runnable correctAssertErrorMessage2 = () -> {
+        List<Testable> tests2 = new ArrayList<>();
+
+        List<Runnable> functionTests = new ArrayList<>();
+        functionTests.add(() -> { assume(false); });
+
+
+        TestResults testResults = CodeCamp.runTests(tests2, functionTests);
+        assume(testResults.summary().contains("CodeCamp.java"));
+        assume(testResults.summary().contains("(run)"));
+    };
+
     public static Runnable correctAssertErrorMessage = () -> {
         List<Testable> tests2 = new ArrayList<>();
 
