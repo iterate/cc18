@@ -12,7 +12,7 @@ class TestResults {
     public String summary() {
         StringBuilder stringBuilder = new StringBuilder();
         for (String exception : exceptions) {
-            
+            stringBuilder.append(exception);
         }
         return exceptions
                 .stream()
