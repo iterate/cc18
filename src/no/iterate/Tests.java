@@ -1,7 +1,7 @@
 package no.iterate;
 
 public class Tests {
-    public static class FizzBuzz implements CodeCamp.WrongTestable, Testable {
+    public static class FizzBuzz implements Testable {
         public void invoke() {
             assert(fizzBuzz(1).equals("1"));
             assert(fizzBuzz(2).equals("2"));
