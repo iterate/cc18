@@ -61,6 +61,16 @@ public class CodeCamp {
         }
     }
 
+    private static class CorrectErrorMessage implements Testable {
+        @Override
+        public void invoke() {
+            List<Testable> tests = new ArrayList<>();
+            tests.add(new FailingTest());
+
+            TestResults testResults = runTests(tests);
+        }
+    }
+
     private static class IntegrationTest implements Testable {
 
         @Override
