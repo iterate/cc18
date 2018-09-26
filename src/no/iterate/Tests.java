@@ -77,7 +77,10 @@ public class Tests {
                 List<Testable> tests = new ArrayList<>();
                 tests.add(new CodeCamp.AnonymousFunction(() -> { throw new RuntimeException("MyMessage"); }));
 
-                TestResults testResults = CodeCamp.runTests(tests, null);
+                List<Runnable> functionTests = new ArrayList<>();
+                functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
+
+                TestResults testResults = CodeCamp.runTests(tests, functionTests);
                 assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
 
             }

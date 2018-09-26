@@ -47,6 +47,7 @@ public class CodeCamp {
                 testResults.exceptions.add(buildErrorMessage(e));
             }
         }
+
         return testResults;
     }
 
