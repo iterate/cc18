@@ -46,7 +46,6 @@ public class Tests {
 
             Runnable correctAssertErrorMessage = () -> {
                 List<Testable> tests2 = new ArrayList<>();
-                tests2.add(new AssertFailedTest());
 
                 List<Runnable> functionTests = new ArrayList<>();
                 functionTests.add(() -> { assume(false); });
