@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-FILES=$(ls -lrt -d -1 $PWD/**/{*,.*} | grep ".java$" | tr '' '')
+FILES=$(ls -lrt -d -1 $PWD/**/{*,.*} | grep ".java$" | tr '\n' 'honk')
 
 echo "_________            .___     _________                       ____  ______  "
 echo "\_   ___ \  ____   __| _/____ \_   ___ \_____    _____ ______/_   |/  __  \ "
