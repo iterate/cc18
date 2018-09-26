@@ -58,7 +58,7 @@ public class CodeCamp {
 
         System.out.println(stackTraceElement.toString());
 
-        return filename + ":" + lineNumber + " " + methodName + " \n";
+        return filename + ":" + lineNumber + " (" + methodName + ") \n";
     }
 
     public interface Testable {
