@@ -40,23 +40,25 @@ public class Tests {
         assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
     };
 
+    private static Runnable correctAssertErrorMessage = () -> {
+        List<Testable> tests2 = new ArrayList<>();
+
+        List<Runnable> functionTests = new ArrayList<>();
+        functionTests.add(() -> { assume(false); });
+
+
+        TestResults testResults = CodeCamp.runTests(tests2, functionTests);
+        assume(testResults.summary().contains("CodeCamp.java"));
+        assume(testResults.summary().contains("(invoke)"));
+    };
+
     public static class IntegrationTest implements Testable {
 
         @Override
         public void invoke() {
             List<Testable> tests = new ArrayList<>();
 
-            Runnable correctAssertErrorMessage = () -> {
-                List<Testable> tests2 = new ArrayList<>();
 
-                List<Runnable> functionTests = new ArrayList<>();
-                functionTests.add(() -> { assume(false); });
-
-
-                TestResults testResults = CodeCamp.runTests(tests2, functionTests);
-                assume(testResults.summary().contains("CodeCamp.java"));
-                assume(testResults.summary().contains("(invoke)"));
-            };
 
             List<Runnable> functionTests = new ArrayList<>();
             functionTests.add(() -> {});
