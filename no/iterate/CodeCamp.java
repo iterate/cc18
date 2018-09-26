@@ -103,7 +103,7 @@ public class CodeCamp {
 
             TestResults testResults = runTests(tests);
             System.out.println(testResults.summary());
-            assert(testResults.summary().contains("RuntimeException"));
+            assert(testResults.summary().contains("MyMessage"));
 
         }
 
@@ -142,7 +142,7 @@ public class CodeCamp {
             TestResults testResults = runTests(tests);
 
             assert(testResults.numberOfTests == tests.size());
-            assert(testResults.numberOfTestsFailed == 3);
+            assert(testResults.numberOfTestsFailed == 2);
         }
 
         @Override
