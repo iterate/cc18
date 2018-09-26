@@ -19,10 +19,11 @@ public class CodeCamp {
 
         public AnonymousFunction(Runnable function) {
             this.function = function;
+
         }
 
         public void invoke() {
-
+            this.function.run();
         }
     }
 
