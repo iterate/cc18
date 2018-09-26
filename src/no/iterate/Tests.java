@@ -35,6 +35,10 @@ public class Tests {
             tests.add(new CorrectAssertErrorMessage());
             tests.add(new CodeCamp.AnonymousFunction(() -> {return;}));
 
+            Runnable correctErrorMessage = () -> {
+
+            };
+
             List<Runnable> functionTests = new ArrayList<>();
             functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
             functionTests.add(() -> {});
