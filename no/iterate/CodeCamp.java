@@ -64,7 +64,9 @@ public class CodeCamp {
     }
 
     private static class IntegrationTest implements Testable {
-        private static void run() {
+
+        @Override
+        public void invoke() {
             List<Testable> tests = new ArrayList<>();
             tests.add(new FailingTest());
             tests.add(new PassingTest());
@@ -74,11 +76,6 @@ public class CodeCamp {
 
             assert(testResults.numberOfTests == 3);
             assert(testResults.numberOfTestsFailed == 2);
-        }
-
-        @Override
-        public void invoke() {
-            run();
         }
     }
 
