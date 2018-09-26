@@ -30,7 +30,7 @@ public class Tests {
         }
     }
 
-    private static Runnable correctErrorMessage = () -> {
+    public static Runnable correctErrorMessage = () -> {
         List<Testable> tests2 = new ArrayList<>();
 
         List<Runnable> functionTests = new ArrayList<>();
