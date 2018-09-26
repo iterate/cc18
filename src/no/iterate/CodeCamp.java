@@ -15,19 +15,6 @@ public class CodeCamp {
         report(runTests(tests, functionTests));
     }
 
-    public static class AnonymousFunction implements Testable {
-        private final Runnable function;
-
-        public AnonymousFunction(Runnable function) {
-            this.function = function;
-
-        }
-
-        public void invoke() {
-            this.function.run();
-        }
-    }
-
     public static void report(TestResults testResults) {
         System.out.println("Tests run: " + testResults.numberOfTests);
         System.out.println("Tests failed: " + testResults.numberOfTestsFailed);
