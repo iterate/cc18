@@ -42,7 +42,7 @@ public class CodeCamp {
             return test.errorMessage();
         }   else {
             StackTraceElement[] stackTraceElements = throwable.getStackTrace();
-            String message;
+            String message = "";
             for (StackTraceElement stackTraceElement : stackTraceElements) {
                 String msg;
                 msg = stackTraceElement.getFileName();
