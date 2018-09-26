@@ -84,6 +84,16 @@ public class CodeCamp {
         }
     }
 
+    private static class EmptyTestResult implements Testable {
+
+        @Override
+        public void invoke() {
+            TestResults sample = new TestResults();
+
+            assert(sample.summary().isEmpty());
+        }
+    }
+
     private static class IntegrationTest implements Testable {
 
         @Override
