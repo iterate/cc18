@@ -4,7 +4,45 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tests {
-    public Runnable integrationTest = () -> {};
+    public Runnable integrationTest = () -> {
+        List<Testable> tests = new ArrayList<>();
+        tests.add(new CodeCamp.AnonymousFunction(() -> {return;}));
+
+        Runnable correctErrorMessage = () -> {
+            List<Testable> tests2 = new ArrayList<>();
+
+            List<Runnable> functionTests = new ArrayList<>();
+            functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
+
+            TestResults testResults = CodeCamp.runTests(tests2, functionTests);
+            assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
+        };
+
+        Runnable correctAssertErrorMessage = () -> {
+            List<Testable> tests2 = new ArrayList<>();
+
+            List<Runnable> functionTests = new ArrayList<>();
+            functionTests.add(() -> { assume(false); });
+
+
+            TestResults testResults = CodeCamp.runTests(tests2, functionTests);
+            assume(testResults.summary().contains("CodeCamp.java"));
+            assume(testResults.summary().contains("(invoke)"));
+        };
+
+        List<Runnable> functionTests = new ArrayList<>();
+        functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
+        functionTests.add(() -> {});
+        functionTests.add(() -> { assume(false); });
+        functionTests.add(correctErrorMessage);
+        functionTests.add(correctAssertErrorMessage);
+
+
+        TestResults testResults = CodeCamp.runTests(tests, functionTests);
+
+        assert(testResults.numberOfTests == tests.size() + functionTests.size());
+        assume(testResults.numberOfTestsFailed == 2);
+    };
 
     public static class FizzBuzz implements Testable {
 
