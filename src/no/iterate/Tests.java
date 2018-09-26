@@ -58,14 +58,11 @@ public class Tests {
         public void invoke() {
             List<Testable> tests = new ArrayList<>();
 
-
-
             List<Runnable> functionTests = new ArrayList<>();
             functionTests.add(() -> {});
             functionTests.add(correctErrorMessage);
             functionTests.add(correctAssertErrorMessage);
-
-
+            
             TestResults testResults = CodeCamp.runTests(tests, functionTests);
 
             assert(testResults.numberOfTests == functionTests.size());
