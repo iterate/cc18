@@ -68,12 +68,6 @@ public class CodeCamp {
         }
     }
 
-    public static class AssertFailedTest implements Testable {
-        public void invoke() {
-            assert(false);
-        }
-    }
-
     public static class IntegrationTest implements Testable {
 
         @Override
@@ -130,6 +124,12 @@ public class CodeCamp {
                 TestResults testResults = runTests(tests);
                 assert(testResults.summary().contains("MyMessage"));
 
+            }
+        }
+
+        public static class AssertFailedTest implements Testable {
+            public void invoke() {
+                assert(false);
             }
         }
     }
