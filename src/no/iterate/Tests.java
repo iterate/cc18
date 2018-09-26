@@ -82,9 +82,7 @@ public class Tests {
 
             }
 
-            private void assume(boolean myMessage, String s) {
-                
-            }
+           
         }
 
         private static class AssertFailedTest implements Testable {
