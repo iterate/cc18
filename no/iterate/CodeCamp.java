@@ -18,6 +18,7 @@ public class CodeCamp {
         System.out.println("Tests failed: " + testResults.numberOfTestsFailed);
 
         if (testResults.numberOfTestsFailed > 0) {
+            System.out.println("Exceptions: " + testResults.summary());
             System.exit(1);
         }
     }
