@@ -58,7 +58,7 @@ public class Tests {
                 functionTests.add(() -> { assume(false); });
 
 
-                TestResults testResults = CodeCamp.runTests(tests, null);
+                TestResults testResults = CodeCamp.runTests(tests, functionTests);
                 assume(testResults.summary().contains("CodeCamp.java"));
                 assume(testResults.summary().contains("(invoke)"));
 
