@@ -81,8 +81,12 @@ public class Tests {
                 tests.add(new FailingTest());
 
                 TestResults testResults = CodeCamp.runTests(tests);
-                assume(testResults.summary().contains("MyMessage"));
+                assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
 
+            }
+
+            private void assume(boolean myMessage, String s) {
+                
             }
         }
 
