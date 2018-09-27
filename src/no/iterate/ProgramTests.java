@@ -18,4 +18,21 @@ public class ProgramTests {
             .addParameter("INT", "input")
             .toString()
             .contains("calculate(INT input)"));
+    public static final Runnable ADD_SECOND_CLASS = () -> assume(new Program()
+            .addClass("FizzBuzz")
+            .addClass("AnotherClass")
+            .toString()
+            .contains("class FizzBuzz"), "Program should contain class FizzBuzz even when AnotherClass has been added");
+    public static final Runnable SET_RETURN_TYPE = () -> assume(new Program()
+            .addClass("FizzBuzz")
+            .addMethod("calculate")
+            .addReturnType("STRING")
+            .toString()
+            .contains("STRING calculate("));
+    public static final Runnable ADD_RETURN = () -> assume(new Program()
+            .addClass("FizzBuzz")
+            .addMethod("calculate")
+            .addMethodReturnStmt("1")
+            .toString()
+            .contains("return 1;"));
 }

@@ -7,12 +7,6 @@ import static no.iterate.Tests.assume;
 
 public class CodeCamp {
 
-    public static final Runnable ADD_SECOND_CLASS = () -> assume(new Program()
-            .addClass("FizzBuzz")
-            .addClass("AnotherClass")
-            .toString()
-            .contains("class FizzBuzz"), "Program should contain class FizzBuzz even when AnotherClass has been added");
-
     public static void main(String[] args) {
         List<Testable> tests = new ArrayList<>();
         tests.add(new Tests.FizzBuzz());
@@ -28,22 +22,12 @@ public class CodeCamp {
 
         functionTests.add(ProgramTests.ADD_PARAMETER);
 
-        functionTests.add(ADD_SECOND_CLASS);
+        functionTests.add(ProgramTests.ADD_SECOND_CLASS);
 
-        functionTests.add(() -> assume(new Program()
-                .addClass("FizzBuzz")
-                .addMethod("calculate")
-                .addReturnType("STRING")
-                .toString()
-                .contains("STRING calculate(")));
+        functionTests.add(ProgramTests.SET_RETURN_TYPE);
         
 
-        functionTests.add(() -> assume(new Program()
-                .addClass("FizzBuzz")
-                .addMethod("calculate")
-                .addMethodReturnStmt("1")
-                .toString()
-                .contains("return 1;")));
+        functionTests.add(ProgramTests.ADD_RETURN);
 
         functionTests.add(() -> assume(new Program()
                 .addClass("FizzBuzz")
