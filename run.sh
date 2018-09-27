@@ -8,7 +8,7 @@ echo '\     \___(  <_> ) /_/ \  ___/\     \____/ __ \|  Y Y  \  |_> >   /   --  
 echo " \______  /\____/\____ |\___  >\______  (____  /__|_|  /   __/|___\______  /"
 echo "        \/            \/    \/        \/     \/      \/|__|              \/ "
 
-javac -classpath javaparser-symbol-solver-core-3.6.23.jar:javaparser-core-3.6.23.jar src/no/iterate/Tester.java src/no/iterate/Reporter.java src/no/iterate/Testable.java src/no/iterate/TestResults.java src/no/iterate/Tests.java src/no/iterate/CodeCamp.java -d out/production/cc18/ && \
+javac -classpath javaparser-symbol-solver-core-3.6.23.jar:javaparser-core-3.6.23.jar src/no/iterate/Program.java src/no/iterate/Tester.java src/no/iterate/Reporter.java src/no/iterate/Testable.java src/no/iterate/TestResults.java src/no/iterate/Tests.java src/no/iterate/CodeCamp.java -d out/production/cc18/ && \
 java -classpath out/production/cc18:javaparser-symbol-solver-core-3.6.23.jar:javaparser-core-3.6.23.jar no.iterate.CodeCamp && \
 git commit -am working || git reset --hard
 
