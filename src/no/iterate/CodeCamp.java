@@ -39,7 +39,7 @@ public class CodeCamp {
             assume(new Program()
                     .addClass("FizzBuzz")
                     .addMethod("calculate", "FizzBuzz")
-                    .addParameter("FizBuzz", "calculate", "int", "input")
+                    .addParameter("FizzBuzz", "calculate", "int", "input")
                     .toString()
                     .contains("calculate"));
         });
