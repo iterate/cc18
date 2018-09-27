@@ -29,7 +29,7 @@ public class CodeCamp {
         functionTests.add(() -> {
             assume(new Program()
                     .addClass("FizzBuzz")
-                    .addMethod("calculate", "FizzBuzz")
+                    .addMethod("calculate")
                     .toString()
                     .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
         });
@@ -37,7 +37,7 @@ public class CodeCamp {
         functionTests.add(() -> {
             assume(new Program()
                     .addClass("FizzBuzz")
-                    .addMethod("calculate", "FizzBuzz")
+                    .addMethod("calculate")
                     .addParameter("FizzBuzz", "calculate", "int", "input")
                     .toString()
                     .contains("calculate"));
@@ -61,7 +61,7 @@ public class CodeCamp {
             return this;
         }
 
-        public Program addMethod(String methodName, String contaningClassName) {
+        public Program addMethod(String methodName) {
             currentClass.addMethod(methodName);
             return this;
         }
