@@ -26,13 +26,11 @@ public class CodeCamp {
                 .toString()
                 .contains("class FizzBuzz"), "Program should contain class FizzBuzz"));
 
-        functionTests.add(() -> {
-            assume(new Program()
-                    .addClass("FizzBuzz")
-                    .addMethod("calculate")
-                    .toString()
-                    .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
-        });
+        functionTests.add(() -> assume(new Program()
+                .addClass("FizzBuzz")
+                .addMethod("calculate")
+                .toString()
+                .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'"));
 
         functionTests.add(() -> {
             assume(new Program()
