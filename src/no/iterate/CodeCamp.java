@@ -45,6 +45,14 @@ public class CodeCamp {
                     .contains("calculate(INT input)"));
         });
 
+        functionTests.add(() -> {
+            assume(new Program()
+                    .addClass("FizzBuzz")
+                    .addClass("AnotherClass")
+                    .toString()
+                    .contains("class FizzBuzz"), "Program should contain class FizzBuzz");
+        });
+
         Reporter.report(runTests(tests, functionTests));
     }
 
