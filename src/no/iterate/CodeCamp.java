@@ -50,7 +50,7 @@ public class CodeCamp {
 
     private static class Program {
 
-        private CompilationUnit compilationUnit;
+        private CompilationUnit compilationUnit = new CompilationUnit();
         private ClassOrInterfaceDeclaration currentClass;
         private MethodDeclaration currentMethod;
 
