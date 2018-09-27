@@ -10,6 +10,7 @@ public class Reporter {
             "        \\/            \\/    \\/        \\/     \\/      \\/|__|              \\/ ";
 
     public static void report(TestResults testResults) {
+        System.out.print(ANSI_RED);
         System.out.println(LOGO);
         System.out.println("Tests run: " + testResults.numberOfTests);
         System.out.println("Tests failed: " + testResults.numberOfTestsFailed);
