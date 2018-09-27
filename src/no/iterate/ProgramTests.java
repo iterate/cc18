@@ -1,5 +1,7 @@
 package no.iterate;
 
+import java.util.List;
+
 import static no.iterate.Tests.assume;
 
 public class ProgramTests {
@@ -42,4 +44,6 @@ public class ProgramTests {
             .addMethodReturnStmt("1")
             .run()
             .contains("return 1;"), "Method should return 1 like we said");
+
+    List<Runnable> TESTS = null;
 }
