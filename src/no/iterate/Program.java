@@ -62,4 +62,8 @@ class Program {
         currentMethod.setBody(block);
         return this;
     }
+
+    public String run() {
+        return this.toString();
+    }
 }
