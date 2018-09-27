@@ -45,6 +45,7 @@ public class CodeCamp {
         }
 
         public Program addMethod(String methodName, String contaningClassName) {
+            compilationUnit.getClassByName(contaningClassName);
             return this;
         }
     }
