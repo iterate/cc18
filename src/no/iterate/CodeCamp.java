@@ -49,7 +49,7 @@ public class CodeCamp {
     private static class Program {
 
         private CompilationUnit compilationUnit;
-        private ClassOrInterfaceDeclaration klass;
+        private ClassOrInterfaceDeclaration currentClass;
 
         public String toString() {
             return compilationUnit.toString();
@@ -57,7 +57,7 @@ public class CodeCamp {
 
         public Program addClass(String className) {
             compilationUnit = new CompilationUnit();
-            klass = compilationUnit.addClass(className);
+            currentClass = compilationUnit.addClass(className);
             return this;
         }
 
