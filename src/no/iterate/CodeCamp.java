@@ -14,6 +14,8 @@ public class CodeCamp {
         functionTests.add(Tests.correctErrorMessage);
         functionTests.add(Tests.correctAssertErrorMessage2);
 
+        functionTests.add(() -> {return;});
+
         report(runTests(tests, functionTests));
     }
 
