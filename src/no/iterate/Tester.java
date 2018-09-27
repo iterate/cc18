@@ -43,7 +43,7 @@ public class Tester {
         return message.toString();
     }
 
-    public static String printStackTraceMessage(StackTraceElement stackTraceElement) {
+    private static String printStackTraceMessage(StackTraceElement stackTraceElement) {
         String filename = stackTraceElement.getFileName();
         int lineNumber = stackTraceElement.getLineNumber();
         String methodName = stackTraceElement.getMethodName();
