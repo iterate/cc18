@@ -21,12 +21,10 @@ public class CodeCamp {
         functionTests.add(Tests.correctErrorMessage);
         functionTests.add(Tests.correctAssertErrorMessage2);
 
-        functionTests.add(() -> {
-            assume(new Program()
-                    .addClass("FizzBuzz")
-                    .toString()
-                    .contains("class FizzBuzz"), "Program should contain class FizzBuzz");
-        });
+        functionTests.add(() -> assume(new Program()
+                .addClass("FizzBuzz")
+                .toString()
+                .contains("class FizzBuzz"), "Program should contain class FizzBuzz"));
 
         functionTests.add(() -> {
             assume(new Program()
