@@ -13,8 +13,11 @@ import com.github.javaparser.ast.stmt.ReturnStmt;
 
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 
@@ -77,14 +80,44 @@ class Program {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+
+        try {
+            runProcess("pwd");
+            System.out.println("**********");
+            runProcess("javac -cp src src/com/journaldev/files/Test.java");
+            System.out.println("**********");
+            runProcess("java -cp src com/journaldev/files/Test Hi Pankaj");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
         //JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
         //compiler.run(new ByteArrayInputStream(toString().getBytes()), System.out, System.err);
         return this.toString();
     }
 
+
+    private static void printLines(String cmd, InputStream ins) throws Exception {
+        String line = null;
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(ins));
+        while ((line = in.readLine()) != null) {
+            System.out.println(cmd + " " + line);
+        }
+    }
+
+    private static void runProcess(String command) throws Exception {
+        Process pro = Runtime.getRuntime().exec(command);
+        printLines(command + " stdout:", pro.getInputStream());
+        printLines(command + " stderr:", pro.getErrorStream());
+        pro.waitFor();
+        System.out.println(command + " exitValue() " + pro.exitValue());
+    }
+
     public static Program script(String script){
         Program program = new Program();
-        script.lines();
+        //script.lines();
         return null;
     };
 }
