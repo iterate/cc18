@@ -40,6 +40,7 @@ public class CodeCamp {
 
         public Program addClass(String className) {
             compilationUnit = new CompilationUnit();
+            compilationUnit.addClass(className);
             return this;
         }
     }
