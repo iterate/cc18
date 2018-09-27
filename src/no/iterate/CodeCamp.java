@@ -10,8 +10,6 @@ import java.util.List;
 
 import static no.iterate.Tests.assume;
 
-import no.iterate.Reporter;
-
 public class CodeCamp {
 
     public static void main(String[] args) {
@@ -47,7 +45,7 @@ public class CodeCamp {
                     .contains("calculate(INT input)"));
         });
 
-        report(runTests(tests, functionTests));
+        Reporter.report(runTests(tests, functionTests));
     }
 
     private static class Program {
@@ -74,18 +72,6 @@ public class CodeCamp {
         public Program addParameter(String parameterType, String parameterName) {
             currentMethod.addParameter(JavaParser.parseTypeParameter(parameterType), parameterName);
             return this;
-        }
-    }
-
-    public static void report(TestResults testResults) {
-        System.out.println("Tests run: " + testResults.numberOfTests);
-        System.out.println("Tests failed: " + testResults.numberOfTestsFailed);
-
-        System.out.println("");
-
-        if (testResults.numberOfTestsFailed > 0) {
-            System.out.println(testResults.summary());
-            System.exit(1);
         }
     }
 
