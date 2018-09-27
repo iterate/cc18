@@ -34,7 +34,11 @@ public class CodeCamp {
         Field[] fields = ProgramTests.class.getFields();
         List<Testable> tests = new ArrayList<>();
         for (Field field : fields) {
-           System.out.println(field);
+            try {
+                field.get(null);
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            }
         }
     }
 
