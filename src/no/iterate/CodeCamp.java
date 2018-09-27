@@ -69,9 +69,7 @@ public class CodeCamp {
         }
 
         public Program addParameter(String containingClass, String containingMethod, String parameterType, String parameterName) {
-            compilationUnit.getClassByName(containingClass)
-                    .map(klass -> klass.getMethodsByName(containingMethod))
-                    .map(method -> method.stream().map(m -> m.addParameter(parseClassOrInterfaceType(parameterType), parameterName)));
+            compilationUnit.getClassByName(containingClass);
             return this;
         }
     }
