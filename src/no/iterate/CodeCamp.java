@@ -23,7 +23,7 @@ public class CodeCamp {
         });
 
         functionTests.add(() -> {
-            assume(new Program().addClass("FizzBuzz").addMethod().toString().contains("class FizzBuzz"));
+            assume(new Program().addClass("FizzBuzz").addMethod("calculate").toString().contains("class FizzBuzz"));
         });
 
 
@@ -44,7 +44,7 @@ public class CodeCamp {
             return this;
         }
 
-        public Program addMethod() {
+        public Program addMethod(String methodName) {
             return this;
         }
     }
