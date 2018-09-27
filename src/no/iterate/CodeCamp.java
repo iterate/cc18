@@ -1,5 +1,6 @@
 package no.iterate;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +26,10 @@ public class CodeCamp {
         functionTests.add(RETURN_VALUE);
 
         Reporter.report(Tester.runTests(tests, functionTests));
+    }
+
+    void testClass() {
+        Field[] fields = ProgramTests.class.getFields();
     }
 
 }
