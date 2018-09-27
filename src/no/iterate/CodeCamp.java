@@ -39,13 +39,11 @@ public class CodeCamp {
                 .toString()
                 .contains("calculate(INT input)")));
 
-        functionTests.add(() -> {
-            assume(new Program()
-                    .addClass("FizzBuzz")
-                    .addClass("AnotherClass")
-                    .toString()
-                    .contains("class FizzBuzz"), "Program should contain class FizzBuzz even when AnotherClass has been added");
-        });
+        functionTests.add(() -> assume(new Program()
+                .addClass("FizzBuzz")
+                .addClass("AnotherClass")
+                .toString()
+                .contains("class FizzBuzz"), "Program should contain class FizzBuzz even when AnotherClass has been added"));
 
         functionTests.add(() -> {
             assume(new Program()
