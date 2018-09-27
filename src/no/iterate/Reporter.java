@@ -2,6 +2,7 @@ package no.iterate;
 
 public class Reporter {
     public static void report(TestResults testResults) {
+        System.out.println();
         System.out.println("Tests run: " + testResults.numberOfTests);
         System.out.println("Tests failed: " + testResults.numberOfTestsFailed);
 
