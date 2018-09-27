@@ -7,7 +7,7 @@ import static no.iterate.Tests.assume;
 
 public class CodeCamp {
 
-    public static final Runnable RUNNABLE = () -> assume(new Program()
+    public static final Runnable ADD_SECOND_CLASS = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addClass("AnotherClass")
             .toString()
@@ -28,7 +28,7 @@ public class CodeCamp {
 
         functionTests.add(ProgramTests.ADD_PARAMETER);
 
-        functionTests.add(RUNNABLE);
+        functionTests.add(ADD_SECOND_CLASS);
 
         functionTests.add(() -> assume(new Program()
                 .addClass("FizzBuzz")
