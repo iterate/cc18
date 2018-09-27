@@ -30,7 +30,7 @@ public class CodeCamp {
         testClass();
     }
 
-    static void testClass() {
+    static List<Runnable> testClass() {
         Field[] fields = ProgramTests.class.getFields();
         List<Runnable> tests = new ArrayList<>();
         for (Field field : fields) {
@@ -40,6 +40,7 @@ public class CodeCamp {
                 e.printStackTrace();
             }
         }
+        return null;
     }
 
 }
