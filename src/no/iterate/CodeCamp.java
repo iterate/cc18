@@ -39,11 +39,11 @@ public class CodeCamp {
             assume(new Program()
                     .addClass("FizzBuzz")
                     .addMethod("calculate", "FizzBuzz")
-                    .addParameter("FizzBuzz", "calculate", "int", "input")
+                    .addParameter("FizBuzz", "calculate", "int", "input")
                     .toString()
                     .contains("calculate"));
         });
-        
+
         report(runTests(tests, functionTests));
     }
 
