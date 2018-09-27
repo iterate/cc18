@@ -18,6 +18,9 @@ public class CodeCamp {
 
         report(runTests(tests, functionTests));
     }
+    
+    private static class Program {
+    }
 
     public static void report(TestResults testResults) {
         System.out.println("Tests run: " + testResults.numberOfTests);
@@ -76,8 +79,5 @@ public class CodeCamp {
         String methodName = stackTraceElement.getMethodName();
 
         return filename + ":" + lineNumber + " (" + methodName + ") \n";
-    }
-
-    private static class Program {
     }
 }
