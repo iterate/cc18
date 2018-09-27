@@ -19,7 +19,7 @@ public class CodeCamp {
         functionTests.add(Tests.correctAssertErrorMessage2);
 
         functionTests.add(() -> {
-            assume(new Program().addClass("FizzBuzz").toString().contains("FizzBuzz"));
+            assume(new Program().addClass("FizzBuzz").toString().contains("class FizzBuzz"));
         });
 
         report(runTests(tests, functionTests));
