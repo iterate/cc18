@@ -2,7 +2,7 @@ package no.iterate;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import com.github.javaparser.symbolsolver.JavaSymbolSolver;
 import static no.iterate.Tests.assume;
 
 public class CodeCamp {
