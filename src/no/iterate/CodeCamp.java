@@ -26,10 +26,12 @@ public class CodeCamp {
         functionTests.add(RETURN_VALUE);
 
         Reporter.report(Tester.runTests(tests, functionTests));
+        testClass();
     }
 
-    void testClass() {
+    static void testClass() {
         Field[] fields = ProgramTests.class.getFields();
+
     }
 
 }
