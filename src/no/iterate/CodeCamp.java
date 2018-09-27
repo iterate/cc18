@@ -7,10 +7,11 @@ import static no.iterate.Tests.assume;
 
 public class CodeCamp {
 
-    public static final Runnable PROGRAM_SHOULD_CONTAIN_CLASS_FIZZBUZZ = () -> assume(new Program()
+    public static final Runnable RUNNABLE = () -> assume(new Program()
             .addClass("FizzBuzz")
+            .addMethod("calculate")
             .toString()
-            .contains("class FizzBuzz"), "Program should contain class FizzBuzz");
+            .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
 
     public static void main(String[] args) {
         List<Testable> tests = new ArrayList<>();
@@ -21,13 +22,9 @@ public class CodeCamp {
         functionTests.add(Tests.correctErrorMessage);
         functionTests.add(Tests.correctAssertErrorMessage2);
 
-        functionTests.add(PROGRAM_SHOULD_CONTAIN_CLASS_FIZZBUZZ);
+        functionTests.add(ProgramTests.PROGRAM_SHOULD_CONTAIN_CLASS_FIZZBUZZ);
 
-        functionTests.add(() -> assume(new Program()
-                .addClass("FizzBuzz")
-                .addMethod("calculate")
-                .toString()
-                .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'"));
+        functionTests.add(RUNNABLE);
 
         functionTests.add(() -> assume(new Program()
                 .addClass("FizzBuzz")
