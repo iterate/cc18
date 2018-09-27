@@ -57,9 +57,9 @@ public class CodeCamp {
         functionTests.add(() -> assume(new Program()
                 .addClass("FizzBuzz")
                 .addMethod("calculate")
-                .addMethodReturnStmt("1")
+                .addMethodReturnStmt("2")
                 .toString()
-                .contains("return 1;")));
+                .contains("return 2;")));
 
         Reporter.report(Tester.runTests(tests, functionTests));
     }
