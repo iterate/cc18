@@ -2,6 +2,7 @@ package no.iterate;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static no.iterate.ProgramTests.*;
@@ -31,10 +32,10 @@ public class CodeCamp {
 
     static void testClass() {
         Field[] fields = ProgramTests.class.getFields();
+        
         for (Field field : fields) {
            System.out.println(field);
         }
-        System.out.println(fields);
     }
 
 }
