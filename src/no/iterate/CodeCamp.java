@@ -22,7 +22,7 @@ public class CodeCamp {
 
         functionTests.add(() -> {
             assume(new Program()
-                    .addClass("FizzBuzz")
+                    .addClass("FzBuzz")
                     .toString()
                     .contains("class FizzBuzz"), "Program should contain class FizzBuzz");
         });
