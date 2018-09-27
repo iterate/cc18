@@ -117,7 +117,7 @@ class Program {
 
     public static Program script(String script){
         Program program = new Program();
-        script.lines();
+        script.lines().forEach(line -> line.lines());
         return null;
     };
 }
