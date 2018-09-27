@@ -64,6 +64,7 @@ class Program {
     }
 
     public String run() {
+        System.out.println(this.toString());
         return this.toString();
     }
 }
