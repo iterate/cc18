@@ -2,6 +2,7 @@ package no.iterate;
 
 public class Reporter {
     public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_RESET = "\u001B[0m";
     private static final String LOGO = "_________            .___     _________                       ____  ______  \n" +
             "\\_   ___ \\  ____   __| _/____ \\_   ___ \\_____    _____ ______/_   |/  __  \\ \n" +
             "/    \\  \\/ /  _ \\ / __ |/ __ \\/    \\  \\/\\__  \\  /     \\\\____ \\|   |>      < \n" +
@@ -12,6 +13,7 @@ public class Reporter {
     public static void report(TestResults testResults) {
         System.out.print(ANSI_RED);
         System.out.println(LOGO);
+        System.out.print(ANSI_RESET);
         System.out.println("Tests run: " + testResults.numberOfTests);
         System.out.println("Tests failed: " + testResults.numberOfTestsFailed);
 
