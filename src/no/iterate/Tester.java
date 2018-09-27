@@ -37,9 +37,17 @@ public class Tester {
         message.append("\n\nStack trace:\n");
 
         for (StackTraceElement stackTraceElement : stackTraceElements) {
-            message.append("\t" + CodeCamp.printStackTraceMessage(stackTraceElement));
+            message.append("\t" + printStackTraceMessage(stackTraceElement));
         }
 
         return message.toString();
+    }
+
+    public static String printStackTraceMessage(StackTraceElement stackTraceElement) {
+        String filename = stackTraceElement.getFileName();
+        int lineNumber = stackTraceElement.getLineNumber();
+        String methodName = stackTraceElement.getMethodName();
+
+        return filename + ":" + lineNumber + " (" + methodName + ") \n";
     }
 }

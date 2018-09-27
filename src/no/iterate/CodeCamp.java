@@ -104,11 +104,4 @@ public class CodeCamp {
         }
     }
 
-    public static String printStackTraceMessage(StackTraceElement stackTraceElement) {
-        String filename = stackTraceElement.getFileName();
-        int lineNumber = stackTraceElement.getLineNumber();
-        String methodName = stackTraceElement.getMethodName();
-
-        return filename + ":" + lineNumber + " (" + methodName + ") \n";
-    }
 }
