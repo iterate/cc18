@@ -37,6 +37,8 @@ class Program {
     }
 
     public Program addMethodBody(String s) {
+        final BlockStmt body = new BlockStmt();
+        currentMethod.setBody(body);
         return this;
     }
 }
