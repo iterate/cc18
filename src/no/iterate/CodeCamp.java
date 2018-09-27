@@ -17,7 +17,8 @@ public class CodeCamp {
         functionTests.add(Tests.correctAssertErrorMessage2);
 
         functionTests.add(() -> {
-            assume(new Program().toString().equals(""));});
+            assume(new Program().toString().equals(""));
+        });
 
         report(runTests(tests, functionTests));
     }
