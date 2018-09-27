@@ -22,6 +22,11 @@ public class CodeCamp {
             assume(new Program().addClass("FizzBuzz").toString().contains("class FizzBuzz"));
         });
 
+        functionTests.add(() -> {
+            assume(new Program().addClass("FizzBuzz").toString().contains("class FizzBuzz"));
+        });
+
+
         report(runTests(tests, functionTests));
     }
 
