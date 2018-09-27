@@ -11,6 +11,9 @@ import com.github.javaparser.ast.expr.StringLiteralExpr;
 import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
 
+import javax.tools.JavaCompiler;
+import javax.tools.ToolProvider;
+
 class Program {
 
     private CompilationUnit compilationUnit = new CompilationUnit();
@@ -65,6 +68,7 @@ class Program {
 
     public String run() {
         System.out.println(this.toString());
+        JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
         return this.toString();
     }
 }
