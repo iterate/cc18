@@ -45,5 +45,4 @@ public class ProgramTests {
             .run()
             .contains("return 1;"), "Method should return 1 like we said");
 
-    List<Runnable> TESTS = null;
 }
