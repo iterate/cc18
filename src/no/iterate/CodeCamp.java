@@ -19,7 +19,6 @@ public class CodeCamp {
         functionTests.add(ProgramTests.PROGRAM_SHOULD_CONTAIN_CLASS_FIZZBUZZ);
         functionTests.add(ProgramTests.ADD_METHOD);
         functionTests.add(ProgramTests.ADD_PARAMETER);
-
         functionTests.add(ProgramTests.ADD_SECOND_CLASS);
 
         functionTests.add(ProgramTests.SET_RETURN_TYPE);
