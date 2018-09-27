@@ -15,3 +15,4 @@ java -classpath out/production/cc18:javaparser-symbol-solver-core-3.6.23.jar:jav
 git commit -am working || git reset --hard
 
 sleep 1
+./run.sh
