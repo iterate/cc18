@@ -57,9 +57,8 @@ public class CodeCamp {
             assume(new Program()
                     .addClass("FizzBuzz")
                     .addMethod("calculate")
-                    .addParameter("INT", "input")
                     .toString()
-                    .contains("calculate(INT input)"));
+                    .contains("calculate"));
         });
 
         Reporter.report(runTests(tests, functionTests));
