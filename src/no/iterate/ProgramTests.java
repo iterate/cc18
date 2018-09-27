@@ -7,7 +7,6 @@ public class ProgramTests {
             .addClass("FizzBuzz")
             .toString()
             .contains("class FizzBuzz"), "Program should contain class FizzBuzz");
-    
     public static final Runnable ADD_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
