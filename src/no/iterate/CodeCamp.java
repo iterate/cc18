@@ -2,10 +2,7 @@ package no.iterate;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
-import static no.iterate.ProgramTests.*;
 
 public class CodeCamp {
 
@@ -18,14 +15,14 @@ public class CodeCamp {
         functionTests.add(Tests.correctErrorMessage);
         functionTests.add(Tests.correctAssertErrorMessage2);
 
-        functionTests.addAll(testClass());
+        functionTests.addAll(testClass(ProgramTests.class));
 
         Reporter.report(Tester.runTests(tests, functionTests));
-        testClass();
+        testClass(ProgramTests.class);
     }
 
-    static List<Runnable> testClass() {
-        Field[] fields = ProgramTests.class.getFields();
+    static List<Runnable> testClass(Class<ProgramTests> aClass) {
+        Field[] fields = aClass.getFields();
         List<Runnable> tests = new ArrayList<>();
         for (Field field : fields) {
             try {
