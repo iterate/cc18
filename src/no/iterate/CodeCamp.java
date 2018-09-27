@@ -125,7 +125,7 @@ public class CodeCamp {
             message.append(printStackTraceMessage(stackTraceElement));
         }
 
-        return message + throwable.getMessage() + "\n!!!\n";
+        return message.toString() + throwable.getMessage() + "\n!!!\n";
     }
 
     private static String printStackTraceMessage(StackTraceElement stackTraceElement) {
