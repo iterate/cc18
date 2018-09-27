@@ -37,7 +37,7 @@ public class CodeCamp {
             assume(new Program()
                     .addClass("FizzBuzz")
                     .addMethod("calculate", "FizzBuzz")
-                    .addParameter()
+                    .addParameter("FizzBuzz", "calculate", "int", "input")
                     .toString()
                     .contains("calculate"));
         });
@@ -66,7 +66,7 @@ public class CodeCamp {
             return this;
         }
 
-        public Program addParameter() {
+        public Program addParameter(String containingClass, String containingMethod, String parameterType, String parameterName) {
             return this;
         }
     }
