@@ -59,7 +59,6 @@ public class CodeCamp {
         }
 
         public Program addClass(String className) {
-            compilationUnit = new CompilationUnit();
             currentClass = compilationUnit.addClass(className);
             return this;
         }
