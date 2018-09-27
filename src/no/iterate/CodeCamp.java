@@ -70,7 +70,7 @@ public class CodeCamp {
                     .contains("calculate("));
         });
 
-        Reporter.report(runTests(tests, functionTests));
+        Reporter.report(Testable.runTests(tests, functionTests));
     }
 
     private static class Program {
@@ -104,32 +104,7 @@ public class CodeCamp {
         }
     }
 
-    public static TestResults runTests(List<Testable> tests, List<Runnable> testFunctions) {
-        TestResults testResults = new TestResults();
-        for (Testable test : tests) {
-            try {
-                testResults.numberOfTests++;
-                test.invoke();
-            } catch (Throwable e) {
-                testResults.numberOfTestsFailed++;
-                testResults.exceptions.add(buildErrorMessage(e));
-            }
-        }
-
-        for (Runnable test : testFunctions) {
-            try {
-                testResults.numberOfTests++;
-                test.run();
-            } catch (Throwable e) {
-                testResults.numberOfTestsFailed++;
-                testResults.exceptions.add(buildErrorMessage(e));
-            }
-        }
-
-        return testResults;
-    }
-
-    private static String buildErrorMessage(Throwable throwable) {
+    public static String buildErrorMessage(Throwable throwable) {
         StackTraceElement[] stackTraceElements = throwable.getStackTrace();
         StringBuilder message = new StringBuilder();
         
