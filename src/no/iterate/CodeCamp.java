@@ -50,6 +50,7 @@ public class CodeCamp {
         functionTests.add(() -> assume(new Program()
                 .addClass("FizzBuzz")
                 .addMethod("calculate")
+                .addMethodBody("return 1;")
                 .toString()
                 .contains("calculate(")));
 

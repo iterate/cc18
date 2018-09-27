@@ -34,4 +34,8 @@ class Program {
         currentMethod.setType(JavaParser.parseTypeParameter(returnType));
         return this;
     }
+
+    public Program addMethodBody(String s) {
+        return this;
+    }
 }
