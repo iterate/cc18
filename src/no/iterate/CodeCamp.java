@@ -23,11 +23,15 @@ public class CodeCamp {
         });
 
         functionTests.add(() -> {
-            assume(new Program().addClass("FizzBuzz").addMethod("calculate", "FizzBuzz").toString().contains("calculate"));
+            assume(new Program().addClass("FizzBuzz").addMethod("calculate", "FizzBuzz").toString().contains("calculate()"));
         });
 
         functionTests.add(() -> {
-            assume(new Program().addClass("FizzBuzz").addMethod("calculate", "FizzBuzz").toString().contains("calculate"));
+            assume(new Program()
+                    .addClass("FizzBuzz")
+                    .addMethod("calculate", "FizzBuzz")
+                    .toString()
+                    .contains("calculate"));
         });
 
 
