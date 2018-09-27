@@ -16,10 +16,11 @@ public class CodeCamp {
         functionTests.add(Tests.correctErrorMessage);
         functionTests.add(Tests.correctAssertErrorMessage2);
 
-        functionTests.add(() -> assume(new Program()
+        Runnable runnable = () -> assume(new Program()
                 .addClass("FizzBuzz")
                 .toString()
-                .contains("class FizzBuzz"), "Program should contain class FizzBuzz"));
+                .contains("class FizzBuzz"), "Program should contain class FizzBuzz");
+        functionTests.add(runnable);
 
         functionTests.add(() -> assume(new Program()
                 .addClass("FizzBuzz")
