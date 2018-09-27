@@ -24,7 +24,7 @@ public class CodeCamp {
 
     private static class Program {
         public String toString() {
-            return "";
+            return "asd";
         }
     }
 
