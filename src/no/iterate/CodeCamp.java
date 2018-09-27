@@ -22,7 +22,6 @@ public class CodeCamp {
         functionTests.add(ProgramTests.ADD_SECOND_CLASS);
         functionTests.add(ProgramTests.SET_RETURN_TYPE);
         functionTests.add(ProgramTests.ADD_RETURN);
-
         functionTests.add(ProgramTests.RETURN_VALUE);
 
 
