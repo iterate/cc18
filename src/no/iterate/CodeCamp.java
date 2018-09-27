@@ -3,6 +3,8 @@ package no.iterate;
 import java.util.ArrayList;
 import java.util.List;
 
+import static no.iterate.Tests.assume;
+
 public class CodeCamp {
 
     public static void main(String[] args) {
@@ -14,7 +16,8 @@ public class CodeCamp {
         functionTests.add(Tests.correctErrorMessage);
         functionTests.add(Tests.correctAssertErrorMessage2);
 
-        functionTests.add(() -> {Tests.assume(new Program().toString().equals(""));});
+        functionTests.add(() -> {
+            assume(new Program().toString().equals(""));});
 
         report(runTests(tests, functionTests));
     }
