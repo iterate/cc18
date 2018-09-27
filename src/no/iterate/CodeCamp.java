@@ -36,7 +36,7 @@ public class CodeCamp {
         }
 
         public Program addClass() {
-            final CompilationUnit compilationUnit = new CompilationUnit();
+            CompilationUnit compilationUnit = new CompilationUnit();
             return this;
         }
     }
