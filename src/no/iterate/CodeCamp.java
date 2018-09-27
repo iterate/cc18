@@ -31,7 +31,7 @@ public class CodeCamp {
 
     static void testClass() {
         Field[] fields = ProgramTests.class.getFields();
-
+        System.out.println(fields);
     }
 
 }
