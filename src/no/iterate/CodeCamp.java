@@ -1,12 +1,10 @@
 package no.iterate;
 
+import com.github.javaparser.ast.CompilationUnit;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.javaparser.ast.CompilationUnit;
-import com.github.javaparser.ast.type.ClassOrInterfaceType;
-
-import static com.github.javaparser.JavaParser.parseClassOrInterfaceType;
 import static no.iterate.Tests.assume;
 
 public class CodeCamp {
