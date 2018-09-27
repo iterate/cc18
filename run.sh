@@ -9,7 +9,7 @@ echo " \______  /\____/\____ |\___  >\______  (____  /__|_|  /   __/|___\______ 
 echo "        \/            \/    \/        \/     \/      \/|__|              \/ "
 
 function class() {
-
+    echo $1
 }
 
 javac -classpath javaparser-symbol-solver-core-3.6.23.jar:javaparser-core-3.6.23.jar src/no/iterate/Testable.java src/no/iterate/TestResults.java src/no/iterate/Tests.java src/no/iterate/CodeCamp.java -d out/production/cc18/ && \
