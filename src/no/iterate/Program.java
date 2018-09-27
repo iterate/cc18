@@ -14,6 +14,9 @@ import com.github.javaparser.ast.stmt.ReturnStmt;
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
 import java.io.ByteArrayInputStream;
+import java.io.FileNotFoundException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 
 class Program {
 
@@ -69,6 +72,11 @@ class Program {
 
     public String run() {
         System.out.println(this.toString());
+        try (PrintWriter out = new PrintWriter("fizzbuzz.java")) {
+            out.println(toString());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
         //JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
         //compiler.run(new ByteArrayInputStream(toString().getBytes()), System.out, System.err);
         return this.toString();

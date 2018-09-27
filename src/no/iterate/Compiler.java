@@ -20,13 +20,14 @@ public class Compiler {
 
         StringWriter writer = new StringWriter();
         PrintWriter out = new PrintWriter(writer);
+        out.println("package no.iterate;");
         out.println("public class HelloWorld {");
         out.println("  public static void main(String args[]) {");
         out.println("    System.out.println(\"This is in another java file\");");
         out.println("  }");
         out.println("}");
         out.close();
-        JavaFileObject file = new JavaSourceFromString("HelloWorld", writer.toString());
+        JavaFileObject file = new JavaSourceFromString("no.iterate.HelloWorld", writer.toString());
 
         Iterable<? extends JavaFileObject> compilationUnits = Arrays.asList(file);
         JavaCompiler.CompilationTask task = compiler.getTask(null, null, diagnostics, null, null, compilationUnits);
@@ -46,7 +47,7 @@ public class Compiler {
 
         if (success) {
             try {
-                Class.forName("HelloWorld").getDeclaredMethod("main", new Class[] { String[].class })
+                Class.forName("no.iterate.HelloWorld").getDeclaredMethod("main", new Class[] { String[].class })
                         .invoke(null, new Object[] { null });
             } catch (ClassNotFoundException e) {
                 System.err.println("Class not found: " + e);
