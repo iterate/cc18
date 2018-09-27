@@ -9,6 +9,7 @@ import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.NameExpr;
 import com.github.javaparser.ast.expr.StringLiteralExpr;
 import com.github.javaparser.ast.stmt.BlockStmt;
+import com.github.javaparser.ast.stmt.ReturnStmt;
 
 class Program {
 
@@ -46,7 +47,10 @@ class Program {
         FieldAccessExpr field = new FieldAccessExpr(clazz, "out");
         MethodCallExpr call = new MethodCallExpr(field, "println");
         call.addArgument(new StringLiteralExpr("Hello World!"));
+        ReturnStmt returnStmt = new ReturnStmt("1");
+
         block.addStatement(call);
+        block.addStatement(returnStmt);
         currentMethod.setBody(block);
         return this;
     }
