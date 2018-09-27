@@ -2,6 +2,7 @@ package no.iterate;
 
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
+import com.github.javaparser.ast.body.MethodDeclaration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +51,7 @@ public class CodeCamp {
 
         private CompilationUnit compilationUnit;
         private ClassOrInterfaceDeclaration currentClass;
+        private MethodDeclaration currentMethod;
 
         public String toString() {
             return compilationUnit.toString();
@@ -62,7 +64,7 @@ public class CodeCamp {
         }
 
         public Program addMethod(String methodName) {
-            currentClass.addMethod(methodName);
+            currentMethod = currentClass.addMethod(methodName);
             return this;
         }
 
