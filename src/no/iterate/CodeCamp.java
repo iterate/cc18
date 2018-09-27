@@ -10,6 +10,8 @@ import java.util.List;
 
 import static no.iterate.Tests.assume;
 
+import no.iterate.Reporter;
+
 public class CodeCamp {
 
     public static void main(String[] args) {
