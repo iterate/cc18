@@ -17,14 +17,14 @@ public class CodeCamp {
         functionTests.add(Tests.correctAssertErrorMessage2);
 
         functionTests.add(() -> {
-            new Program().toString().equals("");});
+            assume(new Program().toString().equals(""));});
 
         report(runTests(tests, functionTests));
     }
 
     private static class Program {
         public String toString() {
-            return "asd";
+            return "";
         }
     }
 
