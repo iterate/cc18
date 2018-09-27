@@ -57,6 +57,7 @@ public class CodeCamp {
             assume(new Program()
                     .addClass("FizzBuzz")
                     .addMethod("calculate")
+                    .addReturnType()
                     .toString()
                     .contains("calculate"));
         });
@@ -86,6 +87,10 @@ public class CodeCamp {
 
         public Program addParameter(String parameterType, String parameterName) {
             currentMethod.addParameter(JavaParser.parseTypeParameter(parameterType), parameterName);
+            return this;
+        }
+
+        public Program addReturnType() {
             return this;
         }
     }
