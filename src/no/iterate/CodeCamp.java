@@ -46,13 +46,7 @@ public class CodeCamp {
                 .addReturnType("STRING")
                 .toString()
                 .contains("STRING calculate(")));
-
-        functionTests.add(() -> assume(new Program()
-                .addClass("FizzBuzz")
-                .addMethod("calculate")
-                .addMethodBody("return 1;")
-                .toString()
-                .contains("calculate() {")));
+        
 
         functionTests.add(() -> assume(new Program()
                 .addClass("FizzBuzz")
@@ -60,6 +54,15 @@ public class CodeCamp {
                 .addMethodReturnStmt("1")
                 .toString()
                 .contains("return 1;")));
+
+        functionTests.add(() -> assume(new Program()
+                .addClass("FizzBuzz")
+                .addMethod("calculate")
+                .addReturnType("STRING")
+                .addMethodReturnStmt("1")
+                .toString()
+                .contains("return 1;")));
+
 
         Reporter.report(Tester.runTests(tests, functionTests));
     }
