@@ -40,7 +40,7 @@ public class CodeCamp {
                 e.printStackTrace();
             }
         }
-        return null;
+        return tests;
     }
 
 }
