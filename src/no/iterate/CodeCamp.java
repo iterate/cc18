@@ -37,6 +37,7 @@ public class CodeCamp {
             assume(new Program()
                     .addClass("FizzBuzz")
                     .addMethod("calculate", "FizzBuzz")
+                    .addParameter()
                     .toString()
                     .contains("calculate"));
         });
@@ -62,6 +63,10 @@ public class CodeCamp {
         public Program addMethod(String methodName, String contaningClassName) {
             compilationUnit.getClassByName(contaningClassName)
                     .map((klass -> klass.addMethod(methodName)));
+            return this;
+        }
+
+        public Program addParameter() {
             return this;
         }
     }
