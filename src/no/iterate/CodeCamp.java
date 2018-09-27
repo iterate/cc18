@@ -52,13 +52,11 @@ public class CodeCamp {
                 .toString()
                 .contains("STRING calculate(")));
 
-        functionTests.add(() -> {
-            assume(new Program()
-                    .addClass("FizzBuzz")
-                    .addMethod("calculate")
-                    .toString()
-                    .contains("calculate("));
-        });
+        functionTests.add(() -> assume(new Program()
+                .addClass("FizzBuzz")
+                .addMethod("calculate")
+                .toString()
+                .contains("calculate(")));
 
         Reporter.report(Tester.runTests(tests, functionTests));
     }
