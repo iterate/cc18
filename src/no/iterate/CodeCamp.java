@@ -6,6 +6,7 @@ import java.util.List;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.type.ClassOrInterfaceType;
 
+import static com.github.javaparser.JavaParser.parseClassOrInterfaceType;
 import static no.iterate.Tests.assume;
 
 public class CodeCamp {
@@ -70,7 +71,7 @@ public class CodeCamp {
         public Program addParameter(String containingClass, String containingMethod, String parameterType, String parameterName) {
             compilationUnit.getClassByName(containingClass)
                     .map(klass -> klass.getMethodsByName(containingMethod))
-                    .map(method -> method.stream().map(m -> m.addParameter(new ClassOrInterfaceType(parameterType), parameterName)));
+                    .map(method -> method.stream().map(m -> m.addParameter(parseClassOrInterfaceType(parameterType), parameterName)));
             return this;
         }
     }
