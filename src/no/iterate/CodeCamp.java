@@ -26,6 +26,10 @@ public class CodeCamp {
             assume(new Program().addClass("FizzBuzz").addMethod("calculate", "FizzBuzz").toString().contains("calculate"));
         });
 
+        functionTests.add(() -> {
+            assume(new Program().addClass("FizzBuzz").addMethod("calculate", "FizzBuzz").toString().contains("calculate"));
+        });
+
 
         report(runTests(tests, functionTests));
     }
