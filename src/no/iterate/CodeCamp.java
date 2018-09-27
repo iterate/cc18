@@ -30,7 +30,7 @@ public class CodeCamp {
         private CompilationUnit compilationUnit;
 
         public String toString() {
-            return "FizzBuzz";
+            return compilationUnit.toString();
         }
 
         public Program addClass(String className) {
