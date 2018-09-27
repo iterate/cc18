@@ -43,8 +43,7 @@ public class CodeCamp {
                     .toString()
                     .contains("calculate"));
         });
-
-
+        
         report(runTests(tests, functionTests));
     }
 
