@@ -57,7 +57,7 @@ public class Tests {
         List<Testable> tests2 = new ArrayList<>();
 
         List<Runnable> functionTests = new ArrayList<>();
-        functionTests.add(() -> { assume(false); });
+        functionTests.add(() -> assume(false));
 
         TestResults testResults = Tester.runTests(tests2, functionTests);
 
