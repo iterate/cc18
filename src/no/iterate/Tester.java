@@ -37,7 +37,7 @@ public class Tester {
         message.append("\n\nStack trace:\n");
 
         for (StackTraceElement stackTraceElement : stackTraceElements) {
-            message.append("\t" + printStackTraceMessage(stackTraceElement));
+            message.append("\t").append(printStackTraceMessage(stackTraceElement));
         }
 
         return message.toString();
