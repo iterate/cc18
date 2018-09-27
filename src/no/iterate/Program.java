@@ -74,5 +74,7 @@ class Program {
         return this.toString();
     }
 
-    public static void script(){};
+    public static Program script(String script){
+        return null;
+    };
 }
