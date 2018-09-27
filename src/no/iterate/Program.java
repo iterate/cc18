@@ -14,8 +14,6 @@ import com.github.javaparser.ast.stmt.ReturnStmt;
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
 import java.io.ByteArrayInputStream;
-import java.io.StringBufferInputStream;
-import java.io.StringReader;
 
 class Program {
 
