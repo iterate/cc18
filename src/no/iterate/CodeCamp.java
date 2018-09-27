@@ -49,7 +49,7 @@ public class CodeCamp {
     private static class Program {
 
         private CompilationUnit compilationUnit;
-        private ClassOrInterfaceDeclaration currentClass;
+        public ClassOrInterfaceDeclaration currentClass;
 
         public String toString() {
             return compilationUnit.toString();
