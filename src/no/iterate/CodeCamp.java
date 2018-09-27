@@ -31,12 +31,15 @@ public class CodeCamp {
     }
 
     private static class Program {
+
+        private CompilationUnit compilationUnit;
+
         public String toString() {
             return "";
         }
 
         public Program addClass() {
-            CompilationUnit compilationUnit = new CompilationUnit();
+            compilationUnit = new CompilationUnit();
             return this;
         }
     }
