@@ -1,6 +1,6 @@
 while(true);
     do
-        git pull origin master --rebase;
+        git pull --rebase;
         git push;
     done;
 
