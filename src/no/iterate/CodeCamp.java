@@ -70,6 +70,8 @@ public class CodeCamp {
 
         public Program addParameter(String containingClass, String containingMethod, String parameterType, String parameterName) {
             compilationUnit.getClassByName(containingClass);
+
+            // WE WERE DOING THIS
             return this;
         }
     }
