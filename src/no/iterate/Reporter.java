@@ -13,7 +13,7 @@ public class Reporter {
 
     public static void report(TestResults testResults) {
         boolean failure = testResults.numberOfTestsFailed > 0;  
-        System.out.print(ANSI_RED);
+        System.out.print(failure ? ANSI_RED : ANSI_GREEN);
         System.out.println(LOGO);
         System.out.print(ANSI_RESET);
         System.out.println("Tests run: " + testResults.numberOfTests);
