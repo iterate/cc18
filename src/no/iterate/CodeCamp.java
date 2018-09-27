@@ -32,10 +32,10 @@ public class CodeCamp {
 
     static void testClass() {
         Field[] fields = ProgramTests.class.getFields();
-        List<Testable> tests = new ArrayList<>();
+        List<Runnable> tests = new ArrayList<>();
         for (Field field : fields) {
             try {
-                System.out.println(field.get(null));
+                tests.add((Runnable) field.get(null));
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
