@@ -42,7 +42,7 @@ public class CodeCamp {
                     .addMethod("calculate")
                     .addParameter("INT", "input")
                     .toString()
-                    .contains("calculate"));
+                    .contains("calculate("));
         });
 
         report(runTests(tests, functionTests));
