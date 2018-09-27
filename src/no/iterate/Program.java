@@ -17,7 +17,7 @@ import java.io.ByteArrayInputStream;
 
 class Program {
 
-    private CompilationUnit compilationUnit = new CompilationUnit();
+    private CompilationUnit compilationUnit = new CompilationUnit("no.iterate");
     private ClassOrInterfaceDeclaration currentClass;
     private MethodDeclaration currentMethod;
 
