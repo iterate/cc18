@@ -14,7 +14,7 @@ public class CodeCamp {
         functionTests.add(Tests.correctErrorMessage);
         functionTests.add(Tests.correctAssertErrorMessage2);
 
-        functionTests.add(() -> {return;});
+        functionTests.add(() -> {new Program();});
 
         report(runTests(tests, functionTests));
     }
@@ -78,4 +78,6 @@ public class CodeCamp {
         return filename + ":" + lineNumber + " (" + methodName + ") \n";
     }
 
+    private static class Program {
+    }
 }
