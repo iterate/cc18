@@ -75,7 +75,7 @@ class Program {
 
     public String run() {
         System.out.println(this.toString());
-        try (PrintWriter out = new PrintWriter("fizzbuzz.java")) {
+        try (PrintWriter out = new PrintWriter("FizzBuzz.java")) {
             out.println(toString());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -84,9 +84,9 @@ class Program {
         try {
             runProcess("pwd");
             System.out.println("**********");
-            runProcess("javac -cp src src/com/journaldev/files/Test.java");
+            runProcess("javac -cp FizzBuzz.java");
             System.out.println("**********");
-            runProcess("java -cp src com/journaldev/files/Test Hi Pankaj");
+            runProcess("java -cp FizzBuzz");
         } catch (Exception e) {
             e.printStackTrace();
         }
