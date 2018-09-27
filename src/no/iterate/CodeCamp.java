@@ -67,7 +67,7 @@ public class CodeCamp {
         }
 
         public Program addParameter(String containingClass, String containingMethod, String parameterType, String parameterName) {
-            compilationUnit.getClassByName(containingClass);
+            compilationUnit.getClassByName(containingClass).map(klass -> klass);
             return this;
         }
     }
