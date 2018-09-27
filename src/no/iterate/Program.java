@@ -73,4 +73,6 @@ class Program {
         //compiler.run(new ByteArrayInputStream(toString().getBytes()), System.out, System.err);
         return this.toString();
     }
+
+    public static void script(){};
 }
