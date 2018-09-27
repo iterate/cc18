@@ -70,7 +70,7 @@ class Program {
     public String run() {
         System.out.println(this.toString());
         JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-        //compiler.run(new ByteArrayInputStream(toString().getBytes()), System.out, System.err);
+        compiler.run(new ByteArrayInputStream(toString().getBytes()), System.out, System.err);
         return this.toString();
     }
 }
