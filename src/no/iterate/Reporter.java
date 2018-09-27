@@ -5,7 +5,7 @@ public class Reporter {
         System.out.println("Tests run: " + testResults.numberOfTests);
         System.out.println("Tests failed: " + testResults.numberOfTestsFailed);
 
-        System.out.println("");
+        System.out.println();
 
         if (testResults.numberOfTestsFailed > 0) {
             System.out.println(testResults.summary());
