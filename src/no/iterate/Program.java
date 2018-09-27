@@ -13,6 +13,9 @@ import com.github.javaparser.ast.stmt.ReturnStmt;
 
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
+import java.io.ByteArrayInputStream;
+import java.io.StringBufferInputStream;
+import java.io.StringReader;
 
 class Program {
 
@@ -69,6 +72,7 @@ class Program {
     public String run() {
         System.out.println(this.toString());
         JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+        compiler.run(new ByteArrayInputStream(toString().getBytes()), System.out, System.err);
         return this.toString();
     }
 }
