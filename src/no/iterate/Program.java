@@ -54,4 +54,8 @@ class Program {
         currentMethod.setBody(block);
         return this;
     }
+
+    public Program addMethodReturnStmt(String s) {
+        return this;
+    }
 }

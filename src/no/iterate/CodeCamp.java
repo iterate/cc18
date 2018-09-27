@@ -54,6 +54,13 @@ public class CodeCamp {
                 .toString()
                 .contains("calculate() {")));
 
+        functionTests.add(() -> assume(new Program()
+                .addClass("FizzBuzz")
+                .addMethod("calculate")
+                .addMethodReturnStmt("1")
+                .toString()
+                .contains("calculate() {")));
+
         Reporter.report(Tester.runTests(tests, functionTests));
     }
 
