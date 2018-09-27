@@ -3,6 +3,12 @@ package no.iterate;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.github.javaparser.ast.CompilationUnit;
+import com.github.javaparser.ast.type.ClassOrInterfaceType;
+
+import static com.github.javaparser.JavaParser.parseClassOrInterfaceType;
+import static no.iterate.Tests.assume;
+
 public class CodeCamp {
 
     public static void main(String[] args) {
@@ -14,14 +20,59 @@ public class CodeCamp {
         functionTests.add(Tests.correctErrorMessage);
         functionTests.add(Tests.correctAssertErrorMessage2);
 
-        functionTests.add(() -> {Tests.assume(new Program().toString().equals(""));});
+        functionTests.add(() -> {
+            assume(new Program()
+                    .addClass("FizzBuzz")
+                    .toString()
+                    .contains("class FizzBuzz"), "Program should contain class FizzBuzz");
+        });
+
+        functionTests.add(() -> {
+            assume(new Program()
+                    .addClass("FizzBuzz")
+                    .addMethod("calculate", "FizzBuzz")
+                    .toString()
+                    .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
+        });
+
+        functionTests.add(() -> {
+            assume(new Program()
+                    .addClass("FizzBuzz")
+                    .addMethod("calculate", "FizzBuzz")
+                    .addParameter("FizzBuzz", "calculate", "int", "input")
+                    .toString()
+                    .contains("calculate"));
+        });
+
 
         report(runTests(tests, functionTests));
     }
 
     private static class Program {
+
+        private CompilationUnit compilationUnit;
+
         public String toString() {
-            return "";
+            return compilationUnit.toString();
+        }
+
+        public Program addClass(String className) {
+            compilationUnit = new CompilationUnit();
+            compilationUnit.addClass(className);
+            return this;
+        }
+
+        public Program addMethod(String methodName, String contaningClassName) {
+            compilationUnit.getClassByName(contaningClassName)
+                    .map((klass -> klass.addMethod(methodName)));
+            return this;
+        }
+
+        public Program addParameter(String containingClass, String containingMethod, String parameterType, String parameterName) {
+            compilationUnit.getClassByName(containingClass);
+
+            // WE WERE DOING THIS
+            return this;
         }
     }
 
