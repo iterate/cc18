@@ -35,7 +35,7 @@ public class CodeCamp {
         List<Testable> tests = new ArrayList<>();
         for (Field field : fields) {
             try {
-                field.get(null);
+                System.out.println(field.get(null));
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
