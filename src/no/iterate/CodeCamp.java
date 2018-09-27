@@ -53,6 +53,15 @@ public class CodeCamp {
                     .contains("class FizzBuzz"), "Program should contain class FizzBuzz even when AnotherClass has been added");
         });
 
+        functionTests.add(() -> {
+            assume(new Program()
+                    .addClass("FizzBuzz")
+                    .addMethod("calculate")
+                    .addParameter("INT", "input")
+                    .toString()
+                    .contains("calculate(INT input)"));
+        });
+
         Reporter.report(runTests(tests, functionTests));
     }
 
