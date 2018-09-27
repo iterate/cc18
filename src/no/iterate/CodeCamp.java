@@ -122,7 +122,7 @@ public class CodeCamp {
         message.append("\n\nStack trace:\n");
 
         for (StackTraceElement stackTraceElement : stackTraceElements) {
-            message.append("" + printStackTraceMessage(stackTraceElement));
+            message.append("\t" + printStackTraceMessage(stackTraceElement));
         }
 
         return message.toString();
