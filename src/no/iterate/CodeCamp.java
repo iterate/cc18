@@ -2,7 +2,7 @@ package no.iterate;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.github.javaparser.symbolsolver.JavaSymbolSolver;
+
 import com.github.javaparser.ast.CompilationUnit;
 
 import static no.iterate.Tests.assume;
@@ -23,7 +23,7 @@ public class CodeCamp {
         });
 
         functionTests.add(() -> {
-            assume(new Program().addClass().toString().contains(""));
+            assume(new Program().addClass("FizzBuzz").toString().contains(""));
         });
 
 
@@ -38,7 +38,7 @@ public class CodeCamp {
             return "";
         }
 
-        public Program addClass() {
+        public Program addClass(String className) {
             compilationUnit = new CompilationUnit();
             return this;
         }
