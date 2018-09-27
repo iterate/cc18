@@ -32,7 +32,7 @@ public class CodeCamp {
     static void testClass() {
         Field[] fields = ProgramTests.class.getFields();
         for (Field field : fields) {
-            
+           System.out.println(field);
         }
         System.out.println(fields);
     }
