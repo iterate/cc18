@@ -117,7 +117,6 @@ public class CodeCamp {
         
         message.append(throwable.getMessage());
 
-        message.append("\n!!!\nTest failed at: " + printStackTraceMessage(stackTraceElements[0]));
         message.append("\nStack trace:\n");
 
         for (StackTraceElement stackTraceElement : stackTraceElements) {
