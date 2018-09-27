@@ -59,7 +59,7 @@ public class CodeCamp {
                 .addMethod("calculate")
                 .addMethodReturnStmt("1")
                 .toString()
-                .contains("calculate() {")));
+                .contains("return 1;")));
 
         Reporter.report(Tester.runTests(tests, functionTests));
     }
