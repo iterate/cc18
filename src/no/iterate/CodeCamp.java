@@ -32,14 +32,12 @@ public class CodeCamp {
                 .toString()
                 .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'"));
 
-        functionTests.add(() -> {
-            assume(new Program()
-                    .addClass("FizzBuzz")
-                    .addMethod("calculate")
-                    .addParameter("INT", "input")
-                    .toString()
-                    .contains("calculate(INT input)"));
-        });
+        functionTests.add(() -> assume(new Program()
+                .addClass("FizzBuzz")
+                .addMethod("calculate")
+                .addParameter("INT", "input")
+                .toString()
+                .contains("calculate(INT input)")));
 
         functionTests.add(() -> {
             assume(new Program()
