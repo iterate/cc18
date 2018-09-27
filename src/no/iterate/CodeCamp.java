@@ -49,7 +49,7 @@ public class CodeCamp {
     private static class Program {
 
         private CompilationUnit compilationUnit;
-        public ClassOrInterfaceDeclaration currentClass;
+        private ClassOrInterfaceDeclaration currentClass;
 
         public String toString() {
             return compilationUnit.toString();
@@ -62,8 +62,7 @@ public class CodeCamp {
         }
 
         public Program addMethod(String methodName, String contaningClassName) {
-            compilationUnit.getClassByName(contaningClassName)
-                    .map((klass -> klass.addMethod(methodName)));
+            currentClass.addMethod(methodName);
             return this;
         }
 
