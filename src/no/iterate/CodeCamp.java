@@ -67,7 +67,7 @@ public class CodeCamp {
                     .addClass("FizzBuzz")
                     .addMethod("calculate")
                     .toString()
-                    .contains("calculate()"));
+                    .contains("calculate("));
         });
 
         Reporter.report(runTests(tests, functionTests));
