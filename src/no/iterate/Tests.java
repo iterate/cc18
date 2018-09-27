@@ -36,7 +36,7 @@ public class Tests {
         List<Runnable> functionTests = new ArrayList<>();
         functionTests.add(() -> { throw new RuntimeException("MyMessage"); });
 
-        TestResults testResults = Testable.runTests(tests2, functionTests);
+        TestResults testResults = Tester.runTests(tests2, functionTests);
         assume(testResults.summary().contains("MyMessage"), "Test results should contain \"MyMessage\"");
     };
 
@@ -47,7 +47,7 @@ public class Tests {
         functionTests.add(() -> { assume(false); });
 
 
-        TestResults testResults = Testable.runTests(tests2, functionTests);
+        TestResults testResults = Tester.runTests(tests2, functionTests);
 
         assume(testResults.summary().contains("Tests.java"));
         assume(testResults.summary().contains("(assume)"));
@@ -59,7 +59,7 @@ public class Tests {
         List<Runnable> functionTests = new ArrayList<>();
         functionTests.add(() -> { assume(false); });
 
-        TestResults testResults = Testable.runTests(tests2, functionTests);
+        TestResults testResults = Tester.runTests(tests2, functionTests);
 
         assume(testResults.summary().contains("CodeCamp.java"), "test result summary should contain \"CodeCamp.java\"");
         assume(testResults.summary().contains("(invoke)"), "test result summary should contain \"(invoke)\"");

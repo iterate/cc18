@@ -70,7 +70,7 @@ public class CodeCamp {
                     .contains("calculate("));
         });
 
-        Reporter.report(Testable.runTests(tests, functionTests));
+        Reporter.report(Tester.runTests(tests, functionTests));
     }
 
     private static class Program {
