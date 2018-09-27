@@ -3,7 +3,7 @@ package no.iterate;
 import java.util.ArrayList;
 import java.util.List;
 
-import static no.iterate.Tests.assume;
+import static no.iterate.ProgramTests.*;
 
 public class CodeCamp {
 
@@ -16,13 +16,13 @@ public class CodeCamp {
         functionTests.add(Tests.correctErrorMessage);
         functionTests.add(Tests.correctAssertErrorMessage2);
 
-        functionTests.add(ProgramTests.PROGRAM_SHOULD_CONTAIN_CLASS_FIZZBUZZ);
-        functionTests.add(ProgramTests.ADD_METHOD);
-        functionTests.add(ProgramTests.ADD_PARAMETER);
-        functionTests.add(ProgramTests.ADD_SECOND_CLASS);
-        functionTests.add(ProgramTests.SET_RETURN_TYPE);
-        functionTests.add(ProgramTests.ADD_RETURN);
-        functionTests.add(ProgramTests.RETURN_VALUE);
+        functionTests.add(PROGRAM_SHOULD_CONTAIN_CLASS_FIZZBUZZ);
+        functionTests.add(ADD_METHOD);
+        functionTests.add(ADD_PARAMETER);
+        functionTests.add(ADD_SECOND_CLASS);
+        functionTests.add(SET_RETURN_TYPE);
+        functionTests.add(ADD_RETURN);
+        functionTests.add(RETURN_VALUE);
 
         Reporter.report(Tester.runTests(tests, functionTests));
     }
