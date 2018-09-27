@@ -12,7 +12,7 @@ public class CodeCamp {
             .addMethod("calculate")
             .toString()
             .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
-    public static final Runnable RUNNABLE = () -> assume(new Program()
+    public static final Runnable ADD_PARAMETER = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
             .addParameter("INT", "input")
@@ -32,7 +32,7 @@ public class CodeCamp {
 
         functionTests.add(ADD_METHOD);
 
-        functionTests.add(RUNNABLE);
+        functionTests.add(ADD_PARAMETER);
 
         functionTests.add(() -> assume(new Program()
                 .addClass("FizzBuzz")
