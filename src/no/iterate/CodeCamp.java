@@ -29,13 +29,7 @@ public class CodeCamp {
 
         functionTests.add(ProgramTests.ADD_RETURN);
 
-        functionTests.add(() -> assume(new Program()
-                .addClass("FizzBuzz")
-                .addMethod("calculate")
-                .addReturnType("STRING")
-                .addMethodReturnStmt("1")
-                .run()
-                .contains("return 1;"), "Method should return 1 like we said"));
+        functionTests.add(ProgramTests.RETURN_VALUE);
 
 
         Reporter.report(Tester.runTests(tests, functionTests));

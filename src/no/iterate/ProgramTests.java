@@ -35,4 +35,11 @@ public class ProgramTests {
             .addMethodReturnStmt("1")
             .toString()
             .contains("return 1;"));
+    public static final Runnable RETURN_VALUE = () -> assume(new Program()
+            .addClass("FizzBuzz")
+            .addMethod("calculate")
+            .addReturnType("STRING")
+            .addMethodReturnStmt("1")
+            .run()
+            .contains("return 1;"), "Method should return 1 like we said");
 }
