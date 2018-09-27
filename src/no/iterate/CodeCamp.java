@@ -40,7 +40,7 @@ public class CodeCamp {
             assume(new Program()
                     .addClass("FizzBuzz")
                     .addMethod("calculate")
-                    .addParameter("FizzBuzz", "calculate", "INT", "input")
+                    .addParameter("FizzBuzz", "INT", "input")
                     .toString()
                     .contains("calculate"));
         });
@@ -69,7 +69,7 @@ public class CodeCamp {
             return this;
         }
 
-        public Program addParameter(String containingClass, String containingMethod, String parameterType, String parameterName) {
+        public Program addParameter(String containingClass, String parameterType, String parameterName) {
             currentMethod.addParameter(JavaParser.parseTypeParameter(parameterType), parameterName);
 
             // WE WERE DOING THIS
