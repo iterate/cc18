@@ -28,7 +28,7 @@ public class Tester {
         return testResults;
     }
 
-    public static String buildErrorMessage(Throwable throwable) {
+    private static String buildErrorMessage(Throwable throwable) {
         StackTraceElement[] stackTraceElements = throwable.getStackTrace();
         StringBuilder message = new StringBuilder();
 
