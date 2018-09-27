@@ -1,5 +1,6 @@
 package no.iterate;
 
+import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
@@ -39,7 +40,7 @@ public class CodeCamp {
             assume(new Program()
                     .addClass("FizzBuzz")
                     .addMethod("calculate")
-                    .addParameter("FizzBuzz", "calculate", "int", "input")
+                    .addParameter("FizzBuzz", "calculate", "INT", "input")
                     .toString()
                     .contains("calculate"));
         });
@@ -69,7 +70,7 @@ public class CodeCamp {
         }
 
         public Program addParameter(String containingClass, String containingMethod, String parameterType, String parameterName) {
-            compilationUnit.getClassByName(containingClass);
+            currentMethod.addParameter(JavaParser.parseTypeParameter(parameterType), parameterName);
 
             // WE WERE DOING THIS
             return this;
