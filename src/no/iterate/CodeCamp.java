@@ -18,14 +18,6 @@ public class CodeCamp {
         functionTests.add(Tests.correctErrorMessage);
         functionTests.add(Tests.correctAssertErrorMessage2);
 
-        functionTests.add(PROGRAM_SHOULD_CONTAIN_CLASS_FIZZBUZZ);
-        functionTests.add(ADD_METHOD);
-        functionTests.add(ADD_PARAMETER);
-        functionTests.add(ADD_SECOND_CLASS);
-        functionTests.add(SET_RETURN_TYPE);
-        functionTests.add(ADD_RETURN);
-        functionTests.add(RETURN_VALUE);
-
         functionTests.addAll(testClass());
 
         Reporter.report(Tester.runTests(tests, functionTests));
