@@ -17,7 +17,6 @@ public class CodeCamp {
         functionTests.add(Tests.correctAssertErrorMessage2);
 
         functionTests.add(ProgramTests.PROGRAM_SHOULD_CONTAIN_CLASS_FIZZBUZZ);
-
         functionTests.add(ProgramTests.ADD_METHOD);
 
         functionTests.add(ProgramTests.ADD_PARAMETER);
