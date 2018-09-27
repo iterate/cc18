@@ -104,22 +104,7 @@ public class CodeCamp {
         }
     }
 
-    public static String buildErrorMessage(Throwable throwable) {
-        StackTraceElement[] stackTraceElements = throwable.getStackTrace();
-        StringBuilder message = new StringBuilder();
-        
-        message.append(throwable.getMessage());
-
-        message.append("\n\nStack trace:\n");
-
-        for (StackTraceElement stackTraceElement : stackTraceElements) {
-            message.append("\t" + printStackTraceMessage(stackTraceElement));
-        }
-
-        return message.toString();
-    }
-
-    private static String printStackTraceMessage(StackTraceElement stackTraceElement) {
+    public static String printStackTraceMessage(StackTraceElement stackTraceElement) {
         String filename = stackTraceElement.getFileName();
         int lineNumber = stackTraceElement.getLineNumber();
         String methodName = stackTraceElement.getMethodName();

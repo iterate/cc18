@@ -11,7 +11,7 @@ public class Tester {
                 test.invoke();
             } catch (Throwable e) {
                 testResults.numberOfTestsFailed++;
-                testResults.exceptions.add(CodeCamp.buildErrorMessage(e));
+                testResults.exceptions.add(buildErrorMessage(e));
             }
         }
 
@@ -21,10 +21,25 @@ public class Tester {
                 test.run();
             } catch (Throwable e) {
                 testResults.numberOfTestsFailed++;
-                testResults.exceptions.add(CodeCamp.buildErrorMessage(e));
+                testResults.exceptions.add(buildErrorMessage(e));
             }
         }
 
         return testResults;
+    }
+
+    public static String buildErrorMessage(Throwable throwable) {
+        StackTraceElement[] stackTraceElements = throwable.getStackTrace();
+        StringBuilder message = new StringBuilder();
+
+        message.append(throwable.getMessage());
+
+        message.append("\n\nStack trace:\n");
+
+        for (StackTraceElement stackTraceElement : stackTraceElements) {
+            message.append("\t" + CodeCamp.printStackTraceMessage(stackTraceElement));
+        }
+
+        return message.toString();
     }
 }
