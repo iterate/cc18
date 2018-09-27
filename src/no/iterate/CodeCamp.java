@@ -119,7 +119,7 @@ public class CodeCamp {
         
         message.append(throwable.getMessage());
 
-        message.append("\nStack trace:\n");
+        message.append("\n\nStack trace:\n");
 
         for (StackTraceElement stackTraceElement : stackTraceElements) {
             message.append(printStackTraceMessage(stackTraceElement));
