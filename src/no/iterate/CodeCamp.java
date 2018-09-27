@@ -20,6 +20,9 @@ public class CodeCamp {
     }
 
     private static class Program {
+        public String toString() {
+            return "";
+        }
     }
 
     public static void report(TestResults testResults) {
