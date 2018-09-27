@@ -11,5 +11,5 @@ echo "        \/            \/    \/        \/     \/      \/|__|              \
 
 
 javac src/no/iterate/Testable.java src/no/iterate/TestResults.java src/no/iterate/Tests.java src/no/iterate/CodeCamp.java -d out/production/cc18/ && \
-java -classpath out/production/cc18 no.iterate.CodeCamp && \
+java -classpath out/production/cc18:javaparser-symbol-solver-core-3.6.23.jar no.iterate.CodeCamp && \
 git commit -am working || git reset --hard
