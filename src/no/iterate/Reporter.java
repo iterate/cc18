@@ -1,7 +1,7 @@
 package no.iterate;
 
 public class Reporter {
-    private static final String LOGO2 = "_________            .___     _________                       ____  ______  \n" +
+    private static final String LOGO = "_________            .___     _________                       ____  ______  \n" +
             "\\_   ___ \\  ____   __| _/____ \\_   ___ \\_____    _____ ______/_   |/  __  \\ \n" +
             "/    \\  \\/ /  _ \\ / __ |/ __ \\/    \\  \\/\\__  \\  /     \\\\____ \\|   |>      < \n" +
             "\\     \\___(  <_> ) /_/ \\  ___/\\     \\____/ __ \\|  Y Y  \\  |_> >   /   --   \\\n" +
@@ -9,7 +9,7 @@ public class Reporter {
             "        \\/            \\/    \\/        \\/     \\/      \\/|__|              \\/ ";
 
     public static void report(TestResults testResults) {
-        System.out.println(LOGO2);
+        System.out.println(LOGO);
         System.out.println("Tests run: " + testResults.numberOfTests);
         System.out.println("Tests failed: " + testResults.numberOfTestsFailed);
 
