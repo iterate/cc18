@@ -45,14 +45,12 @@ public class CodeCamp {
                 .toString()
                 .contains("class FizzBuzz"), "Program should contain class FizzBuzz even when AnotherClass has been added"));
 
-        functionTests.add(() -> {
-            assume(new Program()
-                    .addClass("FizzBuzz")
-                    .addMethod("calculate")
-                    .addReturnType("STRING")
-                    .toString()
-                    .contains("STRING calculate("));
-        });
+        functionTests.add(() -> assume(new Program()
+                .addClass("FizzBuzz")
+                .addMethod("calculate")
+                .addReturnType("STRING")
+                .toString()
+                .contains("STRING calculate(")));
 
         functionTests.add(() -> {
             assume(new Program()
