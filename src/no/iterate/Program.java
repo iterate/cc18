@@ -55,7 +55,11 @@ class Program {
         return this;
     }
 
-    public Program addMethodReturnStmt(String s) {
+    public Program addMethodReturnStmt(String returnString) {
+        final BlockStmt block = new BlockStmt();
+        ReturnStmt returnStmt = new ReturnStmt(returnString);
+        block.addStatement(returnStmt);
+        currentMethod.setBody(block);
         return this;
     }
 }
