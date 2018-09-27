@@ -61,7 +61,7 @@ public class CodeCamp {
                 .addReturnType("STRING")
                 .addMethodReturnStmt("1")
                 .toString()
-                .contains("return 1;")));
+                .contains("return 1;"), "Method should return 1 like we said"));
 
 
         Reporter.report(Tester.runTests(tests, functionTests));
