@@ -62,6 +62,14 @@ public class CodeCamp {
                     .contains("STRING calculate("));
         });
 
+        functionTests.add(() -> {
+            assume(new Program()
+                    .addClass("FizzBuzz")
+                    .addMethod("calculate")
+                    .toString()
+                    .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
+        });
+
         Reporter.report(runTests(tests, functionTests));
     }
 
