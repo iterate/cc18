@@ -50,7 +50,7 @@ public class CodeCamp {
                     .addClass("FizzBuzz")
                     .addClass("AnotherClass")
                     .toString()
-                    .contains("class FizzBuzz"), "Program should contain class FizzBuzz");
+                    .contains("class FizzBuzz"), "Program should contain class FizzBuzz even when AnotherClass has been added");
         });
 
         Reporter.report(runTests(tests, functionTests));
