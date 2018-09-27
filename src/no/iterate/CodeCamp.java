@@ -26,6 +26,8 @@ public class CodeCamp {
         functionTests.add(ADD_RETURN);
         functionTests.add(RETURN_VALUE);
 
+        functionTests.addAll(testClass());
+
         Reporter.report(Tester.runTests(tests, functionTests));
         testClass();
     }
