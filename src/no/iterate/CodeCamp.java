@@ -20,12 +20,21 @@ public class CodeCamp {
             assume(new Program().toString().equals(""));
         });
 
+        functionTests.add(() -> {
+            assume(new Program().addClass().toString().equals(""));
+        });
+
+
         report(runTests(tests, functionTests));
     }
 
     private static class Program {
         public String toString() {
             return "";
+        }
+
+        public Program addClass() {
+            return this;
         }
     }
 
