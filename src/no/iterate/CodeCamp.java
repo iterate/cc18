@@ -71,8 +71,6 @@ public class CodeCamp {
 
         public Program addParameter(String parameterType, String parameterName) {
             currentMethod.addParameter(JavaParser.parseTypeParameter(parameterType), parameterName);
-
-            // WE WERE DOING THIS
             return this;
         }
     }
