@@ -1,6 +1,7 @@
 package no.iterate;
 
 import com.github.javaparser.ast.CompilationUnit;
+import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +49,7 @@ public class CodeCamp {
     private static class Program {
 
         private CompilationUnit compilationUnit;
+        private ClassOrInterfaceDeclaration klass;
 
         public String toString() {
             return compilationUnit.toString();
@@ -55,7 +57,7 @@ public class CodeCamp {
 
         public Program addClass(String className) {
             compilationUnit = new CompilationUnit();
-            compilationUnit.addClass(className);
+            klass = compilationUnit.addClass(className);
             return this;
         }
 
