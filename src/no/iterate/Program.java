@@ -21,6 +21,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
+import java.util.function.Consumer;
 
 class Program {
 
@@ -136,7 +137,7 @@ class Program {
         return this.toString();
     }
 
-    public Program peek(Program lambda) {
+    public Program peek(Consumer<Program> lambda) {
         return this;
     }
 
