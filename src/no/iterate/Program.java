@@ -176,7 +176,10 @@ class Program {
         final BlockStmt block = new BlockStmt();
         ReturnStmt returnStmt = new ReturnStmt(methodCallExpr);
 
-        final List<Statement> statements = block.getStatements().stream().filter(statement -> statement.isReturnStmt()).collect(Collectors.toList());
+        final List<Statement> statements = block.getStatements()
+                .stream()
+                .filter(statement -> statement.isReturnStmt())
+                .collect(Collectors.toList());
 
         block.addStatement(returnStmt);
         currentMethod.setBody(block);
