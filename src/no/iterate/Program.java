@@ -88,6 +88,7 @@ class Program {
 
     public Program addPrimitiveParameter(Primitive parameterType, String parameterName) {
         final PrimitiveType primitiveType = new PrimitiveType(parameterType);
+        new Parameter(primitiveType, parameterName);
         return this;
     }
 
