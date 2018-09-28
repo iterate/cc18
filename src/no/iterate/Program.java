@@ -17,6 +17,7 @@ import com.github.javaparser.ast.type.Type;
 import com.github.javaparser.ast.type.TypeParameter;
 
 import java.io.*;
+import java.lang.reflect.Method;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.function.Consumer;
@@ -146,7 +147,7 @@ class Program {
         call.addArgument(new MethodCallExpr(methodName));
 
         block.addStatement(call);
-        currentMethod.setBody(block);
+        ((MethodDeclaration) currentMethod).setBody(block);
 
         return this;
     }
