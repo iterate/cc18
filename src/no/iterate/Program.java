@@ -37,6 +37,11 @@ class Program {
         return this;
     }
 
+    public Program addMethodToSpecificClass(String methodName) {
+        currentMethod = currentClass.addMethod(methodName);
+        return this;
+    }
+
     public Program addParameter(String parameterType, String parameterName) {
         currentMethod.addParameter(JavaParser.parseTypeParameter(parameterType), parameterName);
         return this;
