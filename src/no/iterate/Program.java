@@ -84,7 +84,7 @@ class Program {
             }
 
             if(node instanceof MethodDeclaration){
-                
+                label = ((MethodDeclaration)node).getName().toString();
             }
 
             System.out.print(indent(depth));
