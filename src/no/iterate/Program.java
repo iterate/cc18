@@ -136,7 +136,7 @@ class Program {
         return this.toString();
     }
 
-    public Program peek(String lambda) {
+    public Program peek(Program lambda) {
         return this;
     }
 
