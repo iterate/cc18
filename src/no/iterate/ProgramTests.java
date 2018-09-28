@@ -16,6 +16,7 @@ public class ProgramTests {
             .makePublic()
             .addParameter("String", "args", true)
             .printMethodResult("calculate")
+            .setCursorToCurrentClass()
             .addMethod("calculate")
             .makeStatic()
             .setReturnType("String")
