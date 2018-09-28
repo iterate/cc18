@@ -59,7 +59,7 @@ class Program {
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
         final Parameter parameter = new Parameter(JavaParser.parseTypeParameter(parameterType), parameterName);
-        parameter.setVarArgs(false);
+        parameter.setVarArgs(isVarArgs);
 
         currentMethod.addParameter(parameter);
         return this;
