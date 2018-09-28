@@ -73,6 +73,7 @@ class Program {
             Node node = nodes.get(i);
 
             if(node instanceof ClassOrInterfaceDeclaration){
+                System.out.print(i);
                 System.out.print(indent(depth));
                 System.out.println(((ClassOrInterfaceDeclaration)node).getName());
             }
