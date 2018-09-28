@@ -63,5 +63,6 @@ public class ProgramTests {
             .addClass("FizzBuzz")
             .addMethodToClass(0, "calculate")
             .toString()
+            
             .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
 }
