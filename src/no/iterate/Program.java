@@ -87,10 +87,10 @@ class Program {
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
         final TypeParameter type = JavaParser.parseTypeParameter(parameterType);
-        return getProgram(parameterName, isVarArgs, type);
+        return addParameter(parameterName, isVarArgs, type);
     }
 
-    private Program getProgram(String parameterName, boolean isVarArgs, TypeParameter type) {
+    private Program addParameter(String parameterName, boolean isVarArgs, TypeParameter type) {
         final Parameter parameter = new Parameter(type, parameterName);
         parameter.setVarArgs(isVarArgs);
 
@@ -147,14 +147,14 @@ class Program {
     }
 
     public Program makeStatic() {
-        return getProgram(Modifier.STATIC);
+        return addParameter(Modifier.STATIC);
     }
 
     public Program makePublic() {
-        return getProgram(Modifier.PUBLIC);
+        return addParameter(Modifier.PUBLIC);
     }
 
-    private Program getProgram(Modifier modifier) {
+    private Program addParameter(Modifier modifier) {
         final EnumSet<Modifier> modifiers = currentMethod.getModifiers();
         modifiers.add(modifier);
         currentMethod.setModifiers(modifiers);
