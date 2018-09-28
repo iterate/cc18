@@ -21,8 +21,6 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.function.Consumer;
@@ -67,19 +65,22 @@ class Program {
 
     public void printChildrenRecursively() {
         System.out.println("Nodes:");
-        printNodes(compilationUnit.getChildNodes());
+        printNodes(compilationUnit.getChildNodes(), 0);
     }
 
-    void printNodes(List<Node> nodes){
+    void printNodes(List<Node> nodes, int depth){
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
 
             if(node instanceof ClassOrInterfaceDeclaration){
+                System.out.print(indent(depth));
                 System.out.println("" + i + "\t"+((ClassOrInterfaceDeclaration)node).getName());
             }
-            printNodes(node.getChildNodes());
+            printNodes(node.getChildNodes(), depth + 1);
         }
     }
+
+    String indent(int depth){ return "";}
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
         final TypeParameter type = JavaParser.parseTypeParameter(parameterType);
