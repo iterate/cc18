@@ -46,7 +46,7 @@ class Program {
     }
 
     public Program addClass(CompilationUnit cu, String className) {
-        currentClass = compilationUnit.addClass(className);
+        cu.addClass(className);
         return this;
     }
 
