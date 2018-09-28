@@ -88,6 +88,7 @@ class Program {
 
     public Program addPrimitiveParameter(String parameterType, String parameterName) {
         final Primitive anInt = Primitive.INT;
+        new com.github.javaparser.ast.type.PrimitiveType(anInt);
         return this;
     }
 
