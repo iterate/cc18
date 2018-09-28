@@ -100,7 +100,7 @@ class Program {
             }
 
             if(node instanceof Parameter){
-                label = "?";
+                label = "parameter: " + ((Parameter)node).getName();
             }
 
             if(node instanceof TypeParameter){
