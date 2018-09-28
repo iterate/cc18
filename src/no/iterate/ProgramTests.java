@@ -66,7 +66,6 @@ public class ProgramTests {
     public static final Runnable ADD_METHOD_TO_SPECIFIC_CLASS = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethodToClass(0, "calculate")
-            .peek(Program::printChildrenRecursively)
             .toString()
             .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
 }
