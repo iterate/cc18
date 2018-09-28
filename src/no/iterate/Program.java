@@ -3,6 +3,7 @@ package no.iterate;
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Modifier;
+import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.Parameter;
@@ -20,6 +21,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
@@ -64,9 +66,10 @@ class Program {
 
     public void printChildrenRecursively() {
         System.out.println("Nodes:");
-        for (int i = 0; i < compilationUnit.getChildNodes().size(); i++) {
+        List<Node> childNodes = compilationUnit.getChildNodes();
+        for (int i = 0; i < childNodes.size(); i++) {
             System.out.print(i);
-            final ArrayList<String> lines = new ArrayList<>(Arrays.asList(compilationUnit.getChildNodes().get(i).toString().split("\n")));
+            final ArrayList<String> lines = new ArrayList<>(Arrays.asList(childNodes.get(i).toString().split("\n")));
             lines.forEach(l -> System.out.println("\t" + l));
         }
     }
