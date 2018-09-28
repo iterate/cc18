@@ -36,6 +36,7 @@ public class ProgramTests {
             .toString()
             .contains("return \"1\";"));
     public static final Runnable RUN_THE_CODE = () -> assume(new Program()
+            .setPackage("no.iterate")
             .addClass("FizzBuzz")
             .addMethod("calculate")
             .addReturnType("String")
