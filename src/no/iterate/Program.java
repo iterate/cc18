@@ -89,6 +89,10 @@ class Program {
                 label = ((MethodDeclaration)node).getName().toString();
             }
 
+            if(node instanceof BlockStmt){
+                
+            }
+
             System.out.print(indent(depth));
             System.out.print("" + i + ": ");
             System.out.println(label);
