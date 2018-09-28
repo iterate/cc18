@@ -92,13 +92,7 @@ class Program {
 
     public Program callMethod(String methodName) {
         final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
-
-        NameExpr clazz = new NameExpr("System");
-        FieldAccessExpr field = new FieldAccessExpr(clazz, "out");
-        MethodCallExpr call = new MethodCallExpr(field, "println");
-        call.addArgument(new MethodCallExpr(methodName));
-
-        block.addStatement(call);
+        block.addStatement(new MethodCallExpr(methodName));
         currentMethod.setBody(block);
 
 
