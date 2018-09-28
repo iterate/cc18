@@ -74,7 +74,7 @@ class Program {
 
     private Program getProgram(Modifier modifier) {
         final EnumSet<Modifier> modifiers = currentMethod.getModifiers();
-        modifiers.add(Modifier.STATIC);
+        modifiers.add(modifier);
 
         currentMethod.setModifiers(modifiers);
         return this;
