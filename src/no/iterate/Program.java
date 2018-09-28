@@ -176,12 +176,13 @@ class Program {
         final BlockStmt block = new BlockStmt();
         ReturnStmt returnStmt = new ReturnStmt(methodCallExpr);
 
-        final List<Statement> statements = block.getStatements()
+        final NodeList<Statement> statements = block.getStatements()
                 .stream()
                 .filter(statement -> !statement.isReturnStmt())
-                .collect(Collectors.toList());
+                .collect(NodeList.toNodeList());
 
-        block.addStatement(returnStmt);
+        statements.add(returnStmt);
+        block.setStatements(statements);
         currentMethod.setBody(block);
         return this;
     }
