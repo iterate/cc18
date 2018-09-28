@@ -197,6 +197,7 @@ class Program {
         pro.waitFor();
         System.out.println(command + " exitValue() " + pro.exitValue());
 
+
         String result = new BufferedReader(new InputStreamReader(inputStream))
                 .lines().collect(Collectors.joining("\n"));
 
