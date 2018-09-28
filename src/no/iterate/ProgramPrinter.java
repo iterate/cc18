@@ -21,7 +21,7 @@ public class ProgramPrinter {
                 .collect(Collectors.joining());
     }
 
-    public static void printNodes(Program program, List<Node> nodes, int depth){
+    public static void printNodes(List<Node> nodes, int depth){
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
 
@@ -59,7 +59,7 @@ public class ProgramPrinter {
             System.out.print("" + i + ": ");
             System.out.println(label);
 
-            printNodes(program, node.getChildNodes(), depth + 1);
+            printNodes(node.getChildNodes(), depth + 1);
         }
     }
 }

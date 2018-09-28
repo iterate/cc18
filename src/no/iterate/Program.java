@@ -67,7 +67,7 @@ class Program {
 
     public void printChildrenRecursively() {
         System.out.println("Nodes:");
-        ProgramPrinter.printNodes(this, compilationUnit.getChildNodes(), 0);
+        ProgramPrinter.printNodes(compilationUnit.getChildNodes(), 0);
     }
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
