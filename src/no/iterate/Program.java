@@ -75,7 +75,7 @@ class Program {
     public Program addMethodToClass(int node, String methodName) {
         cursor2 = compilationUnit.getChildNodes().get(node);
 
-            cursor2 = ((ClassOrInterfaceDeclaration) cursor2).addMethod(methodName);
+        cursor2 = ((ClassOrInterfaceDeclaration) cursor2).addMethod(methodName);
         return this;
     }
 
