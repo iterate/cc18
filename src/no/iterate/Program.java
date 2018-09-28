@@ -204,7 +204,6 @@ class Program {
 
         if (pro.exitValue() != 0) {
             throw new RuntimeException("runProcess() terminated with a non zero exitcode");
-
         }
 
         String result = new BufferedReader(new InputStreamReader(inputStream))
