@@ -13,7 +13,7 @@ public class ProgramTests {
             .contains("class FizzBuzz"), "Program should contain class FizzBuzz");
     public static final Runnable ADD_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
-            .peek(p -> System.out.println(p.cursor.getClass()))
+
             .addMethod("calculate") // sets cursor to method
             .peek(p -> System.out.println(p.cursor.getClass()))
             .toString()
@@ -47,6 +47,7 @@ public class ProgramTests {
     public static final Runnable RUN_THE_CODE = () -> assume(new Program()
             .setPackage("no.iterate")
             .addClass("FizzBuzz")
+            .peek(p -> System.out.println(p.cursor.getClass()))
             .addMethod("main")
             .makeStatic()
             .makePublic()
