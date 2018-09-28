@@ -91,7 +91,7 @@ class Program {
     }
 
 
-    public Program changeSignatureAddParameter(Type type, String name, Object defaultValue) {
+    public Program changeSignatureAddParameter(Type type, String name, Object defaultValue, Class<IntegerLiteralExpr> integerLiteralExprClass) {
         addParameter(type, name, false);
 
         final List<MethodCallExpr> allMethodCalls = currentClass
