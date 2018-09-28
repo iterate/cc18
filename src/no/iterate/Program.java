@@ -144,7 +144,6 @@ class Program {
         String returnString = "";
 
         try {
-            runProcess("pwd");
             System.out.println("**********");
             runProcess("javac "+ fileName + " -d out/production/cc18/");
             System.out.println("**********");
