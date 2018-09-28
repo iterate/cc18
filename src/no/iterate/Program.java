@@ -86,7 +86,7 @@ class Program {
         for (int i = 0; i < depth; i++) {
             stringBuilder.append('\t');
         }
-        return "";
+        return stringBuilder.toString();
     }
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
