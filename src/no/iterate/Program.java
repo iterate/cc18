@@ -112,8 +112,7 @@ class Program {
     }
 
     String indent(int depth){
-        String stringBuilder = IntStream.range(0, depth + 1).mapToObj(i -> "   ").collect(Collectors.joining());
-        return stringBuilder;
+        return IntStream.range(0, depth + 1).mapToObj(i -> "   ").collect(Collectors.joining());
     }
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
