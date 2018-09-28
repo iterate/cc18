@@ -1,7 +1,11 @@
 package no.iterate;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import static java.util.Arrays.stream;
 
@@ -11,14 +15,13 @@ public class CodeCamp {
         List<Testable> tests = new ArrayList<>();
         tests.add(new Tests.FizzBuzz());
 
-        List<Runnable> functionTests = new ArrayList<>();
-        functionTests.add(() -> {});
-        functionTests.add(Tests.correctErrorMessage);
-        functionTests.add(Tests.correctAssertErrorMessage2);
+        List<Runnable> functionalTest = testClass(ProgramTests.class);
+        functionalTest.addAll(List.of(
+                () -> {},
+                Tests.correctErrorMessage,
+                Tests.correctAssertErrorMessage2));
 
-        functionTests.addAll(testClass(ProgramTests.class));
-
-        Reporter.report(Tester.runTests(tests, functionTests));
+        Reporter.report(Tester.runTests(tests, functionalTest));
         testClass(ProgramTests.class);
     }
 
