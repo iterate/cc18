@@ -101,6 +101,7 @@ public class ProgramTests {
                 .addMethod("method1")
                 .setCursorToCurrentClass()
                 .addMethod("method2")
+                .makeStatic()
                 .toString();
 
         assume(program.contains("method1()"), "Adding multiple methods, the first one is still there");
