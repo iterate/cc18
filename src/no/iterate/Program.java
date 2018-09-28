@@ -130,7 +130,7 @@ class Program {
 
         final List<MethodCallExpr> allMethodCalls = currentClass.findAll(MethodCallExpr.class);
 
-        new NodeList<>();
+        final NodeList<Node> nodes = new NodeList<>();
 
         allMethodCalls.stream().map(call -> call.asMethodCallExpr());
 
