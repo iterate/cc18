@@ -1,7 +1,5 @@
 package no.iterate;
 
-import com.github.javaparser.ast.Modifier;
-
 import static no.iterate.Tests.assume;
 
 public class ProgramTests {
@@ -48,7 +46,7 @@ public class ProgramTests {
     public static final Runnable ADD_MAIN_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("main")
-            .makeStatic(Modifier.STATIC)
+            .makeStatic()
             .toString()
             .contains("static void main"));
 
