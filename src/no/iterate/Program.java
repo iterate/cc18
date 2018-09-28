@@ -74,7 +74,7 @@ class Program {
         printNodes(compilationUnit.getChildNodes(), 0);
     }
 
-    void printNodes(List<Node> nodes, int depth){
+    public void printNodes(List<Node> nodes, int depth){
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
 
