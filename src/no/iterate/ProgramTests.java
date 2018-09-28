@@ -87,6 +87,7 @@ public class ProgramTests {
         final String program = new Program()
                 .addClass("FizzBuzz")
                 .addMethod("method1")
+                .setCursorToCurrentClass()
                 .addMethod("method2")
                 .toString();
 
@@ -98,6 +99,7 @@ public class ProgramTests {
         final String program = new Program()
                 .addClass("FizzBuzz")
                 .addMethod("method1")
+                
                 .addMethod("method2")
                 .toString();
 
