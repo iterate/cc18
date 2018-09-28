@@ -117,9 +117,4 @@ class Program {
 
     ;
 
-    public Program apply(String line){
-        if(line.startsWith("ADD_CLASS"))
-            addClass(line.substring("ADD_CLASS".length()));
-        return this;
-    }
 }
