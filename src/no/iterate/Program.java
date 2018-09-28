@@ -17,6 +17,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
+import java.util.List;
 
 class Program {
 
@@ -89,7 +90,6 @@ class Program {
     private Program getProgram(Modifier modifier) {
         final EnumSet<Modifier> modifiers = currentMethod.getModifiers();
         modifiers.add(modifier);
-
         currentMethod.setModifiers(modifiers);
         return this;
     }
