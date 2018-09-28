@@ -126,7 +126,7 @@ class Program {
     public Program changeSignatureAddParameter(Type type, String name, Object defaultValue) {
         addParameter(type, name, false);
 
-        final List<MethodCallExpr> all = currentClass.findAll(MethodCallExpr.class);
+        final List<MethodCallExpr> allMethodCalls = currentClass.findAll(MethodCallExpr.class);
 
         return this;
     }
