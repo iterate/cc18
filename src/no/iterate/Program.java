@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 class Program {
 
@@ -164,6 +165,8 @@ class Program {
         Process pro = Runtime.getRuntime().exec(command);
 
         InputStream inputStream = pro.getInputStream();
+        String result = new BufferedReader(new InputStreamReader(inputStream))
+                .lines().collect(Collectors.joining("\n"));
 
         printLines(command + " stdout:", pro.getInputStream());
         printLines(command + " stderr:", pro.getErrorStream());
