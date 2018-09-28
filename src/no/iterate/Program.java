@@ -77,7 +77,7 @@ class Program {
             if(node instanceof ClassOrInterfaceDeclaration){
                 System.out.println("" + i + "\t"+((ClassOrInterfaceDeclaration)node).getName());
             }
-            node.getChildNodes();
+            printNodes(node.getChildNodes());
         }
     }
 
