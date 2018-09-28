@@ -198,4 +198,8 @@ class Program {
 
         return result;
     }
+
+    public Program addPrimitiveParameter() {
+        return this;
+    }
 }
