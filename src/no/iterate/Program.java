@@ -104,7 +104,7 @@ class Program {
             }
 
             if(node instanceof TypeParameter){
-                label = "type paramter";
+                label = "type parameter";
             }
 
             System.out.print(indent(depth));
