@@ -59,6 +59,7 @@ public class ProgramTests {
             .setReturnType("String")
             .toString()
             .contains("String calculate("));
+
     public static final Runnable ADD_RETURN = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
