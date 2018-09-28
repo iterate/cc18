@@ -33,7 +33,7 @@ import static com.github.javaparser.ast.type.PrimitiveType.*;
 
 class Program {
     public CompilationUnit compilationUnit = new CompilationUnit();
-    private Node currentClass;
+    private Node currentNode;
     private MethodDeclaration currentMethod;
 
     public String toString() {
@@ -41,7 +41,7 @@ class Program {
     }
 
     public Program addClass(String className) {
-        currentClass = compilationUnit.addClass(className);
+        currentNode = compilationUnit.addClass(className);
         return this;
     }
 
@@ -61,22 +61,22 @@ class Program {
     }
 
     public Program addMethod(String methodName) {
-        if(currentClass instanceof ClassOrInterfaceDeclaration)
-            currentMethod = ((ClassOrInterfaceDeclaration) currentClass).addMethod(methodName);
+        if(currentNode instanceof ClassOrInterfaceDeclaration)
+            currentMethod = ((ClassOrInterfaceDeclaration) currentNode).addMethod(methodName);
         return this;
     }
 
     public Program selectMethod(String methodName) {
-        if(currentClass instanceof ClassOrInterfaceDeclaration) 
-            currentMethod = ((ClassOrInterfaceDeclaration) currentClass).getMethodsByName(methodName).get(0);
+        if(currentNode instanceof ClassOrInterfaceDeclaration)
+            currentMethod = ((ClassOrInterfaceDeclaration) currentNode).getMethodsByName(methodName).get(0);
         return this;
     }
 
     public Program addMethodToClass(int node, String methodName) {
-        currentClass = compilationUnit.getChildNodes().get(node);
+        currentNode = compilationUnit.getChildNodes().get(node);
 
-        if(currentClass instanceof ClassOrInterfaceDeclaration)
-            currentMethod = ((ClassOrInterfaceDeclaration) currentClass).addMethod(methodName);
+        if(currentNode instanceof ClassOrInterfaceDeclaration)
+            currentMethod = ((ClassOrInterfaceDeclaration) currentNode).addMethod(methodName);
         return this;
     }
 
@@ -113,7 +113,7 @@ class Program {
     public Program changeSignatureAddParameter(Type type, String name, Object defaultValue) {
         addParameter(type, name, false);
 
-        final List<MethodCallExpr> allMethodCalls = currentClass
+        final List<MethodCallExpr> allMethodCalls = currentNode
                 .findAll(
                         MethodCallExpr.class,
                         methodCallExpr -> methodCallExpr
@@ -189,8 +189,8 @@ class Program {
 
         String className = null;
 
-        if(currentClass instanceof ClassOrInterfaceDeclaration)
-             className = ((ClassOrInterfaceDeclaration) currentClass).getNameAsString();
+        if(currentNode instanceof ClassOrInterfaceDeclaration)
+             className = ((ClassOrInterfaceDeclaration) currentNode).getNameAsString();
 
 
         String fileName = "src/" + packageName.replace(".", "/") + "/" + className + ".java";
