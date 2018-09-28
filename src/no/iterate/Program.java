@@ -73,8 +73,9 @@ class Program {
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
             System.out.print(indent(depth));
-
             System.out.print("" + i + ": ");
+
+
             if(node instanceof ClassOrInterfaceDeclaration){
 
 
