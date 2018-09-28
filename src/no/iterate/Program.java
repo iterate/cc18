@@ -216,7 +216,7 @@ class Program {
     private Program addParameter(Modifier modifier) {
         final EnumSet<Modifier> modifiers = ((MethodDeclaration) cursor2).getModifiers();
         modifiers.add(modifier);
-        ((MethodDeclaration) currentMethod).setModifiers(modifiers);
+        ((MethodDeclaration) cursor2).setModifiers(modifiers);
         return this;
     }
 
