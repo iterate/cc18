@@ -29,7 +29,6 @@ class Program {
     public CompilationUnit compilationUnit = new CompilationUnit();
     public Node cursor;
     public Node cursor2;
-    private MethodDeclaration currentMethod;
 
     public String toString() {
         return compilationUnit.toString();
