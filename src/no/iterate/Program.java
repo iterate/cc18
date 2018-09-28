@@ -131,6 +131,21 @@ class Program {
         return this;
     }
 
+    public Program printMethodResult(String methodName) {
+
+        final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
+
+        NameExpr clazz = new NameExpr("System");
+        FieldAccessExpr field = new FieldAccessExpr(clazz, "out");
+        MethodCallExpr call = new MethodCallExpr(field, "println");
+        call.addArgument(new MethodCallExpr(methodName));
+
+        block.addStatement(call);
+        currentMethod.setBody(block);
+
+        return this;
+    }
+
     public Program printMethodResult(String methodName, int argument) {
 
         final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
