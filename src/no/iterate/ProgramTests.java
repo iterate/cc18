@@ -49,8 +49,8 @@ public class ProgramTests {
             .makeStatic()
             .addReturnType("String")
             .addMethodReturnStmt("\"2\"")
-            //.changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT))
-            .addPrimitiveParameter(PrimitiveType.Primitive.INT, "input")
+            .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT))
+            //.addPrimitiveParameter(PrimitiveType.Primitive.INT, "input")
             .selectMethod("main")
             .run()
             .equals("2"), "Method should return \"2\" like we said");
