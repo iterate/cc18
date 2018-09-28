@@ -83,7 +83,6 @@ class Program {
             if(node instanceof SimpleName){
 
                 label = "";
-                System.out.println(((SimpleName)node).getIdentifier());
             }
 
 
