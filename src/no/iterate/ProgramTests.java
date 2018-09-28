@@ -45,16 +45,4 @@ public class ProgramTests {
             .run()
             .contains("return 1;"), "Method should return 1 like we said");
 
-    public static final Runnable SCRIPT_ADD_CLASS = () -> {
-        String script = "ADD_CLASS FizzBuzz";
-        assume(new Program()
-                .addClass("FizzBuzz")
-                .addMethod("calculate")
-                .addReturnType("STRING")
-                .addMethodReturnStmt("1")
-                .run()
-                .contains("return 1;"), "Method should return 1 like we said");
-
-        Program p = new Program();
-    };
 }
