@@ -167,6 +167,11 @@ class Program {
         return this;
     }
 
+
+    public Program addMethodReturnStmt(MethodCallExpr methodCallExpr) {
+        return this;
+    }
+
     public Program makeStatic() {
         return addParameter(Modifier.STATIC);
     }
@@ -243,9 +248,5 @@ class Program {
         System.out.println(result);
 
         return result;
-    }
-
-    public Program addMethodReturnStmt(MethodCallExpr methodCallExpr) {
-        return this;
     }
 }
