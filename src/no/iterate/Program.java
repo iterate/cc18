@@ -95,7 +95,4 @@ class Program {
         pro.waitFor();
         System.out.println(command + " exitValue() " + pro.exitValue());
     }
-
-    ;
-
 }
