@@ -49,7 +49,7 @@ public class ProgramTests {
             .addReturnType("String")
             .addMethodReturnStmt("\"1\"")
             .run()
-            .contains("1"), "Method should return \"1\" like we said");
+            .equals("1"), "Method should return \"1\" like we said");
 
     public static final Runnable ADD_MAIN_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
