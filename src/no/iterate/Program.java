@@ -220,7 +220,7 @@ class Program {
             e.printStackTrace();
         }
 
-        String returnString = "";
+        String returnString;
 
         try {
             System.out.println("**********");
