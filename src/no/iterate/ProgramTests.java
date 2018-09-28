@@ -20,7 +20,7 @@ public class ProgramTests {
             .addPrimitiveParameter(PrimitiveType.Primitive.INT, "input")
             .addParameter("Integer", "input", false)
             .toString()
-            .contains("calculate(Integer input)"));
+            .contains("calculate(int input, Integer input)"));
     public static final Runnable ADD_SECOND_CLASS = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addClass("AnotherClass")
