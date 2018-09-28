@@ -53,7 +53,7 @@ class Program {
     }
 
     public Program selectMethod(String methodName) {
-        currentClass.getMethodsByName(methodName).get(0);
+        currentMethod = currentClass.getMethodsByName(methodName).get(0);
         return this;
     }
 
