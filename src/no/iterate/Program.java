@@ -79,7 +79,7 @@ class Program {
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
 
-            System.out.println(""+((ClassOrInterfaceDeclaration)node).getName());
+            System.out.println("t"+((ClassOrInterfaceDeclaration)node).getName());
         }
     }
 
