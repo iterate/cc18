@@ -171,10 +171,10 @@ class Program {
 
 
     public Program addMethodReturnStmt(MethodCallExpr methodCallExpr) {
-        final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
+        final BlockStmt block = new BlockStmt();
         ReturnStmt returnStmt = new ReturnStmt(methodCallExpr);
-
-
+        block.addStatement(returnStmt);
+        currentMethod.setBody(block);
         return this;
     }
 
