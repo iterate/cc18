@@ -152,7 +152,7 @@ class Program {
             e.printStackTrace();
         }
 
-        return this.toString();
+        return returnString;
     }
 
     public Program peek(Consumer<Program> lambda) {
