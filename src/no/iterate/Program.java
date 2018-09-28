@@ -72,12 +72,16 @@ class Program {
 
     private void printNodes(List<Node> nodes) {
         for (int i = 0; i < nodes.size(); i++) {
-            System.out.print(i);
-            Node node = nodes.get(i);
-            final ArrayList<String> lines = new ArrayList<>(Arrays.asList(node.toString().split("\n")));
-            lines.forEach(l -> System.out.println("\t" + l));
+            printNode(nodes, i);
 
         }
+    }
+
+    private void printNode(List<Node> nodes, int i) {
+        System.out.print(i);
+        Node node = nodes.get(i);
+        final ArrayList<String> lines = new ArrayList<>(Arrays.asList(node.toString().split("\n")));
+        lines.forEach(l -> System.out.println("\t" + l));
     }
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
