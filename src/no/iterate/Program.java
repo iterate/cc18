@@ -83,6 +83,9 @@ class Program {
                 label = ((SimpleName) node).getIdentifier();
             }
 
+            if(node instanceof MethodDeclaration){
+                
+            }
 
             System.out.print(indent(depth));
             System.out.print("" + i + ": ");
