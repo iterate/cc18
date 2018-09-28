@@ -101,7 +101,7 @@ class Program {
         try {
             runProcess("pwd");
             System.out.println("**********");
-            runProcess("javac -classpath "+ fileName + " -d out/production/cc18/ && \\\n");
+            runProcess("javac -classpath "+ fileName + " -d out/production/cc18/");
             System.out.println("**********");
             runProcess("java -cp FizzBuzz");
         } catch (Exception e) {
