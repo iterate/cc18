@@ -147,6 +147,7 @@ class Program {
     }
 
     public Program peek(Consumer<Program> lambda) {
+        lambda.accept(this);
         return this;
     }
 
