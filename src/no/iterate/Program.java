@@ -75,7 +75,7 @@ class Program {
         return this;
     }
 
-    public Program callMetho2d(String methodName) {
+    public Program printMethodResult(String methodName) {
         final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
 
         NameExpr clazz = new NameExpr("System");
