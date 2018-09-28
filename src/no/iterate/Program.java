@@ -88,7 +88,7 @@ class Program {
             }
 
             if(node instanceof MethodDeclaration){
-                label = ((MethodDeclaration)node).getName().toString();
+                label = "method: " + ((MethodDeclaration)node).getName();
             }
 
             if(node instanceof BlockStmt){
