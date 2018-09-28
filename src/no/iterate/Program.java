@@ -127,7 +127,8 @@ class Program {
         return this.toString();
     }
 
-    public Program peek(){return this;}
+    public Program peek(){
+        return this;}
 
     private static void printLines(String cmd, InputStream ins) throws Exception {
         String line = null;
