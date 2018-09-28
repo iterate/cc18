@@ -33,22 +33,26 @@ public class ProgramTests {
             .addClass("FizzBuzz") // sets cursor to class
             .toString()
             .contains("class FizzBuzz"), "Program should contain class FizzBuzz");
+
     public static final Runnable ADD_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate") // sets cursor to method
             .toString()
             .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
+
     public static final Runnable ADD_PARAMETER = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
             .addPrimitiveParameter(PrimitiveType.Primitive.INT, "input")
             .toString()
             .contains("calculate(int input)"));
+
     public static final Runnable ADD_SECOND_CLASS = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addClass("AnotherClass")
             .toString()
             .contains("class FizzBuzz"), "Program should contain class FizzBuzz even when AnotherClass has been added");
+
     public static final Runnable SET_RETURN_TYPE = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
