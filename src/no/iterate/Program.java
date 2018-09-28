@@ -49,8 +49,6 @@ class Program {
     }
 
     private void printTopLevelChildren() {
-        System.out.println("------");
-
         System.out.println("Nodes:");
         for (int i = 0; i < compilationUnit.getChildNodes().size(); i++) {
             System.out.print(i);
