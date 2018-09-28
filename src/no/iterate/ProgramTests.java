@@ -39,8 +39,6 @@ public class ProgramTests {
             .toString()
             .contains("return \"1\";"));
 
-    NameExpr stringClass = new NameExpr("String");
-
 
     public static final Runnable RUN_THE_CODE = () -> assume(new Program()
             .setPackage("no.iterate")
