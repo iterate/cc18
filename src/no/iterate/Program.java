@@ -37,6 +37,7 @@ class Program {
 
     public Program addClass(String className) {
         cursor = compilationUnit.addClass(className);
+        cursor2 = cursor;
         return this;
     }
 
