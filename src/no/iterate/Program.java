@@ -90,7 +90,7 @@ class Program {
             }
 
             if(node instanceof BlockStmt){
-                
+                label = "?";
             }
 
             System.out.print(indent(depth));
