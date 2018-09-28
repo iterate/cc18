@@ -98,6 +98,8 @@ class Program {
     public Program changeSignatureAddParameter(Type type, String name, Object defaultValue, Class exprClass) {
         addParameter(type, name, false);
 
+        Object o;
+
         try {
             exprClass.newInstance();
         } catch (InstantiationException e) {
