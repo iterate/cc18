@@ -89,7 +89,7 @@ class Program {
 
     public String run() {
         System.out.println(this.toString());
-        String packageName = "no/iterate";
+        String packageName = compilationUnit.getPackageDeclaration().get().getNameAsString();
         String className = "FizzBuzz";
         String fileName = "src/" + packageName + "/" + className + ".java";
         try (PrintWriter out = new PrintWriter(fileName)) {
