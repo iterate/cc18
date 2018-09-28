@@ -107,6 +107,7 @@ class Program {
             return this;
         } catch (IllegalAccessException e) {
             e.printStackTrace();
+            return this;
         }
 
         final List<MethodCallExpr> allMethodCalls = currentClass
