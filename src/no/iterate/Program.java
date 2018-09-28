@@ -65,8 +65,7 @@ class Program {
 
     public Program selectMethod(String methodName) {
         if(cursor instanceof ClassOrInterfaceDeclaration) {
-            currentMethod = ((ClassOrInterfaceDeclaration) cursor).getMethodsByName(methodName).get(0);
-            cursor2 = currentMethod;
+            cursor2 = ((ClassOrInterfaceDeclaration) cursor).getMethodsByName(methodName).get(0);
         }
         return this;
     }
