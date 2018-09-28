@@ -5,8 +5,10 @@ import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Modifier;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
+import com.github.javaparser.ast.body.Parameter;
 import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
+import com.github.javaparser.ast.type.ClassOrInterfaceType;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -57,6 +59,7 @@ class Program {
     }
 
     public Program addParameter(String parameterType, String parameterName) {
+        new Parameter(new ClassOrInterfaceType("String"), "args");
         currentMethod.addParameter(JavaParser.parseTypeParameter(parameterType), parameterName);
         return this;
     }
