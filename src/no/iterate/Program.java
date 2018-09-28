@@ -169,7 +169,7 @@ class Program {
             System.out.println("**********");
             returnString = runProcess("java -classpath out/production/cc18 "+ packageName + "." + className);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         return returnString;
