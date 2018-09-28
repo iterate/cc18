@@ -58,7 +58,7 @@ public class ProgramTests {
             .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 0)
             .addMethodReturnStmt(new MethodCallExpr(new NameExpr("String"), "valueOf").addArgument("input"))
             .run()
-            .equals("2"), "Method should return \"2\" like we said");
+            .equals("2"), "Method should return what we give as input");
 
     public static final Runnable ADD_MAIN_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
