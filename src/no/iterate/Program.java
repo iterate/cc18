@@ -8,6 +8,7 @@ import com.github.javaparser.ast.NodeList;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.Parameter;
+import com.github.javaparser.ast.expr.Expression;
 import com.github.javaparser.ast.expr.FieldAccessExpr;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.NameExpr;
@@ -130,7 +131,7 @@ class Program {
 
         final List<MethodCallExpr> allMethodCalls = currentClass.findAll(MethodCallExpr.class);
 
-        final NodeList<Node> nodes = new NodeList<>();
+        final NodeList<Expression> nodes = new NodeList<>();
 
         allMethodCalls.stream().map(call -> call.asMethodCallExpr());
 
