@@ -70,6 +70,11 @@ class Program {
         ProgramPrinter.printNodes(compilationUnit.getChildNodes(), 0);
     }
 
+    public void printChildrenRecursively(int i) {
+        System.out.println("Nodes:");
+        ProgramPrinter.printNodes(compilationUnit.getChildNodes(), 0);
+    }
+
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
         final TypeParameter type = JavaParser.parseTypeParameter(parameterType);
         return addParameter(type, parameterName, isVarArgs);
