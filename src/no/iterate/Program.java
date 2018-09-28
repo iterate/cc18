@@ -6,6 +6,7 @@ import com.github.javaparser.ast.Modifier;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.Parameter;
+import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
 
@@ -72,6 +73,7 @@ class Program {
 
     public Program callMethod(String methodName) {
         final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
+        new MethodCallExpr(methodName);
 
         return this;
     }
