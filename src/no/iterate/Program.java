@@ -151,6 +151,7 @@ class Program {
         final NodeList<Expression> nodes = new NodeList<>();
 
         allMethodCalls.stream().map(call -> call.asMethodCallExpr()).forEach(c -> {
+            c.getArguments();
             c.setArguments(nodes);
         });
 
