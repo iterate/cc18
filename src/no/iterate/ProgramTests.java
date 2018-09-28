@@ -107,7 +107,7 @@ public class ProgramTests {
 
         System.out.println(program);
 
-        assume(program.contains("method1()"), "Adding multiple methods, the first one is still there");
+        assume(program.contains("static void method1()"), "Adding multiple methods, the first one is still there");
         assume(program.contains("method2()"), "Adding multiple methods, the last one is added");
     };
 }
