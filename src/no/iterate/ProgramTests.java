@@ -50,7 +50,7 @@ public class ProgramTests {
             .addReturnType("String")
             .addMethodReturnStmt("\"2\"")
             .peek(Program::printChildrenRecursively)
-            //.changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 0)
+            .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 0)
             .run()
             .equals("2"), "Method should return \"2\" like we said");
 
