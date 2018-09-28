@@ -67,7 +67,6 @@ public class ProgramTests {
             .toString()
             .contains("return \"1\";"));
 
-
     public static final Runnable ADD_MAIN_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("main")
@@ -82,4 +81,6 @@ public class ProgramTests {
             .addMethodToClass(0, "calculate")
             .toString()
             .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
+
+    public static final Runnable ADD_MULTIPLE_METHODS = () -> {return; };
 }
