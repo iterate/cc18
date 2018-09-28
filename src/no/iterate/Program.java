@@ -173,6 +173,6 @@ class Program {
                 .lines().collect(Collectors.joining("\n"));
 
 
-        return "";
+        return result;
     }
 }
