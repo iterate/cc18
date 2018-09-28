@@ -3,6 +3,7 @@ package no.iterate;
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Modifier;
+import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.NodeList;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
@@ -32,7 +33,7 @@ import static com.github.javaparser.ast.type.PrimitiveType.*;
 
 class Program {
     public CompilationUnit compilationUnit = new CompilationUnit();
-    private ClassOrInterfaceDeclaration currentClass;
+    private Node currentClass;
     private MethodDeclaration currentMethod;
 
     public String toString() {
