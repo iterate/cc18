@@ -47,6 +47,7 @@ public class ProgramTests {
             .addClass("FizzBuzz")
             .addMethod("main")
             .makeStatic()
+            .makePublic()
             .toString()
             .contains("static void main"));
 
