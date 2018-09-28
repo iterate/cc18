@@ -2,6 +2,7 @@ package no.iterate;
 
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
+import com.github.javaparser.ast.Modifier;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.stmt.BlockStmt;
@@ -12,6 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.EnumSet;
 
 class Program {
 
@@ -58,6 +60,7 @@ class Program {
     }
 
     public Program makeStatic() {
+        currentMethod.setModifiers(EnumSet.of(Modifier.STATIC));
         return this;
     }
 
