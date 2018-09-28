@@ -33,7 +33,7 @@ import static com.github.javaparser.ast.type.PrimitiveType.*;
 
 class Program {
     public CompilationUnit compilationUnit = new CompilationUnit();
-    private Node currentNode;
+    private Node cursor;
     private MethodDeclaration currentMethod;
 
     public String toString() {
@@ -41,7 +41,7 @@ class Program {
     }
 
     public Program addClass(String className) {
-        currentNode = compilationUnit.addClass(className);
+        cursor = compilationUnit.addClass(className);
         return this;
     }
 
@@ -61,22 +61,22 @@ class Program {
     }
 
     public Program addMethod(String methodName) {
-        if(currentNode instanceof ClassOrInterfaceDeclaration)
-            currentMethod = ((ClassOrInterfaceDeclaration) currentNode).addMethod(methodName);
+        if(cursor instanceof ClassOrInterfaceDeclaration)
+            currentMethod = ((ClassOrInterfaceDeclaration) cursor).addMethod(methodName);
         return this;
     }
 
     public Program selectMethod(String methodName) {
-        if(currentNode instanceof ClassOrInterfaceDeclaration)
-            currentMethod = ((ClassOrInterfaceDeclaration) currentNode).getMethodsByName(methodName).get(0);
+        if(cursor instanceof ClassOrInterfaceDeclaration)
+            currentMethod = ((ClassOrInterfaceDeclaration) cursor).getMethodsByName(methodName).get(0);
         return this;
     }
 
     public Program addMethodToClass(int node, String methodName) {
-        currentNode = compilationUnit.getChildNodes().get(node);
+        cursor = compilationUnit.getChildNodes().get(node);
 
-        if(currentNode instanceof ClassOrInterfaceDeclaration)
-            currentMethod = ((ClassOrInterfaceDeclaration) currentNode).addMethod(methodName);
+        if(cursor instanceof ClassOrInterfaceDeclaration)
+            currentMethod = ((ClassOrInterfaceDeclaration) cursor).addMethod(methodName);
         return this;
     }
 
@@ -113,7 +113,7 @@ class Program {
     public Program changeSignatureAddParameter(Type type, String name, Object defaultValue) {
         addParameter(type, name, false);
 
-        final List<MethodCallExpr> allMethodCalls = currentNode
+        final List<MethodCallExpr> allMethodCalls = cursor
                 .findAll(
                         MethodCallExpr.class,
                         methodCallExpr -> methodCallExpr
@@ -192,8 +192,8 @@ class Program {
 
         String className = null;
 
-        if(currentNode instanceof ClassOrInterfaceDeclaration)
-             className = ((ClassOrInterfaceDeclaration) currentNode).getNameAsString();
+        if(cursor instanceof ClassOrInterfaceDeclaration)
+             className = ((ClassOrInterfaceDeclaration) cursor).getNameAsString();
 
 
         String fileName = "src/" + packageName.replace(".", "/") + "/" + className + ".java";
