@@ -178,7 +178,7 @@ class Program {
 
         final List<Statement> statements = block.getStatements()
                 .stream()
-                .filter(statement -> statement.isReturnStmt())
+                .filter(statement -> !statement.isReturnStmt())
                 .collect(Collectors.toList());
 
         block.addStatement(returnStmt);
