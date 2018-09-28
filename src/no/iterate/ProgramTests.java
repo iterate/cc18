@@ -15,7 +15,7 @@ public class ProgramTests {
     public static final Runnable ADD_PARAMETER = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
-            .addParameter("INT", "input")
+            .addParameter("INT", "input", false)
             .toString()
             .contains("calculate(INT input)"));
     public static final Runnable ADD_SECOND_CLASS = () -> assume(new Program()
@@ -49,7 +49,7 @@ public class ProgramTests {
             .addMethod("main")
             .makeStatic()
             .makePublic()
-            .addParameter("String", "args")
+            .addParameter("String", "args", false)
             .toString()
             .contains("public static void main(String args"));
 
