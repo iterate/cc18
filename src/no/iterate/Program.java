@@ -97,7 +97,7 @@ class Program {
         final Parameter parameter = new Parameter(type, parameterName);
         parameter.setVarArgs(isVarArgs);
 
-        ((MethodDeclaration) currentMethod).addParameter(parameter);
+        ((MethodDeclaration) cursor2).addParameter(parameter);
 
         return this;
     }
