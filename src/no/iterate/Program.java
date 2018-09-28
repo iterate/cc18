@@ -77,7 +77,7 @@ class Program {
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
 
-            String label = "REPLACE ME!";
+            String label = "REPLACE ME!" + node.toString();
 
             if(node instanceof ClassOrInterfaceDeclaration){
                 label = "class/interface: " + ((ClassOrInterfaceDeclaration) node).getName();
