@@ -81,8 +81,6 @@ class Program {
             }
 
             if(node instanceof SimpleName){
-                System.out.print(indent(depth));
-                System.out.print(i);
 
                 System.out.println(((SimpleName)node).getIdentifier());
             }
