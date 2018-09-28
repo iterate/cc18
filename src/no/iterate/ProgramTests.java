@@ -45,4 +45,10 @@ public class ProgramTests {
             .run()
             .contains("return 1;"), "Method should return 1 like we said");
 
+    public static final Runnable ADD_METHOD2 = () -> assume(new Program()
+            .addClass("FizzBuzz")
+            .addMethod("calculate")
+            .toString()
+            .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
+
 }
