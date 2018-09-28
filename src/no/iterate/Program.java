@@ -69,6 +69,10 @@ class Program {
         return this;
     }
 
+    public Program setCursorToCurrentClass(){
+        return this;
+    }
+
     public Program addMethodToClass(int node, String methodName) {
         cursor2 = compilationUnit.getChildNodes().get(node);
 
