@@ -52,6 +52,7 @@ public class ProgramTests {
             .contains("public static void main("));
 
     public static final Runnable ADD_METHOD_TO_SPECIFIC_CLASS = () -> assume(new Program()
+            .addPackage("no.iterate")
             .addClass("FizzBuzz")
             .addMethodToClass(1, "calculate")
             .toString()
