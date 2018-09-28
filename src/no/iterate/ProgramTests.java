@@ -89,9 +89,18 @@ public class ProgramTests {
                 .addMethod("method2")
                 .toString();
 
+        assume(program.contains("method1()"), "Adding multiple methods, the first one is still there");
+        assume(program.contains("method2()"), "Adding multiple methods, the last one is added");
+    };
+
+    public static final Runnable ADD_MULTIPLE_METHODS_CHAGE_FIRST = () -> {
+        final String program = new Program()
+                .addClass("FizzBuzz")
+                .addMethod("method1")
+                .addMethod("method2")
+                .toString();
 
         assume(program.contains("method1()"), "Adding multiple methods, the first one is still there");
         assume(program.contains("method2()"), "Adding multiple methods, the last one is added");
-
     };
 }
