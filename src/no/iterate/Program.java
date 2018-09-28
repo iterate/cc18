@@ -72,6 +72,11 @@ class Program {
         return getProgram(Modifier.STATIC);
     }
 
+
+    public Program makePublic() {
+        return this;
+    }
+
     private Program getProgram(Modifier modifier) {
         final EnumSet<Modifier> modifiers = currentMethod.getModifiers();
         modifiers.add(modifier);
@@ -117,9 +122,5 @@ class Program {
         printLines(command + " stderr:", pro.getErrorStream());
         pro.waitFor();
         System.out.println(command + " exitValue() " + pro.exitValue());
-    }
-
-    public Program makePublic() {
-        return this;
     }
 }
