@@ -98,6 +98,14 @@ class Program {
     public Program changeSignatureAddParameter(Type type, String name, Object defaultValue, Class exprClass) {
         addParameter(type, name, false);
 
+        try {
+            exprClass.newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
         final List<MethodCallExpr> allMethodCalls = currentClass
                 .findAll(
                         MethodCallExpr.class,
