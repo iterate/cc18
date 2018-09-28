@@ -70,7 +70,7 @@ class Program {
         ProgramPrinter.printNodes(compilationUnit.getChildNodes(), 0);
     }
 
-    public void printChildrenRecursively(int i) {
+    public void printChildrenRecursively(Program program) {
         System.out.println("Nodes:");
         ProgramPrinter.printNodes(compilationUnit.getChildNodes(), 0);
     }
