@@ -99,6 +99,10 @@ class Program {
     }
 
 
+    public Program changeSignatureAddParameter(Type type, String name, Object defaultValue) {
+        return this;
+    }
+
     public Program addReturnType(String returnType) {
         currentMethod.setType(JavaParser.parseTypeParameter(returnType));
         return this;
@@ -209,9 +213,5 @@ class Program {
         System.out.println(result);
 
         return result;
-    }
-
-    public Program changeSignatureAddParameter(Type type, String name, Object defaultValue) {
-        return this;
     }
 }
