@@ -153,8 +153,7 @@ class Program {
 
         allMethodCalls.stream().map(call -> call.asMethodCallExpr()).forEach(c -> {
             final NodeList<Expression> arguments = c.getArguments();
-
-            arguments.addLast(new IntegerLiteralExpr(1));
+            arguments.addLast(new IntegerLiteralExpr((Integer) defaultValue));
             c.setArguments(arguments);
         });
 
