@@ -82,7 +82,7 @@ class Program {
 
     public String run() {
         System.out.println(this.toString());
-        try (PrintWriter out = new PrintWriter("FizzBuzz.java")) {
+        try (PrintWriter out = new PrintWriter("src/no/iterate/FizzBuzz.java")) {
             out.println(toString());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
