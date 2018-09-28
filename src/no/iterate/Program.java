@@ -212,7 +212,7 @@ class Program {
         System.out.println(command + " exitValue() " + pro.exitValue());
 
         if (pro.exitValue() != 0) {
-            throw new RuntimeException("runProcess");
+            throw new RuntimeException("runProcess() terminated");
 
         }
 
