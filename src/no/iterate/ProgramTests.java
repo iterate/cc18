@@ -36,7 +36,7 @@ public class ProgramTests {
     public static final Runnable ADD_RETURN = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
-            .addMethodReturnStmt("\"1\"")
+            .setMethodReturnStmt("\"1\"")
             .toString()
             .contains("return \"1\";"));
 
@@ -53,10 +53,10 @@ public class ProgramTests {
             .addMethod("calculate")
             .makeStatic()
             .addReturnType("String")
-            .addMethodReturnStmt("\"2\"")
+            .setMethodReturnStmt("\"2\"")
             .peek(Program::printChildrenRecursively)
             .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 0)
-            .addMethodReturnStmt(new MethodCallExpr(new NameExpr("String"), "valueOf").addArgument("input"))
+            .setMethodReturnStmt(new MethodCallExpr(new NameExpr("String"), "valueOf").addArgument("input"))
             .run()
             .equals("0"), "Method should return what we give as input");
 

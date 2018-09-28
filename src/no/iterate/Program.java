@@ -154,7 +154,7 @@ class Program {
         return this;
     }
 
-    public Program addMethodReturnStmt(String returnString) {
+    public Program setMethodReturnStmt(String returnString) {
         final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
         ReturnStmt returnStmt = new ReturnStmt(returnString);
         block.addStatement(returnStmt);
@@ -163,7 +163,7 @@ class Program {
     }
 
 
-    public Program addMethodReturnStmt(MethodCallExpr methodCallExpr) {
+    public Program setMethodReturnStmt(MethodCallExpr methodCallExpr) {
         final BlockStmt block = new BlockStmt();
         ReturnStmt returnStmt = new ReturnStmt(methodCallExpr);
 
