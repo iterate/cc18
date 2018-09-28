@@ -18,6 +18,7 @@ import com.github.javaparser.ast.stmt.ReturnStmt;
 import com.github.javaparser.ast.type.PrimitiveType;
 import com.github.javaparser.ast.type.Type;
 import com.github.javaparser.ast.type.TypeParameter;
+import com.github.javaparser.ast.type.VoidType;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -90,6 +91,10 @@ class Program {
             }
 
             if(node instanceof BlockStmt){
+                label = "?";
+            }
+
+            if(node instanceof VoidType){
                 label = "?";
             }
 
