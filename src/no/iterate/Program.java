@@ -53,6 +53,7 @@ class Program {
     }
 
     public Program selectMethod(String methodName) {
+        currentClass.getMethodsByName(methodName);
         return this;
     }
 
