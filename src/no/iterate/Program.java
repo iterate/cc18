@@ -13,6 +13,7 @@ import com.github.javaparser.ast.expr.NameExpr;
 import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
 import com.github.javaparser.ast.type.PrimitiveType;
+import com.github.javaparser.ast.type.Type;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -209,7 +210,7 @@ class Program {
         return result;
     }
 
-    public Program changeSignatureAddParameter() {
+    public Program changeSignatureAddParameter(Type type) {
         return this;
     }
 }
