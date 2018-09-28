@@ -126,7 +126,7 @@ class Program {
 
         final List<MethodCallExpr> allMethodCalls = currentClass.findAll(MethodCallExpr.class);
 
-        allMethodCalls.stream().map(call -> call);
+        allMethodCalls.stream().map(call -> call.asMethodCallExpr());
 
         return this;
     }
