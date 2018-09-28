@@ -86,7 +86,12 @@ class Program {
     }
 
     void printNodes(List<Node> nodes){
-        
+        for (int i = 0; i < nodes.size(); i++) {
+            Node node = nodes.get(i);
+
+            System.out.println("" + i + "\t"+((ClassOrInterfaceDeclaration)node).getName());
+            node.getChildNodes();
+        }
     }
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
