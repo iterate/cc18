@@ -40,7 +40,9 @@ class Program {
 
         System.out.println("------");
 
-        compilationUnit.getChildNodes();
+        compilationUnit.getChildNodes().forEach(
+                n -> System.out.println(n)
+        );
 
         System.out.println("------");
 
