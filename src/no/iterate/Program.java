@@ -193,7 +193,6 @@ class Program {
 
         ((MethodDeclaration) cursor2).setBody(block);
 
-
         return this;
     }
 
