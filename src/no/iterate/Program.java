@@ -98,7 +98,9 @@ class Program {
         final Parameter parameter = new Parameter(type, parameterName);
         parameter.setVarArgs(isVarArgs);
 
-        currentMethod.addParameter(parameter);
+        if(currentMethod instanceof MethodDeclaration)
+            ((MethodDeclaration) currentMethod).addParameter(parameter);
+
         return this;
     }
 
