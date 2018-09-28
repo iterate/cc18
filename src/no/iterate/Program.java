@@ -69,7 +69,8 @@ class Program {
         List<Node> nodes = compilationUnit.getChildNodes();
         for (int i = 0; i < nodes.size(); i++) {
             System.out.print(i);
-            final ArrayList<String> lines = new ArrayList<>(Arrays.asList(nodes.get(i).toString().split("\n")));
+            Node node = nodes.get(i);
+            final ArrayList<String> lines = new ArrayList<>(Arrays.asList(node.toString().split("\n")));
             lines.forEach(l -> System.out.println("\t" + l));
         }
     }
