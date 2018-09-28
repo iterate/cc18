@@ -66,6 +66,7 @@ class Program {
     }
 
     public void printChildrenRecursively() {
+        printChildrenRecursively(this);
     }
 
     public void printChildrenRecursively(Program program) {
