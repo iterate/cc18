@@ -71,6 +71,8 @@ class Program {
     }
 
     public Program callMethod(String methodName) {
+        final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
+
         return this;
     }
 
