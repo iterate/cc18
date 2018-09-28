@@ -147,7 +147,7 @@ class Program {
         call.addArgument(new MethodCallExpr(methodName));
 
         block.addStatement(call);
-        ((MethodDeclaration) currentMethod).setBody(block);
+        ((MethodDeclaration) cursor2).setBody(block);
 
         return this;
     }
