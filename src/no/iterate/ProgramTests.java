@@ -51,7 +51,7 @@ public class ProgramTests {
             .makeStatic()
             .makePublic()
             .addParameter("String", "args", true)
-            .printMethodResult("calculate", 0)
+            .printMethodResult("calculate")
             .addMethod("calculate")
             .makeStatic()
             .setReturnType("String")
