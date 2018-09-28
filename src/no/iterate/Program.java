@@ -141,12 +141,14 @@ class Program {
             e.printStackTrace();
         }
 
+        String returnString = "";
+
         try {
             runProcess("pwd");
             System.out.println("**********");
             runProcess("javac "+ fileName + " -d out/production/cc18/");
             System.out.println("**********");
-            runProcess("java -classpath out/production/cc18 "+ packageName + "." + className);
+            returnString = runProcess("java -classpath out/production/cc18 "+ packageName + "." + className);
         } catch (Exception e) {
             e.printStackTrace();
         }
