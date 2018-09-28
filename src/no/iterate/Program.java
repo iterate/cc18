@@ -102,9 +102,7 @@ class Program {
                                 .asString()
                                 .equals(currentMethod.getName().toString())
                 );
-
-        final NodeList<Expression> nodes = new NodeList<>();
-
+        
         allMethodCalls.stream().map(call -> call.asMethodCallExpr()).forEach(c -> {
             final NodeList<Expression> arguments = c.getArguments();
             arguments.addLast(new IntegerLiteralExpr((Integer) defaultValue));
