@@ -95,7 +95,7 @@ public class ProgramTests {
         assume(program.contains("method2()"), "Adding multiple methods, the last one is added");
     };
 
-    public static final Runnable ADD_MULTIPLE_METHODS_CHAGE_FIRST = () -> {
+    public static final Runnable ADD_MULTIPLE_METHODS_CHANGE_FIRST = () -> {
         final String program = new Program()
                 .addClass("FizzBuzz")
                 .addMethod("method1")
