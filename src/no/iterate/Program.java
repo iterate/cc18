@@ -91,9 +91,6 @@ class Program {
             e.printStackTrace();
         }
 
-
-        //JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-        //compiler.run(new ByteArrayInputStream(toString().getBytes()), System.out, System.err);
         return this.toString();
     }
 
