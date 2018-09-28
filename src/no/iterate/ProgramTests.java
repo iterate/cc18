@@ -84,7 +84,7 @@ public class ProgramTests {
 
     public static final Runnable ADD_MULTIPLE_METHODS = () -> { new Program()
             .addClass("FizzBuzz")
-            .addMethod( "method1")
+            .addMethod("method1")
             .addMethod("method2");
     };
 }
