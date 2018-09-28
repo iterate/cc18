@@ -49,6 +49,7 @@ public class ProgramTests {
             .makeStatic()
             .addReturnType("String")
             .addMethodReturnStmt("\"2\"")
+            .peek(Program::printChildrenRecursively)
             //.changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 0)
             //.addPrimitiveParameter(PrimitiveType.Primitive.INT, "input")
             .run()
