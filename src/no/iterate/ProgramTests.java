@@ -15,7 +15,7 @@ public class ProgramTests {
     public static final Runnable ADD_PARAMETER = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
-            .addPrimitiveParameter("int", "number")
+            .addPrimitiveParameter("int", "input")
             .addParameter("Integer", "input", false)
             .toString()
             .contains("calculate(Integer input)"));
