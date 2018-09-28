@@ -67,8 +67,7 @@ class Program {
 
     public void printChildrenRecursively() {
         System.out.println("Nodes:");
-        List<Node> nodes = compilationUnit.getChildNodes();
-        printNodes(nodes);
+        printNodes(compilationUnit.getChildNodes());
     }
 
     void printNodes(List<Node> nodes){
