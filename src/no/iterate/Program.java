@@ -15,6 +15,7 @@ import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.NameExpr;
 import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
+import com.github.javaparser.ast.stmt.Statement;
 import com.github.javaparser.ast.type.PrimitiveType;
 import com.github.javaparser.ast.type.Type;
 import com.github.javaparser.ast.type.TypeParameter;
@@ -28,6 +29,7 @@ import java.util.EnumSet;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static com.github.javaparser.ast.type.PrimitiveType.*;
 
@@ -174,7 +176,7 @@ class Program {
         final BlockStmt block = new BlockStmt();
         ReturnStmt returnStmt = new ReturnStmt(methodCallExpr);
 
-        block.getStatements().stream().filter(statement -> statement.isReturnStmt());
+        final Stream<Statement> statementStream = block.getStatements().stream().filter(statement -> statement.isReturnStmt());
 
         block.addStatement(returnStmt);
         currentMethod.setBody(block);
