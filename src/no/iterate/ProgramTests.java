@@ -52,9 +52,8 @@ public class ProgramTests {
             .contains("public static void main("));
 
     public static final Runnable ADD_METHOD_TO_SPECIFIC_CLASS = () -> assume(new Program()
-            .setPackage("no.iterate")
             .addClass("FizzBuzz")
-            .addMethodToClass(1, "calculate")
+            .addMethodToClass(0, "calculate")
             .toString()
             .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
 }
