@@ -152,18 +152,19 @@ class Program {
 
     public Program printMethodResult(String methodName, int argument) {
 
-        if(cursor2 instanceof MethodDeclaration);
+        if(cursor2 instanceof MethodDeclaration) {
 
-        final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
+            final BlockStmt block = ((MethodDeclaration) currentMethod).getBody().orElse(new BlockStmt());
 
-        NameExpr clazz = new NameExpr("System");
-        FieldAccessExpr field = new FieldAccessExpr(clazz, "out");
-        MethodCallExpr call = new MethodCallExpr(field, "println");
-        call.addArgument(new MethodCallExpr(methodName).addArgument(new IntegerLiteralExpr(argument)));
+            NameExpr clazz = new NameExpr("System");
+            FieldAccessExpr field = new FieldAccessExpr(clazz, "out");
+            MethodCallExpr call = new MethodCallExpr(field, "println");
+            call.addArgument(new MethodCallExpr(methodName).addArgument(new IntegerLiteralExpr(argument)));
 
-        block.addStatement(call);
-        currentMethod.setBody(block);
+            block.addStatement(call);
+            currentMethod.setBody(block);
 
+        }
         return this;
     }
 
