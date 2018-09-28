@@ -80,7 +80,6 @@ class Program {
             }
 
             if(node instanceof SimpleName){
-
                 label = "";
             }
 
