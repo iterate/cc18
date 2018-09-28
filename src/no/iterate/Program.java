@@ -91,7 +91,7 @@ class Program {
         System.out.println(this.toString());
         String packageName = compilationUnit.getPackageDeclaration().get().getNameAsString();
         String className = "FizzBuzz";
-        String fileName = "src/" + packageName + "/" + className + ".java";
+        String fileName = "src/" + packageName.replace(".", "/") + "/" + className + ".java";
         try (PrintWriter out = new PrintWriter(fileName)) {
             out.println(toString());
         } catch (FileNotFoundException e) {
