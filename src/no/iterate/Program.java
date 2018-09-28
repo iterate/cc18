@@ -55,6 +55,11 @@ class Program {
         return this;
     }
 
+    public Program setPackage(CompilationUnit cu, String packageName){
+        compilationUnit.setPackageDeclaration(packageName);
+        return this;
+    }
+
     public Program addMethod(String methodName) {
         currentMethod = currentClass.addMethod(methodName);
         return this;
