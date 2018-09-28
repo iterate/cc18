@@ -74,6 +74,9 @@ class Program {
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
 
+            if(node instanceof ClassOrInterfaceDeclaration){
+
+            }
             System.out.println("" + i + "\t"+((ClassOrInterfaceDeclaration)node).getName());
             node.getChildNodes();
         }
