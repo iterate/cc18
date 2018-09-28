@@ -83,6 +83,12 @@ class Program {
         return this;
     }
 
+    public Program addPrimitiveParameter2() {
+        return this;
+    }
+
+
+
     public Program addReturnType(String returnType) {
         currentMethod.setType(JavaParser.parseTypeParameter(returnType));
         return this;
