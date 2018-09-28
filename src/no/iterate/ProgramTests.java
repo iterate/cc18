@@ -101,6 +101,7 @@ public class ProgramTests {
                 .addMethod("method1")
                 .setCursorToCurrentClass()
                 .addMethod("method2")
+                .selectMethod("method1")
                 .makeStatic()
                 .toString();
 
