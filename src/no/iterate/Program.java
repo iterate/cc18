@@ -84,7 +84,7 @@ class Program {
     String indent(int depth){
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < depth; i++) {
-            
+            stringBuilder.append('\t');
         }
         return "";
     }
