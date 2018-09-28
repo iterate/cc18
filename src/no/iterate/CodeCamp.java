@@ -1,11 +1,9 @@
 package no.iterate;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import static java.util.Arrays.*;
+import static java.util.Arrays.stream;
 
 public class CodeCamp {
 
