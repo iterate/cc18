@@ -9,7 +9,6 @@ import com.github.javaparser.ast.body.Parameter;
 import com.github.javaparser.ast.expr.FieldAccessExpr;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.NameExpr;
-import com.github.javaparser.ast.expr.StringLiteralExpr;
 import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
 
@@ -76,7 +75,7 @@ class Program {
         return this;
     }
 
-    public Program printMethodResult(String methodName) {
+    public Program printMethodResult(String methodName, String arguments) {
         final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
 
         NameExpr clazz = new NameExpr("System");
@@ -95,7 +94,6 @@ class Program {
         final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
         block.addStatement(new MethodCallExpr(methodName));
         currentMethod.setBody(block);
-
 
         return this;
     }
