@@ -1,5 +1,6 @@
 package no.iterate;
 
+import com.github.javaparser.ast.expr.NameExpr;
 import com.github.javaparser.ast.type.PrimitiveType;
 
 import static no.iterate.Tests.assume;
@@ -37,6 +38,10 @@ public class ProgramTests {
             .addMethodReturnStmt("\"1\"")
             .toString()
             .contains("return \"1\";"));
+
+    NameExpr stringClass = new NameExpr("String");
+
+
     public static final Runnable RUN_THE_CODE = () -> assume(new Program()
             .setPackage("no.iterate")
             .addClass("FizzBuzz")
