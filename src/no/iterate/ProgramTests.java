@@ -44,7 +44,7 @@ public class ProgramTests {
             .contains("return 1;"), "Method should return 1 like we said");
 
 
-    public static final Runnable ADD_METHOD2 = () -> assume(new Program()
+    public static final Runnable ADD_METHOD_TO_SPECIFIC_CLASS = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
             .toString()
