@@ -32,9 +32,9 @@ public class ProgramTests {
     public static final Runnable ADD_RETURN = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
-            .addMethodReturnStmt("1")
+            .addMethodReturnStmt("\"1\"")
             .toString()
-            .contains("return 1;"));
+            .contains("return \"1\";"));
     public static final Runnable RUN_THE_CODE = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
