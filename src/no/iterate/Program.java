@@ -99,6 +99,10 @@ class Program {
                 label = "?";
             }
 
+            if(node instanceof VoidType){
+                label = "?";
+            }
+
             System.out.print(indent(depth));
             System.out.print("" + i + ": ");
             System.out.println(label);
