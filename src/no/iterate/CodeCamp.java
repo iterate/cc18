@@ -2,7 +2,10 @@ package no.iterate;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
+import static java.util.Arrays.*;
 
 public class CodeCamp {
 
@@ -24,13 +27,13 @@ public class CodeCamp {
     static List<Runnable> testClass(Class<ProgramTests> aClass) {
         Field[] fields = aClass.getFields();
         List<Runnable> tests = new ArrayList<>();
-        for (Field field : fields) {
+        stream(fields).forEach(field -> {
             try {
                 tests.add((Runnable) field.get(null));
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             }
-        }
+        });
         return tests;
     }
 
