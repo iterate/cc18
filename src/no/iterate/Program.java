@@ -101,7 +101,7 @@ class Program {
         Object o;
 
         try {
-            exprClass.newInstance();
+            o = exprClass.newInstance();
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
