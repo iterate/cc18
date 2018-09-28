@@ -74,6 +74,7 @@ class Program {
     public Program callMethod(String methodName) {
         final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
         final MethodCallExpr methodCallExpr = new MethodCallExpr(methodName);
+        block.addStatement(methodCallExpr);
 
         return this;
     }
