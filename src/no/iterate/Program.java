@@ -30,7 +30,9 @@ class Program {
         return this;
     }
 
-    public Program addPackage(String packageName){return this;}
+    public Program addPackage(String packageName){
+
+        return this;}
 
     public Program addMethod(String methodName) {
         currentMethod = currentClass.addMethod(methodName);
