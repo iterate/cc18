@@ -174,7 +174,7 @@ class Program {
         final BlockStmt block = new BlockStmt();
         ReturnStmt returnStmt = new ReturnStmt(methodCallExpr);
 
-        block.getStatements().stream().filter(statement -> true);
+        block.getStatements().stream().filter(statement -> statement.isReturnStmt());
 
         block.addStatement(returnStmt);
         currentMethod.setBody(block);
