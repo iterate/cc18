@@ -68,7 +68,6 @@ class Program {
         for (int i = 0; i < compilationUnit.getChildNodes().size(); i++) {
             System.out.print(i);
             final ArrayList<String> split = new ArrayList<>(Arrays.asList(compilationUnit.getChildNodes().get(i).toString().split("\n")));
-            split.forEach(l -> System.out.println("\t" + l));
         }
     }
 
