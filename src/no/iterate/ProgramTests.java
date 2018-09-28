@@ -40,7 +40,7 @@ public class ProgramTests {
             .toString()
             .contains("return \"1\";"));
 
-    MethodCallExpr valueOf = new MethodCallExpr(new NameExpr("String"), "valueOf");
+    MethodCallExpr returnStatment = new MethodCallExpr(new NameExpr("String"), "valueOf").addArgument("input");
 
     public static final Runnable RUN_THE_CODE = () -> assume(new Program()
             .setPackage("no.iterate")
