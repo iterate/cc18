@@ -99,7 +99,7 @@ class Program {
                 label = "?";
             }
 
-            if(node instanceof VoidType){
+            if(node instanceof Parameter){
                 label = "?";
             }
 
