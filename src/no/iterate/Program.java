@@ -33,7 +33,7 @@ class Program {
         return this;
     }
 
-    public Program addMethodToClass(String methodName, int node) {
+    public Program addMethodToClass(int node, String methodName) {
         currentMethod = currentClass.addMethod(methodName);
         return this;
     }
