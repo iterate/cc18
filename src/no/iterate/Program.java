@@ -69,6 +69,10 @@ class Program {
     }
 
     public Program makeStatic() {
+        return getProgram();
+    }
+
+    private Program getProgram() {
         final EnumSet<Modifier> modifiers = currentMethod.getModifiers();
         modifiers.add(Modifier.STATIC);
 
