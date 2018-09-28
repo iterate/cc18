@@ -142,7 +142,6 @@ class Program {
         block.addStatement(call);
         currentMethod.setBody(block);
 
-
         return this;
     }
 
