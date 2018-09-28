@@ -104,6 +104,7 @@ class Program {
             o = exprClass.newInstance();
         } catch (InstantiationException e) {
             e.printStackTrace();
+            return this;
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
