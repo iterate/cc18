@@ -80,7 +80,7 @@ class Program {
             String label = "REPLACE ME!";
 
             if(node instanceof ClassOrInterfaceDeclaration){
-                label = ((ClassOrInterfaceDeclaration) node).getName().toString();
+                label = "class/interface: " + ((ClassOrInterfaceDeclaration) node).getName();
             }
 
             if(node instanceof SimpleName){
