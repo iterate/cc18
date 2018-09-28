@@ -66,7 +66,8 @@ class Program {
     }
 
     public Program selectMethod(String methodName) {
-        currentMethod = currentClass.getMethodsByName(methodName).get(0);
+        if(currentClass instanceof ClassOrInterfaceDeclaration) 
+            currentMethod = ((ClassOrInterfaceDeclaration) currentClass).getMethodsByName(methodName).get(0);
         return this;
     }
 
