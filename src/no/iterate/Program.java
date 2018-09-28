@@ -110,7 +110,7 @@ class Program {
     public Program addPrimitiveParameter(Primitive parameterType, String parameterName) {
         final PrimitiveType primitiveType = new PrimitiveType(parameterType);
 
-        currentMethod.addParameter(new Parameter(primitiveType, parameterName));
+        addParameter(primitiveType, parameterName, false);
         return this;
     }
 
