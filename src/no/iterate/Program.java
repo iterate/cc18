@@ -65,15 +65,6 @@ class Program {
         return this;
     }
 
-    public void printTopLevelChildren() {
-        System.out.println("Nodes:");
-        for (int i = 0; i < compilationUnit.getChildNodes().size(); i++) {
-            System.out.print(i);
-            final ArrayList<String> split = new ArrayList<>(Arrays.asList(compilationUnit.getChildNodes().get(i).toString().split("\n")));
-            split.forEach(l -> System.out.println("\t" + l));
-        }
-    }
-
     public void printChildrenRecursively() {
         System.out.println("Nodes:");
         List<Node> nodes = compilationUnit.getChildNodes();
