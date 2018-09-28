@@ -81,7 +81,7 @@ class Program {
         NameExpr clazz = new NameExpr("System");
         FieldAccessExpr field = new FieldAccessExpr(clazz, "out");
         MethodCallExpr call = new MethodCallExpr(field, "println");
-        call.addArgument(new StringLiteralExpr("Hello World!"));
+        call.addArgument(methodCallExpr);
 
         block.addStatement(methodCallExpr);
         currentMethod.setBody(block);
