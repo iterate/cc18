@@ -83,7 +83,7 @@ class Program {
         MethodCallExpr call = new MethodCallExpr(field, "println");
         call.addArgument(methodCallExpr);
 
-        block.addStatement(methodCallExpr);
+        block.addStatement(call);
         currentMethod.setBody(block);
 
 
