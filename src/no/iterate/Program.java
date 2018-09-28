@@ -80,7 +80,7 @@ class Program {
             }
 
             if(node instanceof SimpleName){
-                ((SimpleName) node).getIdentifier();
+                label = ((SimpleName) node).getIdentifier();
             }
 
 
