@@ -42,6 +42,13 @@ class Program {
     public Program addMethodToClass(int node, String methodName) {
         currentClass = (ClassOrInterfaceDeclaration) compilationUnit.getChildNodes().get(node);
 
+        printTopLevelChildren();
+
+        currentMethod = currentClass.addMethod(methodName);
+        return this;
+    }
+
+    private void printTopLevelChildren() {
         System.out.println("------");
 
         System.out.println("Nodes:");
@@ -51,9 +58,6 @@ class Program {
         }
 
         System.out.println("------");
-
-        currentMethod = currentClass.addMethod(methodName);
-        return this;
     }
 
     public Program addParameter(String parameterType, String parameterName) {
