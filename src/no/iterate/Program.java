@@ -68,15 +68,11 @@ class Program {
         System.out.println("Nodes:");
         List<Node> nodes = compilationUnit.getChildNodes();
         for (int i = 0; i < nodes.size(); i++) {
-            printNode(nodes, i);
+            System.out.print(i);
+            Node node = nodes.get(i);
+            final ArrayList<String> lines = new ArrayList<>(Arrays.asList(node.toString().split("\n")));
+            lines.forEach(l -> System.out.println("\t" + l));
         }
-    }
-
-    private void printNode(List<Node> nodes, int i) {
-        System.out.print(i);
-        Node node = nodes.get(i);
-        final ArrayList<String> lines = new ArrayList<>(Arrays.asList(node.toString().split("\n")));
-        lines.forEach(l -> System.out.println("\t" + l));
     }
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
