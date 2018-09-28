@@ -138,7 +138,7 @@ class Program {
 
     public Program printMethodResult(String methodName) {
 
-        final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
+        final BlockStmt block = ((MethodDeclaration) cursor2).getBody().orElse(new BlockStmt());
 
         NameExpr clazz = new NameExpr("System");
         FieldAccessExpr field = new FieldAccessExpr(clazz, "out");
