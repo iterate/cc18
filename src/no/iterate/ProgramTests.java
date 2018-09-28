@@ -56,13 +56,13 @@ public class ProgramTests {
             .makeStatic()
             .setReturnType("String")
             .setMethodReturnStmt("\"1\"")
-            .selectMethod("main")
-            .printMethodResult("calculate")
             .selectMethod("calculate")
             .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 1)
             .setMethodReturnStmt(new MethodCallExpr(new NameExpr("String"), "valueOf").addArgument("input"))
+            .selectMethod("main")
+            .printMethodResult("calculate", 2)
             .run()
-            .equals("1\n1"), "Method should return what we give as input");
+            .equals("1\n2"), "Method should return what we give as input");
 
     public static final Runnable ADD_MAIN_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
