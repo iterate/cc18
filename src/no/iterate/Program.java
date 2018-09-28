@@ -31,7 +31,7 @@ class Program {
     }
 
     public Program addPackage(String packageName){
-
+        compilationUnit.setPackageDeclaration(packageName);
         return this;}
 
     public Program addMethod(String methodName) {
