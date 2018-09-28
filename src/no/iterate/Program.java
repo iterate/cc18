@@ -71,10 +71,10 @@ class Program {
     }
 
     public Program addMethodToClass(int node, String methodName) {
-        cursor = compilationUnit.getChildNodes().get(node);
+        cursor2 = compilationUnit.getChildNodes().get(node);
 
-        if(cursor instanceof ClassOrInterfaceDeclaration)
-            currentMethod = ((ClassOrInterfaceDeclaration) cursor).addMethod(methodName);
+        if(cursor2 instanceof ClassOrInterfaceDeclaration)
+            cursor2 = ((ClassOrInterfaceDeclaration) cursor).addMethod(methodName);
         return this;
     }
 
