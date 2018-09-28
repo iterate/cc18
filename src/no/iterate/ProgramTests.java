@@ -49,7 +49,7 @@ public class ProgramTests {
             .makeStatic()
             .makePublic()
             .toString()
-            .contains("public static void main"));
+            .contains("public static void main("));
 
     public static final Runnable ADD_METHOD_TO_SPECIFIC_CLASS = () -> assume(new Program()
             .addClass("FizzBuzz")
