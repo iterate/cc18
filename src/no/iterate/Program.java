@@ -39,7 +39,8 @@ class Program {
         currentClass = (ClassOrInterfaceDeclaration) compilationUnit.getChildNodes().get(node);
 
         System.out.println("------");
-        
+
+
         System.out.println("------");
 
         currentMethod = currentClass.addMethod(methodName);
