@@ -51,7 +51,7 @@ public class ProgramTests {
             .makePublic()
             .addParameter("String", "args", true)
             .toString()
-            .contains("public static void main(String"));
+            .contains("public static void main(String... args"));
 
     public static final Runnable ADD_METHOD_TO_SPECIFIC_CLASS = () -> assume(new Program()
             .addClass("FizzBuzz")
