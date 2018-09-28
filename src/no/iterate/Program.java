@@ -64,7 +64,7 @@ class Program {
             e.printStackTrace();
         }
 
-        try {
+        /*try {
             runProcess("pwd");
             System.out.println("**********");
             runProcess("javac -cp FizzBuzz.java");
@@ -72,7 +72,7 @@ class Program {
             runProcess("java -cp FizzBuzz");
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
 
         return this.toString();
     }
