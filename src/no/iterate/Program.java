@@ -85,7 +85,7 @@ class Program {
         }
     }
 
-    void printNodes(){}
+    void printNodes(Node nodes){}
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
         final TypeParameter type = JavaParser.parseTypeParameter(parameterType);
