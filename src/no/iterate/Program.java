@@ -108,7 +108,7 @@ class Program {
                 label = "type parameter: " + ((TypeParameter)node).getName();
             }
 
-            System.out.print(program.indent(depth));
+            System.out.print(Program.indent(depth));
             System.out.print("" + i + ": ");
             System.out.println(label);
 
@@ -116,7 +116,7 @@ class Program {
         }
     }
 
-    String indent(int depth){
+    static String indent(int depth){
         return IntStream
                 .range(0, depth + 1)
                 .mapToObj(i -> "   ")
