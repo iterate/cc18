@@ -72,7 +72,6 @@ class Program {
         return getProgram(Modifier.STATIC);
     }
 
-
     public Program makePublic() {
         return this;
     }
