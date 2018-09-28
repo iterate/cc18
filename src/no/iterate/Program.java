@@ -13,6 +13,8 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.EnumSet;
 
 class Program {
@@ -49,7 +51,8 @@ class Program {
         System.out.println("Nodes:");
         for (int i = 0; i < compilationUnit.getChildNodes().size(); i++) {
             System.out.print(i);
-            compilationUnit.getChildNodes().get(i).toString().lines().forEach(l -> System.out.println("\t" + l));
+            final ArrayList<String> split = new ArrayList<>(Arrays.asList(compilationUnit.getChildNodes().get(i).toString().split("\n")));
+            split.forEach(l -> System.out.println("\t" + l));
         }
     }
 
