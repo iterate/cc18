@@ -57,7 +57,7 @@ public class ProgramTests {
             .setReturnType("String")
             .setMethodReturnStmt("\"1\"")
             .selectMethod("main")
-            .printMethodResult("calculate", 2)
+            .printMethodResult("calculate")
             .selectMethod("calculate")
             .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 1)
             .setMethodReturnStmt(new MethodCallExpr(new NameExpr("String"), "valueOf").addArgument("input"))

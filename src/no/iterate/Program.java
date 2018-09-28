@@ -154,7 +154,7 @@ class Program {
         NameExpr clazz = new NameExpr("System");
         FieldAccessExpr field = new FieldAccessExpr(clazz, "out");
         MethodCallExpr call = new MethodCallExpr(field, "println");
-        call.addArgument(new MethodCallExpr(methodName));
+        call.addArgument(new MethodCallExpr(methodName).addArgument(new IntegerLiteralExpr(0)));
 
         block.addStatement(call);
         currentMethod.setBody(block);
