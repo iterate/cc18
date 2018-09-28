@@ -103,7 +103,7 @@ class Program {
             System.out.println("**********");
             runProcess("javac -classpath "+ fileName + " -d out/production/cc18/");
             System.out.println("**********");
-            runProcess("java -cp FizzBuzz");
+            runProcess("java -classpath out/production/cc18 "+ packageName + "." + className);
         } catch (Exception e) {
             e.printStackTrace();
         }
