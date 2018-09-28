@@ -60,7 +60,7 @@ class Program {
 
     public Program addParameter(String parameterType, String parameterName) {
         new Parameter(JavaParser.parseTypeParameter(parameterType), parameterName);
-        currentMethod.addParameter(JavaParser.parseTypeParameter(parameterType), parameterName);
+        currentMethod.addParameter(JavaParser.parseClassOrInterfaceType(parameterType), parameterName);
         return this;
     }
 
