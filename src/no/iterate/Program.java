@@ -73,7 +73,7 @@ class Program {
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
 
-            String label;
+            String label = "REPLACE ME!";
 
             if(node instanceof ClassOrInterfaceDeclaration){
                 label = ((ClassOrInterfaceDeclaration) node).getName().toString();
@@ -90,6 +90,7 @@ class Program {
 
             System.out.print(indent(depth));
             System.out.print("" + i + ": ");
+            System.out.println(label);
 
             printNodes(node.getChildNodes(), depth + 1);
         }
