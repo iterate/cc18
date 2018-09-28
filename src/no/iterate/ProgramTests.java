@@ -38,7 +38,7 @@ public class ProgramTests {
     public static final Runnable RUN_THE_CODE = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
-            .addReturnType("STRING")
+            .addReturnType("String")
             .addMethodReturnStmt("\"1\"")
             .run()
             .contains("return \"1\";"), "Method should return \"1\" like we said");
