@@ -84,7 +84,7 @@ class Program {
             }
 
             if(node instanceof SimpleName){
-                label = ((SimpleName) node).getIdentifier();
+                label = "name: " + ((SimpleName) node).getIdentifier();
             }
 
             if(node instanceof MethodDeclaration){
