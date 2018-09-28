@@ -7,6 +7,28 @@ import com.github.javaparser.ast.type.PrimitiveType;
 import static no.iterate.Tests.assume;
 
 public class ProgramTests {
+    public static final Runnable INTEGRATION_TEST = () -> assume(new Program()
+            .setPackage("no.iterate")
+            .addClass("FizzBuzz")
+            .addMethod("main")
+            .peek(p -> System.out.println(p.cursor.getClass()))
+            .makeStatic()
+            .makePublic()
+            .addParameter("String", "args", true)
+            .printMethodResult("calculate")
+            .addMethod("calculate")
+            .makeStatic()
+            .setReturnType("String")
+            .setMethodReturnStmt("\"1\"")
+            .selectMethod("calculate")
+            .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 1)
+            .setMethodReturnStmt(new MethodCallExpr(new NameExpr("String"), "valueOf").addArgument("input"))
+            .selectMethod("main")
+            .printMethodResult("calculate", 2)
+            .run()
+            .equals("1\n2"), "Method should return what we give as input");
+
+
     public static final Runnable PROGRAM_SHOULD_CONTAIN_CLASS_FIZZBUZZ = () -> assume(new Program()
             .addClass("FizzBuzz") // sets cursor to class
             .toString()
@@ -40,26 +62,6 @@ public class ProgramTests {
             .toString()
             .contains("return \"1\";"));
 
-    public static final Runnable INTEGRATION_TEST = () -> assume(new Program()
-            .setPackage("no.iterate")
-            .addClass("FizzBuzz")
-            .addMethod("main")
-            .peek(p -> System.out.println(p.cursor.getClass()))
-            .makeStatic()
-            .makePublic()
-            .addParameter("String", "args", true)
-            .printMethodResult("calculate")
-            .addMethod("calculate")
-            .makeStatic()
-            .setReturnType("String")
-            .setMethodReturnStmt("\"1\"")
-            .selectMethod("calculate")
-            .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 1)
-            .setMethodReturnStmt(new MethodCallExpr(new NameExpr("String"), "valueOf").addArgument("input"))
-            .selectMethod("main")
-            .printMethodResult("calculate", 2)
-            .run()
-            .equals("1\n2"), "Method should return what we give as input");
 
     public static final Runnable ADD_MAIN_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
