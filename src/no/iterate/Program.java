@@ -54,7 +54,7 @@ class Program {
         return this;
     }
 
-    private void printTopLevelChildren() {
+    public void printTopLevelChildren() {
         System.out.println("Nodes:");
         for (int i = 0; i < compilationUnit.getChildNodes().size(); i++) {
             System.out.print(i);
