@@ -60,6 +60,7 @@ public class ProgramTests {
             .makeStatic()
             .makePublic()
             .addParameter("String", "args", true)
+            .peek(Program::printChildrenRecursively)
             .toString()
             .contains("public static void main(String... args"));
 
