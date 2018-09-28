@@ -52,7 +52,8 @@ class Program {
 
     public Program setPackage(String packageName){
         compilationUnit.setPackageDeclaration(packageName);
-        return this;}
+        return this;
+    }
 
     public Program addMethod(String methodName) {
         currentMethod = currentClass.addMethod(methodName);
