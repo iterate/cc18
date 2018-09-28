@@ -72,9 +72,8 @@ class Program {
     void printNodes(List<Node> nodes, int depth){
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
-            System.out.print(indent(depth));
-            System.out.print("" + i + ": ");
 
+            String label;
 
             if(node instanceof ClassOrInterfaceDeclaration){
 
@@ -88,6 +87,10 @@ class Program {
 
                 System.out.println(((SimpleName)node).getIdentifier());
             }
+
+
+            System.out.print(indent(depth));
+            System.out.print("" + i + ": ");
 
             printNodes(node.getChildNodes(), depth + 1);
         }
