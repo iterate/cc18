@@ -132,7 +132,7 @@ class Program {
     }
 
     public Program setReturnType(String returnType) {
-        ((MethodDeclaration) currentMethod).setType(JavaParser.parseTypeParameter(returnType));
+        ((MethodDeclaration) cursor2).setType(JavaParser.parseTypeParameter(returnType));
         return this;
     }
 
