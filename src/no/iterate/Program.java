@@ -32,7 +32,6 @@ import static com.github.javaparser.ast.type.PrimitiveType.*;
 
 class Program {
 
-    // Lars
     public CompilationUnit compilationUnit = new CompilationUnit();
     private ClassOrInterfaceDeclaration currentClass;
     private MethodDeclaration currentMethod;
