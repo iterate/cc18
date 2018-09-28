@@ -111,7 +111,7 @@ class Program {
 
 
     public Program changeSignatureAddParameter(Type type, String name, Object defaultValue) {
-        return this;
+        return addParameter(type, name, false);
     }
 
     public Program addReturnType(String returnType) {
