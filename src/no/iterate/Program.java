@@ -89,10 +89,10 @@ class Program {
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
         final TypeParameter type = JavaParser.parseTypeParameter(parameterType);
-        return addParameter(parameterName, isVarArgs, type);
+        return addParameter(type, parameterName, isVarArgs);
     }
 
-    private Program addParameter(String parameterName, boolean isVarArgs, TypeParameter type) {
+    private Program addParameter(TypeParameter type, String parameterName, boolean isVarArgs) {
         final Parameter parameter = new Parameter(type, parameterName);
         parameter.setVarArgs(isVarArgs);
 
