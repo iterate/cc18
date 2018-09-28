@@ -77,7 +77,6 @@ class Program {
         List<Node> nodes = compilationUnit.getChildNodes();
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
-            System.out.print(i);
         }
     }
 
