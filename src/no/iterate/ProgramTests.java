@@ -1,5 +1,7 @@
 package no.iterate;
 
+import com.github.javaparser.ast.CompilationUnit;
+
 import static no.iterate.Tests.assume;
 
 public class ProgramTests {
@@ -52,5 +54,7 @@ public class ProgramTests {
                 .addMethodReturnStmt("1")
                 .run()
                 .contains("return 1;"), "Method should return 1 like we said");
+
+        Program p = new Program();
     };
 }
