@@ -60,7 +60,7 @@ class Program {
     }
 
     public Program makeStatic() {
-        currentMethod.setModifiers(EnumSet.of(Modifier.STATIC));
+        currentMethod.setModifiers(EnumSet.of(Modifier.PUBLIC, Modifier.STATIC));
         return this;
     }
 
