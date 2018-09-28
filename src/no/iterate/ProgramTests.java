@@ -82,9 +82,11 @@ public class ProgramTests {
             .toString()
             .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
 
-    public static final Runnable ADD_MULTIPLE_METHODS = () -> { new Program()
+    public static final Runnable ADD_MULTIPLE_METHODS = () -> { assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("method1")
-            .addMethod("method2");
+            .addMethod("method2")
+            .toString()
+            .contains("method1()"), "Adding multiple methods, the first one is still there");
     };
 }
