@@ -30,6 +30,9 @@ import java.util.stream.Collectors;
 
 import static com.github.javaparser.ast.type.PrimitiveType.*;
 
+
+//My comment
+
 class Program {
 
     public CompilationUnit compilationUnit = new CompilationUnit();
