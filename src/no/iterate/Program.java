@@ -129,6 +129,9 @@ class Program {
     }
 
     public Program addReturnType(String returnType) {
+        NameExpr clazz = new NameExpr("System");
+
+
         currentMethod.setType(JavaParser.parseTypeParameter(returnType));
         return this;
     }
