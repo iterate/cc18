@@ -115,11 +115,7 @@ class Program {
         System.out.println(command + " exitValue() " + pro.exitValue());
     }
 
-    public static Program script(String script){
-        Program program = new Program();
-        //script.lines().forEach(line -> program.apply(line));
-        return program;
-    };
+    ;
 
     public Program apply(String line){
         if(line.startsWith("ADD_CLASS"))
