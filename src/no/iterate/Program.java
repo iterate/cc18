@@ -91,7 +91,8 @@ class Program {
         System.out.println(this.toString());
         String packageName = "no/iterate";
         String className = "FizzBuzz";
-        try (PrintWriter out = new PrintWriter("src/" + packageName + "/" + className + ".java")) {
+        String fileName = "src/" + packageName + "/" + className + ".java";
+        try (PrintWriter out = new PrintWriter(fileName)) {
             out.println(toString());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -100,7 +101,7 @@ class Program {
         try {
             runProcess("pwd");
             System.out.println("**********");
-            runProcess("javac -classpath javaparser-symbol-solver-core-3.6.23.jar:javaparser-core-3.6.23.jar src/no/iterate/ProgramTests.java src/no/iterate/Program.java src/no/iterate/Tester.java src/no/iterate/Reporter.java src/no/iterate/Testable.java src/no/iterate/TestResults.java src/no/iterate/FizzBuzz.java -d out/production/cc18/ && \\\n");
+            runProcess("javac -classpath src/no/iterate/ProgramTests.java src/no/iterate/Program.java src/no/iterate/Tester.java src/no/iterate/Reporter.java src/no/iterate/Testable.java src/no/iterate/TestResults.java src/no/iterate/FizzBuzz.java -d out/production/cc18/ && \\\n");
             System.out.println("**********");
             runProcess("java -cp FizzBuzz");
         } catch (Exception e) {
