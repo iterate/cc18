@@ -152,6 +152,8 @@ class Program {
 
     public Program printMethodResult(String methodName, int argument) {
 
+        if(cursor2 instanceof MethodDeclaration);
+
         final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
 
         NameExpr clazz = new NameExpr("System");
