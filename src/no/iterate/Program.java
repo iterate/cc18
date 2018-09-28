@@ -170,14 +170,6 @@ class Program {
         return this;
     }
 
-    public Program callMethod(String methodName) {
-        final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
-        block.addStatement(new MethodCallExpr(methodName));
-        currentMethod.setBody(block);
-
-        return this;
-    }
-
     public Program setMethodReturnStmt(String returnString) {
         final BlockStmt block = ((MethodDeclaration) cursor2).getBody().orElse(new BlockStmt());
         ReturnStmt returnStmt = new ReturnStmt(returnString);
