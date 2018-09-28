@@ -12,15 +12,6 @@ class TestResults {
     public List<String> exceptions = new ArrayList<>();
 
     public String summary() {
-
-
-
-        exceptions.stream().collect(Collectors.joining());
-
-        StringBuilder stringBuilder = new StringBuilder();
-        for (String exception : exceptions) {
-            stringBuilder.append(exception);
-        }
-        return stringBuilder.toString();
+        return exceptions.stream().collect(Collectors.joining());
     }
 }
