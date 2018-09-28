@@ -30,7 +30,6 @@ import java.util.EnumSet;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import static com.github.javaparser.ast.type.PrimitiveType.*;
 
@@ -108,19 +107,12 @@ class Program {
                 label = "type parameter: " + ((TypeParameter)node).getName();
             }
 
-            System.out.print(Program.indent(depth));
+            System.out.print(ProgramPrinter.indent(depth));
             System.out.print("" + i + ": ");
             System.out.println(label);
 
             printNodes(program, node.getChildNodes(), depth + 1);
         }
-    }
-
-    static String indent(int depth){
-        return IntStream
-                .range(0, depth + 1)
-                .mapToObj(i -> "   ")
-                .collect(Collectors.joining());
     }
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
