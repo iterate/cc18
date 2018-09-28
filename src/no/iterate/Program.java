@@ -118,7 +118,7 @@ class Program {
                         methodCallExpr -> methodCallExpr
                                 .getName()
                                 .asString()
-                                .equals(currentMethod.getName().toString())
+                                .equals(((MethodDeclaration) currentMethod).getName().toString())
                 );
         
         allMethodCalls.stream().map(call -> call.asMethodCallExpr()).forEach(c -> {
