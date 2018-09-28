@@ -66,10 +66,10 @@ class Program {
 
     public void printChildrenRecursively() {
         System.out.println("Nodes:");
-        List<Node> childNodes = compilationUnit.getChildNodes();
-        for (int i = 0; i < childNodes.size(); i++) {
+        List<Node> nodes = compilationUnit.getChildNodes();
+        for (int i = 0; i < nodes.size(); i++) {
             System.out.print(i);
-            final ArrayList<String> lines = new ArrayList<>(Arrays.asList(childNodes.get(i).toString().split("\n")));
+            final ArrayList<String> lines = new ArrayList<>(Arrays.asList(nodes.get(i).toString().split("\n")));
             lines.forEach(l -> System.out.println("\t" + l));
         }
     }
