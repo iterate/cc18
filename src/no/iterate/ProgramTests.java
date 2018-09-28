@@ -48,9 +48,9 @@ public class ProgramTests {
             .addMethod("calculate")
             .makeStatic()
             .addReturnType("String")
-            .addMethodReturnStmt("\"1\"")
+            .addMethodReturnStmt("\"2\"")
             .run()
-            .equals("1"), "Method should return \"1\" like we said");
+            .equals("2"), "Method should return \"2\" like we said");
 
     public static final Runnable ADD_MAIN_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
