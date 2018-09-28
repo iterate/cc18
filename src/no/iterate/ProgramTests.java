@@ -54,6 +54,7 @@ public class ProgramTests {
             .makeStatic()
             .setReturnType("String")
             .setMethodReturnStmt("\"2\"")
+            .printMethodResult("calculate")
             .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 0)
             .setMethodReturnStmt(new MethodCallExpr(new NameExpr("String"), "valueOf").addArgument("input"))
             .run()
