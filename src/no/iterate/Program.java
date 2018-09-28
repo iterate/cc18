@@ -70,6 +70,9 @@ class Program {
     }
 
     public Program setCursorToCurrentClass(){
+        while (cursor2 instanceof ClassOrInterfaceDeclaration){
+            cursor2 = cursor2.getParentNode().get();
+        }
         return this;
     }
 
