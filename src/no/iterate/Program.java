@@ -10,6 +10,7 @@ import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.Parameter;
 import com.github.javaparser.ast.expr.Expression;
 import com.github.javaparser.ast.expr.FieldAccessExpr;
+import com.github.javaparser.ast.expr.IntegerLiteralExpr;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.NameExpr;
 import com.github.javaparser.ast.expr.SimpleName;
@@ -152,7 +153,8 @@ class Program {
 
         allMethodCalls.stream().map(call -> call.asMethodCallExpr()).forEach(c -> {
             final NodeList<Expression> arguments = c.getArguments();
-            //arguments.addLast();
+
+            arguments.addLast(new IntegerLiteralExpr(1));
             c.setArguments(arguments);
         });
 
