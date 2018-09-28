@@ -57,6 +57,10 @@ class Program {
         return this;
     }
 
+    public Program makeStatic() {
+        return this;
+    }
+
     public String run() {
         System.out.println(this.toString());
         try (PrintWriter out = new PrintWriter("FizzBuzz.java")) {
