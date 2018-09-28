@@ -174,7 +174,6 @@ class Program {
 
         InputStream inputStream = pro.getInputStream();
 
-        //printLines(command + " stdout:", pro.getInputStream());
         printLines(command + " stderr:", pro.getErrorStream());
         pro.waitFor();
         System.out.println(command + " exitValue() " + pro.exitValue());
