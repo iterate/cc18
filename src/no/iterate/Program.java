@@ -58,8 +58,7 @@ class Program {
 
     public Program addMethod(String methodName) {
         if(cursor instanceof ClassOrInterfaceDeclaration) {
-            currentMethod = ((ClassOrInterfaceDeclaration) cursor).addMethod(methodName);
-            cursor2 = currentMethod;
+            cursor2 = ((ClassOrInterfaceDeclaration) cursor).addMethod(methodName);
         }
         return this;
     }
