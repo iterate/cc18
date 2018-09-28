@@ -14,11 +14,8 @@ public class ProgramTests {
     public static final Runnable ADD_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
             .peek(p -> System.out.println(p.cursor.getClass()))
-            .addMethod("calculate")
-
+            .addMethod("calculate") // sets cursor to method
             .peek(p -> System.out.println(p.cursor.getClass()))
-
-
             .toString()
             .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
     public static final Runnable ADD_PARAMETER = () -> assume(new Program()
