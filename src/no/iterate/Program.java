@@ -3,7 +3,6 @@ package no.iterate;
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.Modifier;
-import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.NodeList;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
@@ -13,13 +12,11 @@ import com.github.javaparser.ast.expr.FieldAccessExpr;
 import com.github.javaparser.ast.expr.IntegerLiteralExpr;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.NameExpr;
-import com.github.javaparser.ast.expr.SimpleName;
 import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
 import com.github.javaparser.ast.type.PrimitiveType;
 import com.github.javaparser.ast.type.Type;
 import com.github.javaparser.ast.type.TypeParameter;
-import com.github.javaparser.ast.type.VoidType;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -70,49 +67,7 @@ class Program {
 
     public void printChildrenRecursively() {
         System.out.println("Nodes:");
-        printNodes(this, compilationUnit.getChildNodes(), 0);
-    }
-
-    public static void printNodes(Program program, List<Node> nodes, int depth){
-        for (int i = 0; i < nodes.size(); i++) {
-            Node node = nodes.get(i);
-
-            String label = "REPLACE ME!";
-
-            if(node instanceof ClassOrInterfaceDeclaration){
-                label = "class/interface: " + ((ClassOrInterfaceDeclaration) node).getName();
-            }
-
-            if(node instanceof SimpleName){
-                label = "name: " + ((SimpleName) node).getIdentifier();
-            }
-
-            if(node instanceof MethodDeclaration){
-                label = "method: " + ((MethodDeclaration)node).getName();
-            }
-
-            if(node instanceof BlockStmt){
-                label = "block statement: ";
-            }
-
-            if(node instanceof VoidType){
-                label = "void";
-            }
-
-            if(node instanceof Parameter){
-                label = "parameter: " + ((Parameter)node).getName();
-            }
-
-            if(node instanceof TypeParameter){
-                label = "type parameter: " + ((TypeParameter)node).getName();
-            }
-
-            System.out.print(ProgramPrinter.indent(depth));
-            System.out.print("" + i + ": ");
-            System.out.println(label);
-
-            printNodes(program, node.getChildNodes(), depth + 1);
-        }
+        ProgramPrinter.printNodes(this, compilationUnit.getChildNodes(), 0);
     }
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
