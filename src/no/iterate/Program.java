@@ -201,4 +201,7 @@ class Program {
         return result;
     }
 
+    public Program selectMethod(String main) {
+        return this;
+    }
 }
