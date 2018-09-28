@@ -169,6 +169,8 @@ class Program {
 
 
     public Program addMethodReturnStmt(MethodCallExpr methodCallExpr) {
+        final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
+
         return this;
     }
 
