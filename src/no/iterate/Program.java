@@ -52,20 +52,6 @@ class Program {
         return this;
     }
 
-    public Program addMethodBody(String s) {
-        final BlockStmt block = new BlockStmt();
-        NameExpr clazz = new NameExpr("System");
-        FieldAccessExpr field = new FieldAccessExpr(clazz, "out");
-        MethodCallExpr call = new MethodCallExpr(field, "println");
-        call.addArgument(new StringLiteralExpr("Hello World!"));
-        ReturnStmt returnStmt = new ReturnStmt("1");
-
-        block.addStatement(call);
-        block.addStatement(returnStmt);
-        currentMethod.setBody(block);
-        return this;
-    }
-
     public Program addMethodReturnStmt(String returnString) {
         final BlockStmt block = new BlockStmt();
         ReturnStmt returnStmt = new ReturnStmt(returnString);
