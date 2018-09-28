@@ -83,7 +83,7 @@ class Program {
         return this;
     }
 
-    public Program addPrimitiveParameter(String parameterType) {
+    public Program addPrimitiveParameter(String parameterType, String parameterName) {
         return this;
     }
 
