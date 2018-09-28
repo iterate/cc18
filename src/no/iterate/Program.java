@@ -205,4 +205,8 @@ class Program {
 
         return result;
     }
+
+    public Program changeSignature() {
+        return this;
+    }
 }
