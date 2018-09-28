@@ -9,6 +9,7 @@ import static no.iterate.Tests.assume;
 public class ProgramTests {
     public static final Runnable PROGRAM_SHOULD_CONTAIN_CLASS_FIZZBUZZ = () -> assume(new Program()
             .addClass("FizzBuzz") // sets cursor to class
+            .peek(p -> System.out.println(p))
             .toString()
             .contains("class FizzBuzz"), "Program should contain class FizzBuzz");
     public static final Runnable ADD_METHOD = () -> assume(new Program()
