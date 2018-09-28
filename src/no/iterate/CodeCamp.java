@@ -25,9 +25,8 @@ public class CodeCamp {
     }
 
     static List<Runnable> testClass(Class<ProgramTests> aClass) {
-        Field[] fields = aClass.getFields();
         List<Runnable> tests = new ArrayList<>();
-        stream(fields).forEach(field -> {
+        stream(aClass.getFields()).forEach(field -> {
             try {
                 tests.add((Runnable) field.get(null));
             } catch (IllegalAccessException e) {
