@@ -32,7 +32,7 @@ import static com.github.javaparser.ast.type.PrimitiveType.*;
 
 class Program {
 
-    private CompilationUnit compilationUnit = new CompilationUnit();
+    public CompilationUnit compilationUnit = new CompilationUnit();
     private ClassOrInterfaceDeclaration currentClass;
     private MethodDeclaration currentMethod;
 
