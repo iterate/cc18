@@ -14,7 +14,8 @@ class TestResults {
     public String summary() {
 
 
-        System.out.println(Arrays.asList("ole", "petter").stream().collect(Collectors.joining()));
+
+        exceptions.stream().collect(Collectors.joining());
 
         StringBuilder stringBuilder = new StringBuilder();
         for (String exception : exceptions) {
