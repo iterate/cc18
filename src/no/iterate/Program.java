@@ -41,7 +41,7 @@ class Program {
         System.out.println("------");
 
         for (int i = 0; i < compilationUnit.getChildNodes().size(); i++) {
-            System.out.println();
+            System.out.println("Nodes:");
             compilationUnit.getChildNodes().get(i);
         }
 
