@@ -118,7 +118,7 @@ class Program {
                         methodCallExpr -> methodCallExpr
                                 .getName()
                                 .asString()
-                                .equals(((MethodDeclaration) currentMethod).getName().toString())
+                                .equals(((MethodDeclaration) cursor2).getName().toString())
                 );
         
         allMethodCalls.stream().map(call -> call.asMethodCallExpr()).forEach(c -> {
