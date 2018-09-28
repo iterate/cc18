@@ -68,7 +68,7 @@ class Program {
         return this;
     }
 
-    public Program makeStatic() {
+    public Program makeStatic(Modifier modifier) {
         return getProgram();
     }
 
