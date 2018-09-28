@@ -196,7 +196,11 @@ class Program {
 
         statements.add(returnStmt);
         block.setStatements(statements);
+
+
         currentMethod.setBody(block);
+
+
         return this;
     }
 
