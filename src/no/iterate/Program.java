@@ -76,9 +76,8 @@ class Program {
             String label;
 
             if(node instanceof ClassOrInterfaceDeclaration){
+                label = ((ClassOrInterfaceDeclaration) node).getName().toString();
 
-
-                System.out.println(((ClassOrInterfaceDeclaration)node).getName());
             }
 
             if(node instanceof SimpleName){
