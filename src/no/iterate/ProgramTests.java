@@ -83,5 +83,7 @@ public class ProgramTests {
             .contains("calculate()"), "Adding a method, 'calculate' should make THE STRING contain 'calculate()'");
 
     public static final Runnable ADD_MULTIPLE_METHODS = () -> { new Program()
-            .addClass("FizzBuzz"); };
+            .addClass("FizzBuzz")
+            .addMethodToClass(0, "method1");
+    };
 }
