@@ -52,8 +52,7 @@ class Program {
         return this;
     }
 
-
-    public Program selectMethod(String main) {
+    public Program selectMethod(String methodName) {
         return this;
     }
 
