@@ -54,7 +54,7 @@ class Program {
     }
 
     public Program setPackage(String packageName){
-        compilationUnit.setPackageDeclaration(packageName);
+        setPackage(compilationUnit, packageName);
         return this;
     }
 
