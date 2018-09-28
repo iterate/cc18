@@ -31,7 +31,6 @@ import java.util.stream.Collectors;
 import static com.github.javaparser.ast.type.PrimitiveType.*;
 
 class Program {
-
     public CompilationUnit compilationUnit = new CompilationUnit();
     private ClassOrInterfaceDeclaration currentClass;
     private MethodDeclaration currentMethod;
