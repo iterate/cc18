@@ -139,7 +139,7 @@ class Program {
     public Program changeSignatureAddParameter(Type type, String name, Object defaultValue) {
         addParameter(type, name, false);
 
-        final List<MethodCallExpr> allMethodCalls = currentClass.findAll(MethodCallExpr.class);
+        final List<MethodCallExpr> allMethodCalls = currentClass.findAll(MethodCallExpr.class, methodCallExpr -> true);
 
         final NodeList<Expression> nodes = new NodeList<>();
 
