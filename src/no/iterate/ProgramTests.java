@@ -42,7 +42,7 @@ public class ProgramTests {
 
     MethodCallExpr returnStatment = new MethodCallExpr(new NameExpr("String"), "valueOf").addArgument("input");
 
-    public static final Runnable RUN_THE_CODE = () -> assume(new Program()
+    public static final Runnable INTEGRATION = () -> assume(new Program()
             .setPackage("no.iterate")
             .addClass("FizzBuzz")
             .addMethod("main")
