@@ -1,6 +1,5 @@
 package no.iterate;
 
-import com.github.javaparser.ast.expr.IntegerLiteralExpr;
 import com.github.javaparser.ast.type.PrimitiveType;
 
 import static no.iterate.Tests.assume;
@@ -51,7 +50,7 @@ public class ProgramTests {
             .addReturnType("String")
             .addMethodReturnStmt("\"2\"")
             .peek(Program::printChildrenRecursively)
-            .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 0, IntegerLiteralExpr.class)
+            .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 0)
             .run()
             .equals("2"), "Method should return \"2\" like we said");
 
