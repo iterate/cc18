@@ -1,7 +1,5 @@
 package no.iterate;
 
-import com.github.javaparser.ast.CompilationUnit;
-
 import static no.iterate.Tests.assume;
 
 public class ProgramTests {
