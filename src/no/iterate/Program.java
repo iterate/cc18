@@ -79,7 +79,6 @@ class Program {
             Node node = nodes.get(i);
             System.out.print(i);
             final ArrayList<String> lines = new ArrayList<>(Arrays.asList(node.toString().split("\n")));
-            lines.forEach(l -> System.out.println("\t" + l));
         }
     }
 
