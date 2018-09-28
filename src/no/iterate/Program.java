@@ -126,7 +126,7 @@ class Program {
         return this;
     }
 
-    public Program addReturnType(String returnType) {
+    public Program setReturnType(String returnType) {
         currentMethod.setType(JavaParser.parseTypeParameter(returnType));
         return this;
     }

@@ -30,7 +30,7 @@ public class ProgramTests {
     public static final Runnable SET_RETURN_TYPE = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
-            .addReturnType("String")
+            .setReturnType("String")
             .toString()
             .contains("String calculate("));
     public static final Runnable ADD_RETURN = () -> assume(new Program()
@@ -52,7 +52,7 @@ public class ProgramTests {
             .printMethodResult("calculate")
             .addMethod("calculate")
             .makeStatic()
-            .addReturnType("String")
+            .setReturnType("String")
             .setMethodReturnStmt("\"2\"")
             .peek(Program::printChildrenRecursively)
             .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 0)
