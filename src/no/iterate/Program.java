@@ -6,7 +6,10 @@ import com.github.javaparser.ast.Modifier;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.body.Parameter;
+import com.github.javaparser.ast.expr.FieldAccessExpr;
 import com.github.javaparser.ast.expr.MethodCallExpr;
+import com.github.javaparser.ast.expr.NameExpr;
+import com.github.javaparser.ast.expr.StringLiteralExpr;
 import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
 
@@ -76,6 +79,11 @@ class Program {
         final MethodCallExpr methodCallExpr = new MethodCallExpr(methodName);
         block.addStatement(methodCallExpr);
         currentMethod.setBody(block);
+
+        NameExpr clazz = new NameExpr("System");
+        FieldAccessExpr field = new FieldAccessExpr(clazz, "out");
+        MethodCallExpr call = new MethodCallExpr(field, "println");
+        call.addArgument(new StringLiteralExpr("Hello World!"));
 
         return this;
     }
