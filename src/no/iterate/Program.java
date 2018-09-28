@@ -244,4 +244,8 @@ class Program {
 
         return result;
     }
+
+    public Program addMethodReturnStmt(MethodCallExpr methodCallExpr) {
+        return this;
+    }
 }
