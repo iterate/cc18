@@ -73,7 +73,7 @@ class Program {
         cursor2 = compilationUnit.getChildNodes().get(node);
 
         if(cursor2 instanceof ClassOrInterfaceDeclaration)
-            cursor2 = ((ClassOrInterfaceDeclaration) cursor).addMethod(methodName);
+            cursor2 = ((ClassOrInterfaceDeclaration) cursor2).addMethod(methodName);
         return this;
     }
 
