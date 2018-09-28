@@ -54,8 +54,6 @@ class Program {
             System.out.print(i);
             compilationUnit.getChildNodes().get(i).toString().lines().forEach(l -> System.out.println("\t" + l));
         }
-
-        System.out.println("------");
     }
 
     public Program addParameter(String parameterType, String parameterName) {
