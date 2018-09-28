@@ -89,7 +89,9 @@ class Program {
 
     public String run() {
         System.out.println(this.toString());
-        try (PrintWriter out = new PrintWriter("src/no/iterate/FizzBuzz.java")) {
+        String packageName = "no/iterate";
+        String className = "FizzBuzz";
+        try (PrintWriter out = new PrintWriter("src/" + packageName + "/" + className + ".java")) {
             out.println(toString());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
