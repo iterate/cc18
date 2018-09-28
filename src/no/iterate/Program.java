@@ -128,6 +128,8 @@ class Program {
     public Program changeSignatureAddParameter(Type type, String name, Object defaultValue) {
         addParameter(type, name, false);
 
+        currentClass.findAll(MethodCallExpr.class);
+
         return this;
     }
 
