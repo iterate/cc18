@@ -31,8 +31,6 @@ import java.util.stream.Collectors;
 import static com.github.javaparser.ast.type.PrimitiveType.*;
 
 
-//My comment is redundant
-
 class Program {
 
     // Lars
