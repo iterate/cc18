@@ -178,7 +178,7 @@ class Program {
     }
 
     public Program setMethodReturnStmt(String returnString) {
-        final BlockStmt block = ((MethodDeclaration) currentMethod).getBody().orElse(new BlockStmt());
+        final BlockStmt block = ((MethodDeclaration) cursor2).getBody().orElse(new BlockStmt());
         ReturnStmt returnStmt = new ReturnStmt(returnString);
         block.addStatement(returnStmt);
         currentMethod.setBody(block);
