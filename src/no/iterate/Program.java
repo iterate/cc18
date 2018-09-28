@@ -94,7 +94,7 @@ class Program {
         return addParameter(type, parameterName, isVarArgs);
     }
 
-    private Program addParameter(TypeParameter type, String parameterName, boolean isVarArgs) {
+    private Program addParameter(Type type, String parameterName, boolean isVarArgs) {
         final Parameter parameter = new Parameter(type, parameterName);
         parameter.setVarArgs(isVarArgs);
 
