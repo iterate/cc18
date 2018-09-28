@@ -83,10 +83,9 @@ class Program {
         return this;
     }
 
-    public Program addPrimitiveParameter2() {
+    public Program addPrimitiveParameter() {
         return this;
     }
-
 
 
     public Program addReturnType(String returnType) {
@@ -196,7 +195,4 @@ class Program {
         return result;
     }
 
-    public Program addPrimitiveParameter() {
-        return this;
-    }
 }
