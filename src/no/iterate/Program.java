@@ -81,7 +81,6 @@ class Program {
             Node node = nodes.get(i);
 
             System.out.println("" + i + "\t"+((ClassOrInterfaceDeclaration)node).getName());
-            node.getChildNodes();
         }
     }
 
