@@ -139,6 +139,9 @@ class Program {
     public Program printMethodResult(String methodName) {
         final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
 
+        MethodCallExpr valueOf = new MethodCallExpr(new NameExpr("String"), "valueOf");
+        valueOf.addArgument("input");
+
         NameExpr clazz = new NameExpr("System");
         FieldAccessExpr field = new FieldAccessExpr(clazz, "out");
         MethodCallExpr call = new MethodCallExpr(field, "println");
