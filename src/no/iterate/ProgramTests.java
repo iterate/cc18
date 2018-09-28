@@ -49,6 +49,7 @@ public class ProgramTests {
             .makeStatic()
             .addReturnType("String")
             .addMethodReturnStmt("\"1\"")
+            .addPrimitiveParameter(PrimitiveType.Primitive.INT, "input")
             .run()
             .equals("1"), "Method should return \"1\" like we said");
 
