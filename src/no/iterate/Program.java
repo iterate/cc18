@@ -45,6 +45,11 @@ class Program {
         return this;
     }
 
+    public Program addClass(CompilationUnit cu, String className) {
+        currentClass = compilationUnit.addClass(className);
+        return this;
+    }
+
     public Program setPackage(String packageName){
         compilationUnit.setPackageDeclaration(packageName);
         return this;}
