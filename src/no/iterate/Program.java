@@ -162,7 +162,7 @@ class Program {
             call.addArgument(new MethodCallExpr(methodName).addArgument(new IntegerLiteralExpr(argument)));
 
             block.addStatement(call);
-            currentMethod.setBody(block);
+            ((MethodDeclaration) currentMethod).setBody(block);
 
         }
         return this;
