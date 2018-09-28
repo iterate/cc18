@@ -40,6 +40,7 @@ class Program {
 
         System.out.println("------");
 
+        compilationUnit.getChildNodes();
 
         System.out.println("------");
 
