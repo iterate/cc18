@@ -49,6 +49,7 @@ public class ProgramTests {
             .addMethod("main")
             .makeStatic()
             .makePublic()
+            .addParameter("String", "args")
             .toString()
             .contains("public static void main("));
 
