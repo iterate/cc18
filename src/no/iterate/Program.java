@@ -131,7 +131,8 @@ class Program {
         return this;
     }
 
-    public Program printMethodResult(String methodName) {
+    public Program printMethodResult(String methodName, int argument) {
+
         final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
 
         NameExpr clazz = new NameExpr("System");
