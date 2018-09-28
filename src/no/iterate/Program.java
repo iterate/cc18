@@ -103,7 +103,7 @@ class Program {
                 label = "?";
             }
 
-            if(node instanceof Parameter){
+            if(node instanceof TypeParameter){
                 label = "?";
             }
 
