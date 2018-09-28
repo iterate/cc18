@@ -42,7 +42,7 @@ class Program {
 
         for (int i = 0; i < compilationUnit.getChildNodes().size(); i++) {
             System.out.println("Nodes:");
-            compilationUnit.getChildNodes().get(i).toString().lines().forEach(l -> System.out.println(l));
+            compilationUnit.getChildNodes().get(i).toString().lines().forEach(l -> System.out.println("" + l));
         }
 
         System.out.println("------");
