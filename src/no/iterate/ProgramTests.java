@@ -39,9 +39,9 @@ public class ProgramTests {
             .addClass("FizzBuzz")
             .addMethod("calculate")
             .addReturnType("STRING")
-            .addMethodReturnStmt("1")
+            .addMethodReturnStmt("\"1\"")
             .run()
-            .contains("return 1;"), "Method should return 1 like we said");
+            .contains("return \"1\";"), "Method should return 1 like we said");
 
 
     public static final Runnable ADD_METHOD_TO_SPECIFIC_CLASS = () -> assume(new Program()
