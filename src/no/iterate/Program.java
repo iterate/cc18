@@ -60,7 +60,8 @@ class Program {
     }
 
     public Program addMethod(String methodName) {
-        currentMethod = currentClass.addMethod(methodName);
+        if(currentClass instanceof ClassOrInterfaceDeclaration)
+            currentMethod = currentClass.addMethod(methodName);
         return this;
     }
 
