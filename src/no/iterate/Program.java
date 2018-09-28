@@ -36,7 +36,7 @@ class Program {
     }
 
     public Program addMethodToClass(int node, String methodName) {
-        compilationUnit.getChildNodes();
+        compilationUnit.getChildNodes().get(node);
         currentMethod = currentClass.addMethod(methodName);
         return this;
     }
