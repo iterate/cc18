@@ -237,8 +237,7 @@ class Program {
     }
 
     private static void printLines(String cmd, InputStream ins) throws Exception {
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(ins));
+        BufferedReader in = new BufferedReader(new InputStreamReader(ins));
         in.lines().map(line -> cmd + " " + line).forEach(System.out::println);
     }
 
