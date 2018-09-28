@@ -26,7 +26,7 @@ import static com.github.javaparser.ast.type.PrimitiveType.Primitive;
 
 class Program {
     public CompilationUnit compilationUnit = new CompilationUnit();
-    private Node cursor;
+    public Node cursor;
     private MethodDeclaration currentMethod;
 
     public String toString() {
