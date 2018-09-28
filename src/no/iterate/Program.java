@@ -73,7 +73,7 @@ class Program {
     }
 
     public Program makePublic() {
-        return this;
+        return getProgram(Modifier.PUBLIC);
     }
 
     private Program getProgram(Modifier modifier) {
