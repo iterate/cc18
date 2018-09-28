@@ -14,6 +14,7 @@ import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
 import com.github.javaparser.ast.type.PrimitiveType;
 import com.github.javaparser.ast.type.Type;
+import com.github.javaparser.ast.type.TypeParameter;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -84,7 +85,8 @@ class Program {
     }
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
-        final Parameter parameter = new Parameter(JavaParser.parseTypeParameter(parameterType), parameterName);
+        final TypeParameter type = JavaParser.parseTypeParameter(parameterType);
+        final Parameter parameter = new Parameter(type, parameterName);
         parameter.setVarArgs(isVarArgs);
 
         currentMethod.addParameter(parameter);
