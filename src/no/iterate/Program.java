@@ -17,7 +17,7 @@ import java.util.EnumSet;
 
 class Program {
 
-    private CompilationUnit compilationUnit = new CompilationUnit("no.iterate");
+    private CompilationUnit compilationUnit = new CompilationUnit();
     private ClassOrInterfaceDeclaration currentClass;
     private MethodDeclaration currentMethod;
 
