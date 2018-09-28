@@ -66,7 +66,7 @@ class Program {
         final EnumSet<Modifier> modifiers = currentMethod.getModifiers();
         modifiers.add(Modifier.STATIC);
 
-        currentMethod.setModifiers(EnumSet.of(Modifier.PUBLIC, Modifier.STATIC));
+        currentMethod.setModifiers(modifiers);
         return this;
     }
 
