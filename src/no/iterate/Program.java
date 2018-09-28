@@ -10,6 +10,7 @@ import com.github.javaparser.ast.body.Parameter;
 import com.github.javaparser.ast.expr.FieldAccessExpr;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.NameExpr;
+import com.github.javaparser.ast.expr.SimpleName;
 import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
 import com.github.javaparser.ast.type.PrimitiveType;
@@ -77,7 +78,13 @@ class Program {
                 System.out.print(indent(depth));
                 System.out.println(((ClassOrInterfaceDeclaration)node).getName());
             }
-            
+
+            if(node instanceof SimpleName){
+                System.out.print(i);
+                System.out.print(indent(depth));
+                System.out.println(((SimpleName)node).getIdentifier());
+            }
+
             printNodes(node.getChildNodes(), depth + 1);
         }
     }
