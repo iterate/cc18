@@ -46,6 +46,7 @@ public class ProgramTests {
     public static final Runnable ADD_MAIN_METHOD = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("main")
+            .makeStatic()
             .toString()
             .contains("void main"));
 
