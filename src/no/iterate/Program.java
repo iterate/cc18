@@ -172,6 +172,7 @@ class Program {
         String result = new BufferedReader(new InputStreamReader(inputStream))
                 .lines().collect(Collectors.joining("\n"));
 
+        System.out.println(result);
 
         return result;
     }
