@@ -29,6 +29,7 @@ import java.util.EnumSet;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static com.github.javaparser.ast.type.PrimitiveType.*;
 
@@ -107,11 +108,8 @@ class Program {
     }
 
     String indent(int depth){
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < depth+1; i++) {
-            stringBuilder.append("   ");
-        }
-        return stringBuilder.toString();
+        String stringBuilder = IntStream.range(0, depth + 1).mapToObj(i -> "   ").collect(Collectors.joining());
+        return stringBuilder;
     }
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
