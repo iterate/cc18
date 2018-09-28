@@ -47,7 +47,7 @@ public class ProgramTests {
             .addClass("FizzBuzz")
             .addMethod("main")
             .toString()
-            .contains("main"));
+            .contains("void main"));
 
     public static final Runnable ADD_METHOD_TO_SPECIFIC_CLASS = () -> assume(new Program()
             .addClass("FizzBuzz")
