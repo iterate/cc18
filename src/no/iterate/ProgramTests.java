@@ -1,5 +1,7 @@
 package no.iterate;
 
+import com.github.javaparser.ast.type.PrimitiveType;
+
 import static no.iterate.Tests.assume;
 
 public class ProgramTests {
@@ -15,7 +17,7 @@ public class ProgramTests {
     public static final Runnable ADD_PARAMETER = () -> assume(new Program()
             .addClass("FizzBuzz")
             .addMethod("calculate")
-            .addPrimitiveParameter("int", "input")
+            .addPrimitiveParameter(PrimitiveType.Primitive.INT, "input")
             .addParameter("Integer", "input", false)
             .toString()
             .contains("calculate(Integer input)"));

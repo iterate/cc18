@@ -13,7 +13,6 @@ import com.github.javaparser.ast.expr.NameExpr;
 import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
 
-import javax.lang.model.type.PrimitiveType;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -86,7 +85,7 @@ class Program {
         return this;
     }
 
-    public Program addPrimitiveParameter(String parameterType, String parameterName) {
+    public Program addPrimitiveParameter(Primitive parameterType, String parameterName) {
         final Primitive anInt = Primitive.INT;
         new com.github.javaparser.ast.type.PrimitiveType(anInt);
         return this;
