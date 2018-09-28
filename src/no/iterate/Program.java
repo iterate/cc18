@@ -181,7 +181,7 @@ class Program {
         final BlockStmt block = ((MethodDeclaration) cursor2).getBody().orElse(new BlockStmt());
         ReturnStmt returnStmt = new ReturnStmt(returnString);
         block.addStatement(returnStmt);
-        ((MethodDeclaration) currentMethod).setBody(block);
+        ((MethodDeclaration) cursor2).setBody(block);
         return this;
     }
 
