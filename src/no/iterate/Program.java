@@ -12,6 +12,7 @@ import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.NameExpr;
 import com.github.javaparser.ast.stmt.BlockStmt;
 import com.github.javaparser.ast.stmt.ReturnStmt;
+import com.github.javaparser.ast.type.PrimitiveType;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -86,7 +87,7 @@ class Program {
     }
 
     public Program addPrimitiveParameter(Primitive parameterType, String parameterName) {
-        new com.github.javaparser.ast.type.PrimitiveType(parameterType);
+        final PrimitiveType primitiveType = new PrimitiveType(parameterType);
         return this;
     }
 
