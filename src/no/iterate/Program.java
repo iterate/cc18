@@ -77,7 +77,7 @@ class Program {
     }
 
     public Program addMethodReturnStmt(String returnString) {
-        final BlockStmt block = new BlockStmt();
+        final BlockStmt block = currentMethod.getBody().orElse(new BlockStmt());
         ReturnStmt returnStmt = new ReturnStmt(returnString);
         block.addStatement(returnStmt);
         currentMethod.setBody(block);
