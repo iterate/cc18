@@ -54,9 +54,9 @@ public class ProgramTests {
             .makeStatic()
             .setReturnType("String")
             .setMethodReturnStmt("\"2\"")
-            .peek(Program::printChildrenRecursively)
             .changeSignatureAddParameter(new PrimitiveType(PrimitiveType.Primitive.INT), "input", 0)
             .setMethodReturnStmt(new MethodCallExpr(new NameExpr("String"), "valueOf").addArgument("input"))
+            .peek(Program::printChildrenRecursively)
             .run()
             .equals("0"), "Method should return what we give as input");
 
