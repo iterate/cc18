@@ -206,7 +206,7 @@ class Program {
         return result;
     }
 
-    public Program changeSignature() {
+    public Program changeSignatureAddParameter() {
         return this;
     }
 }
