@@ -70,6 +70,10 @@ class Program {
         return this;
     }
 
+    public Program callMethod(String methodName) {
+        return this;
+    }
+
     public Program addMethodReturnStmt(String returnString) {
         final BlockStmt block = new BlockStmt();
         ReturnStmt returnStmt = new ReturnStmt(returnString);
