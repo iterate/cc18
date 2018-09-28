@@ -211,7 +211,7 @@ class Program {
         return result;
     }
 
-    public Program changeSignatureAddParameter(Type type) {
+    public Program changeSignatureAddParameter(Type type, String name) {
         return this;
     }
 }
