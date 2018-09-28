@@ -198,7 +198,7 @@ class Program {
         block.setStatements(statements);
 
 
-        currentMethod.setBody(block);
+        ((MethodDeclaration) cursor2).setBody(block);
 
 
         return this;
