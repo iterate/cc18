@@ -94,7 +94,11 @@ class Program {
     public Program changeSignatureAddParameter(Type type, String name, Object defaultValue) {
         addParameter(type, name, false);
 
-        final List<MethodCallExpr> allMethodCalls = currentClass.findAll(MethodCallExpr.class, methodCallExpr -> methodCallExpr.getName().asString().equals(currentMethod.getName().toString()));
+        final List<MethodCallExpr> allMethodCalls = currentClass
+                .findAll(
+                        MethodCallExpr.class,
+                        methodCallExpr -> methodCallExpr.getName().asString().equals(currentMethod.getName().toString())
+                );
 
         final NodeList<Expression> nodes = new NodeList<>();
 
