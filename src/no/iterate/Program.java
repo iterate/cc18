@@ -30,7 +30,7 @@ class Program {
         return this;
     }
 
-    public Program addPackage(String packageName){
+    public Program setPackage(String packageName){
         compilationUnit.setPackageDeclaration(packageName);
         return this;}
 
