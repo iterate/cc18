@@ -97,7 +97,7 @@ class Program {
     public String run() {
         System.out.println(this.toString());
         String packageName = compilationUnit.getPackageDeclaration().get().getNameAsString();
-        String className = "FizzBuzz";
+        String className = currentClass.getNameAsString();
         String fileName = "src/" + packageName.replace(".", "/") + "/" + className + ".java";
         try (PrintWriter out = new PrintWriter(fileName)) {
             out.println(toString());
