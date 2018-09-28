@@ -81,7 +81,8 @@ class Program {
         }
     }
 
-    String indent(int depth){ return "";}
+    String indent(int depth){
+        return "";}
 
     public Program addParameter(String parameterType, String parameterName, boolean isVarArgs) {
         final TypeParameter type = JavaParser.parseTypeParameter(parameterType);
