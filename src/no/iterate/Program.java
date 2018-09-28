@@ -71,10 +71,10 @@ class Program {
 
     public void printChildrenRecursively() {
         System.out.println("Nodes:");
-        printNodes(compilationUnit.getChildNodes(), 0);
+        printNodes(this, compilationUnit.getChildNodes(), 0);
     }
 
-    public void printNodes(List<Node> nodes, int depth){
+    public static void printNodes(Program program, List<Node> nodes, int depth){
         for (int i = 0; i < nodes.size(); i++) {
             Node node = nodes.get(i);
 
@@ -108,11 +108,11 @@ class Program {
                 label = "type parameter: " + ((TypeParameter)node).getName();
             }
 
-            System.out.print(indent(depth));
+            System.out.print(program.indent(depth));
             System.out.print("" + i + ": ");
             System.out.println(label);
 
-            printNodes(node.getChildNodes(), depth + 1);
+            printNodes(program, node.getChildNodes(), depth + 1);
         }
     }
 
