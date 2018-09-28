@@ -92,7 +92,7 @@ class Program {
             }
 
             if(node instanceof BlockStmt){
-                label = "?";
+                label = "block statement: ";
             }
 
             if(node instanceof VoidType){
