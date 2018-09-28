@@ -97,7 +97,10 @@ class Program {
         final List<MethodCallExpr> allMethodCalls = currentClass
                 .findAll(
                         MethodCallExpr.class,
-                        methodCallExpr -> methodCallExpr.getName().asString().equals(currentMethod.getName().toString())
+                        methodCallExpr -> methodCallExpr
+                                .getName()
+                                .asString()
+                                .equals(currentMethod.getName().toString())
                 );
 
         final NodeList<Expression> nodes = new NodeList<>();
